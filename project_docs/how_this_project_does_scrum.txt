@@ -1,0 +1,45 @@
+HOW THIS PROJECT DOES SCRUM
+---------------------------
+
+The Scrum Master role equates to my general intention to do Scrum. It won't explicitly
+appear unless I record a task to "remove an impediment to progress".
+
+Backlog items can be added to project_tracking/backlog.txt at any time.
+
+
+SPRINTS:
+
+Sprints are one week, ending/starting first thing Saturday. Days are real days.
+
+Because most "days" are so short (just my lunch break), reading and trying stuff will be
+explicit backlog items. (I'm the product owner. And learning is something I want.)
+
+
+THE  SPRINT REVIEW/RETROSPECTIVE/PLANNING EVENT (15 min, not including playing the game):
+1. Play the game
+2. Make a free-form entry into project_tracking/review_retro_log.txt
+3. Update project_tracking/backlog.txt to reflect items complete in the sprint.
+4. Move the old sprint_backlog.txt to project_tracking/archive/sprint_backlog_<n>.txt
+5. Add backlog items to a new project_tracking/sprint_backlog.txt
+6. Add detailed tasks to selected backlog items. Split items if needed.
+7. Review the plan and remove items if needed until the sprint seems practical.
+
+
+STANDUPS:
+
+Standups are 5 minutes, max, at the beginning of each weekday lunch break or weekend programming time.
+
+Detailed discussions (i.e. me thinking about technical details) are NOT allowed.
+
+Update project_tracking/standup_log.txt with one or more COMP and PLAN lines.
+  COMP: What did I complete yesterday that contributed to the team meeting our sprint goal?
+  PLAN: What do I plan to complete today to contribute to the team meeting our sprint goal?
+  [PED: Do I see any impediment that could prevent me or the team from meeting our sprint goal?]
+
+If there's a PED, maybe make this a "PED Day" and remove something from sprint_backlog.txt.
+
+
+COMPLETING A SPRINT EARLY:
+
+If a sprint's items are all completed early, do the sprint ending and beginning stuff imediately.
+They next sprint gets the remaining days, plus the full week that follows.

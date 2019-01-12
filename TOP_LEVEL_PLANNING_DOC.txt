@@ -23,8 +23,10 @@ PHILOSOPHY:
 
 2. Use small, even trivial, steps to keep momentum
 
+3. Focus on concepts over tools
+
 
 CURRENT PROCESS:
 
-1. Putting stuff to do next-ish in project_docs/NEXTIES.TXT
+1. Putting TODO items into project_docs/NEXTIES.TXT
    (Which will go away when it's replaced by something more formal)

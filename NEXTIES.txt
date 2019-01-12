@@ -1,0 +1,5 @@
+NEXTIES.TXT:: v0 PROJECT PROCESS
+i.e. "stuff to do"
+
+> Learn about backlog items
+> Write my rules for what goes in backlog.txt
