@@ -1,0 +1,30 @@
+TOP LEVEL PLANNING DOC
+----------------------
+
+GOALS:
+
+1. Create a game of buying, selling, and transport with a variety of fun steampunk cargo vehicles.
+
+2. Learn additional technical process and best practices
+    a. Accessibility
+    b. Git/Github
+    c. Testing
+    d. TDD
+    e. Debugging tools 
+
+3. Learn organizational process and best practices
+    a. Agile/SCRUM
+    b. Github project flow as if I was a team
+
+
+PHILOSOPHY:
+
+1. Constantly move toward all goals
+
+2. Use small, even trivial, steps to keep momentum
+
+
+CURRENT PROCESS:
+
+1. Putting stuff to do next-ish in project_docs/NEXTIES.TXT
+   (Which will go away when it's replaced by something more formal)
