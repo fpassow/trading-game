@@ -6,40 +6,77 @@ appear unless I record a task to "remove an impediment to progress".
 
 Backlog items can be added to project_tracking/backlog.txt at any time.
 
+Backlog items are a single line:
+[<points>] <description>
+
+Sub-tasks are indented lines under an item. (Or they are split into new items.)
+
+A point corresponds to the amount of coding which I think you could be done in 5 to 15 minutes.
+In reality, all the work associated with a point is expected to take about an hour. (i.e. 1 weekday)
+
+Since this is just a game, priority doesn't have its usual meaning. However, all the stories needed
+to do something meaningful should be added to a sprint together. And items still needed to make a
+completed item useful have top priority in the next sprint.
+
+Notes and minor planning can be added under an item, on lines prefixed with "//".
+
+Further planning can go in a file <item>_PLANNING.txt in the dev_docs directory.
+
+All to-do's should be tracked as backlog items. Weird backlog items are a fair price to pay 
+in exchange for having only one central place to see everything that's to-do.
+
 
 SPRINTS:
 
-Sprints are one week, ending/starting first thing Saturday. Days are real days.
+Sprints are one week long, ending/starting first thing Saturday. Days are real days.
 
 Because most "days" are so short (just my lunch break), reading and trying stuff will be
 explicit backlog items. (I'm the product owner. And learning is something I want.)
 
 
-THE  SPRINT REVIEW/RETROSPECTIVE/PLANNING EVENT (15 min, not including playing the game):
+THE  SPRINT REVIEW+RETROSPECTIVE+PLANNING EVENT (15 min, not including playing the game):
 1. Play the game
 2. Make a free-form entry into project_tracking/review_retro_log.txt
-3. Update project_tracking/backlog.txt to reflect items complete in the sprint.
+3. Delete items completed in the sprint from project_tracking/backlog.txt.
 4. Move the old sprint_backlog.txt to project_tracking/archive/sprint_backlog_<n>.txt
+5. Assign points to backlog items which *might* be in the next sprint
 5. Add backlog items to a new project_tracking/sprint_backlog.txt
-6. Add detailed tasks to selected backlog items. Split items if needed.
-7. Review the plan and remove items if needed until the sprint seems practical.
+6. Add detailed tasks to selected backlog items (data, logic, UI). 
+7. Split items if needed.
+8. Review the plan and remove items if needed until the sprint seems practical
+9. Bias toward undercommiting, since I might not be free and productive on all lunch breaks.
+
+TRACKING:
+
+Add "--" at the start of the line in sprint_backlog.txt when I start working on an item or subtask.
+Update to "-t-", for initial TDD unit test(s)
+          "-tc-" for code passing those tests, plus any tests I decided to add
+          "-tcp-" when code has passed manual testing by a player and item is done.
+          Non-code items are "-" for "started" and "-----" for done.
 
 
 STANDUPS:
 
-Standups are 5 minutes, max, at the beginning of each weekday lunch break or weekend programming time.
+Standups are 5 minutes, max, at the END of each weekday lunch break or weekend programming time.
 
 Detailed discussions (i.e. me thinking about technical details) are NOT allowed.
 
 Update project_tracking/standup_log.txt with one or more COMP and PLAN lines.
-  COMP: What did I complete yesterday that contributed to the team meeting our sprint goal?
-  PLAN: What do I plan to complete today to contribute to the team meeting our sprint goal?
-  [PED: Do I see any impediment that could prevent me or the team from meeting our sprint goal?]
+    COMP: What did I complete today that contributed to the team meeting our sprint goal?
+    PLAN: What do I plan to complete tomorrow to contribute to the team meeting our sprint goal?
+   [PED: Do I see any impediment that could prevent me or the team from meeting our sprint goal?]
 
-If there's a PED, maybe make this a "PED Day" and remove something from sprint_backlog.txt.
+If there's a PED, I will likely turn it into a backlog item, because I use backlog items for everything,
+ and maybe remove a backlog item to balance the points.
+
+(I'm putting the standup at the end of the "day" because, with "days" only one hour long, it has
+to be the start or the end. And my background processor is more productive if I know exactly what I'm
+going to start working on at the beginning of the next day.)
 
 
 COMPLETING A SPRINT EARLY:
 
 If a sprint's items are all completed early, do the sprint ending and beginning stuff imediately.
-They next sprint gets the remaining days, plus the full week that follows.
+Then, depending on time remaining, decide whether to do a mini-sprint with the remaining days,
+or to plan a long sprint with the remaining days plus the next week. In either case, the next
+sprint is planned to end on Saturday.

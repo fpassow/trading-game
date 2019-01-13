@@ -27,6 +27,4 @@ PHILOSOPHY:
 
 
 CURRENT PROCESS:
-
-1. Putting TODO items into project_docs/NEXTIES.TXT
-   (Which will go away when it's replaced by something more formal)
+  See how_this_project_does_scrum.txt
