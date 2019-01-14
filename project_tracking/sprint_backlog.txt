@@ -1,4 +1,4 @@
-1 Read about managing projects in github
+1 Read about managing projects in github (playing with delete-me repo)
 
 .5 Draft how_this_project_does_git.txt
 

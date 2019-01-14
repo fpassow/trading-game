@@ -1,18 +1,28 @@
-import React, { Component } from 'react';
-import TabsDemo1 from './TabsDemo1'
-import TabsDemo2 from './TabsDemo2'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import WelcomePage from './WelcomePage'
+import MainPage from './MainPage'
+import { showWelcomePage } from './actions'
 
-const ibWrapperStyle = {display:"inline-block"}
+const AppComponent = ({showingWelcomePage, showWelcomePage, hideWelcomePage}) => (
+    <div className="App">
+        {showingWelcomePage ? <WelcomePage hideWelcomePage={hideWelcomePage} /> :
+                              <MainPage showWelcomePage={showWelcomePage} />
+        }
+    </div>
+)
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-          <div style={ibWrapperStyle}><TabsDemo1 /></div>
-          <div style={ibWrapperStyle}><TabsDemo2 /></div>
-      </div>
-    );
-  }
-}
 
-export default App;
+const mapStateToProps = state => ({
+  showingWelcomePage: state.showingWelcomePage
+})
+
+const mapDispatchToProps = dispatch => ({
+  showWelcomePage: () => dispatch(showWelcomePage(true)),
+  hideWelcomePage: () => dispatch(showWelcomePage(false))
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AppComponent)

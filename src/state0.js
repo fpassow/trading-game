@@ -1,5 +1,8 @@
 
 const state0 = {
+    showingWelcomePage: true
+}
+/*
 	tabbedStuff1: {
         selectedTab: 0,
         tabs: [
@@ -44,5 +47,5 @@ const state0 = {
         }
     ]
 }
-
+*/
 export default state0
