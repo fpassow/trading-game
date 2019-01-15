@@ -1,4 +1,7 @@
-1 Read about managing projects in github (playing with delete-me repo)
+--- 1 Read about managing projects in github (playing with delete-me repo)
+//My backlog files are simple, and visible when I work offline in the moring.
+//Github issues are great for colboration, but it's more work to add SCRUM structure, and I can't
+//   see them part of the time.
 
 .5 Draft how_this_project_does_git.txt
 
