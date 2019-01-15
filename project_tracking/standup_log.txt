@@ -1,5 +1,9 @@
 STANDUP LOG
 -----------
 
+Jan 15
+--- 1 See intro and instructions first thing
+PLAN: 1 Dismiss intro page
+
 
 

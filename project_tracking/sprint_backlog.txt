@@ -8,8 +8,8 @@
 
 .5 Finalize how_this_project_does_git.txt
 
-1 See intro and instructions first thing
+--- 1 See intro and instructions first thing
 
-1 Dismiss intro page
+--- 1 Dismiss intro page
 
-1 Click somewhere to re-view intro page
+--- 1 Click somewhere to re-view intro page

@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 
-const MainPage = () => (
+const MainPage = ({showWelcomePage}) => (
     <div >
-        main...
+        <h1>main...</h1>
+        <button onClick={showWelcomePage} >Help</button>
     </div>
 )
 

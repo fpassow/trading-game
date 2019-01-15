@@ -48,11 +48,8 @@ THE  SPRINT REVIEW+RETROSPECTIVE+PLANNING EVENT (15 min, not including playing t
 
 TRACKING:
 
-Add "--" at the start of the line in sprint_backlog.txt when I start working on an item or subtask.
-Update to "-t-", for initial TDD unit test(s)
-          "-tc-" for code passing those tests, plus any tests I decided to add
-          "-tcp-" when code has passed manual testing by a player and item is done.
-          Non-code items are "-" for "started" and "-----" for done.
+Add "-" at the start of the line in sprint_backlog.txt when I start working on an item or subtask.
+Update to "---", for done, with tests, all green, and manual testing good too.
 
 
 STANDUPS:

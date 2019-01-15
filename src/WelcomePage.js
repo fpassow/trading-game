@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 
-const WelcomePage = ({showingWelcomPage}) => (
+const WelcomePage = ({hideWelcomePage}) => (
     <div >
         <h1>Hi!</h1>
+        <button onClick={hideWelcomePage} >Hide</button>
     </div>
 )
 
