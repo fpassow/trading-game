@@ -5,5 +5,11 @@ Jan 15
 --- 1 See intro and instructions first thing
 PLAN: 1 Dismiss intro page
 
+Jan 15 (lunch)
+--- 1 Dismiss intro page
+--- 1 Click somewhere to re-view intro page
+PLAN: Read about pull requests.
+PLAN: Do pull requests make any sense for this project?
+
 
 
