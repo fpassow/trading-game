@@ -1,6 +1,7 @@
 
 const state0 = {
-    showingWelcomePage: true
+    showingWelcomePage: true,
+    cash: 500
 }
 /*
 	tabbedStuff1: {

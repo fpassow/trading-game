@@ -1,0 +1,20 @@
+https://gist.github.com/vlandham/3b2b79c40bc7353ae95a
+
+
+$ git checkout -b feature-branch-name
+
+$ git push origin feature-branch-name
+//Repeat above to save work
+
+Create and merge pull request on github.com
+
+//Get the new state of the github.com repo back to local. 
+// Clean this up after doing it some more. Worst case, nuke-n-clone.
+$ git fetch origin
+$ git checkout master
+$ git pull
+
+//Start the next feature branch...
+$ git checkout -b next-feature-branch-name
+....
+
