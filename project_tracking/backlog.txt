@@ -1,20 +1,4 @@
----1 Read about managing projects in github
 
-.5 Draft how_this_project_does_git.txt
-
-.5 Create multipe gitub users, if needed
-
-.5 Play with pull requests
-
-.5 Finalize how_this_project_does_git.txt
-
----1 See intro and instructions first thing
-
----1 Dismiss intro page
-
----1 Click somewhere to re-view intro page
-
-1 See my money
 
 1 See my location ("port")
 
@@ -49,6 +33,8 @@
 1 Fire crew
 
 1 See my ships required crew
+
+1 Buy fuel
 
 1 See travel time and fuel required to reach any other port
 

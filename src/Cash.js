@@ -2,8 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 const CashComponent = ({cash}) => (
-    <div>
-        {cash} florins ( &#402 )
+    <div >
+        <h2>Strongbox: {cash} florins ( &#402; ) </h2>
     </div>
 )
 

@@ -39,12 +39,12 @@ THE  SPRINT REVIEW+RETROSPECTIVE+PLANNING EVENT (15 min, not including playing t
 2. Make a free-form entry into project_tracking/review_retro_log.txt
 3. Delete items completed in the sprint from project_tracking/backlog.txt.
 4. Move the old sprint_backlog.txt to project_tracking/archive/sprint_backlog_<n>.txt
-5. Assign points to backlog items which *might* be in the next sprint
-5. Add backlog items to a new project_tracking/sprint_backlog.txt
-6. Add detailed tasks to selected backlog items (data, logic, UI). 
-7. Split items if needed.
-8. Review the plan and remove items if needed until the sprint seems practical
-9. Bias toward undercommiting, since I might not be free and productive on all lunch breaks.
+5. Add backlog items which might be in new sprint to a new project_tracking/sprint_backlog.txt
+6. Assign points to backlog items which might be in the next sprint
+7. Add detailed tasks to selected backlog items (data, logic, UI). 
+8. Split items if needed.
+9. Review the plan and remove items if needed until the sprint seems practical
+10. Bias toward undercommiting, since I might not be free and productive on all lunch breaks.
 
 TRACKING:
 

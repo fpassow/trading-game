@@ -1,24 +1,24 @@
---- 1 Read about managing projects in github (playing with delete-me repo)
-//My backlog files are simple, and visible when I work offline in the moring.
-//Github issues are great for colboration, but it's more work to add SCRUM structure, and I can't
-//   see them part of the time.
+Second Sprint
+Thurs Jan 17 - Sat Jan 26
+"BEGINNING OF PLAY, WITH MINIMAL UI"
 
----.5 Draft how_this_project_does_git.txt
+1 See my location ("port")
 
----.5 Create multipe gitub users, if needed
-  //Not needed
+1 See ships for sale at my current port
 
----.5 Play with pull requests
+1 Buy a ship
 
----.5 Finalize how_this_project_does_git.txt
+1 See my ship's required crew
 
---- 1 See intro and instructions first thing
+1 See fuel supply, and max capacity, of my ship
 
---- 1 Dismiss intro page
+1 See food stores on my ship
 
---- 1 Click somewhere to re-view intro page
+1 Buy fuel
 
-**********************
-//Adding an item because I can't do the github stuff without Internet access...
+1 See current port's price for food stores
 
-1 See my money
+1 See my current crew count
+
+1 Hire crew
+
