@@ -11,5 +11,11 @@ Jan 15 (lunch)
 PLAN: Read about pull requests.
 PLAN: Do pull requests make any sense for this project?
 
+Jan 16
+--- 1 Read about managing projects in github (playing with delete-me repo)
+---.5 Draft how_this_project_does_git.txt
+---.5 Create multipe gitub users, if needed   //Not needed
+---.5 Play with pull requests
+---.5 Finalize how_this_project_does_git.txt
 
 
