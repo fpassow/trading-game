@@ -1,9 +1,13 @@
 import React from 'react'
-import Cash from './Cash'
+import PlacePanel from './PlacePanel'
+import ShipPanel from './ShipPanel'
+import MapPanel from './MapPanel'
 
 const MainPage = ({showWelcomePage}) => (
     <div >
-        <Cash />
+        <PlacePanel />
+        <ShipPanel />
+        <MapPanel />
         <button onClick={showWelcomePage} >Help</button>
     </div>
 )

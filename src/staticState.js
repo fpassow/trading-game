@@ -1,33 +1,41 @@
 const staticState = {
-    ports: [
+    places: [
         {
             name: 'Morlock',
-            portId: 'morlock',
+            placeId: 'morlock',
+            placeType: 'PORT',
+            description: 'Shrouded in hissing steam and sulphurous smogg',
             x: 1,
             y: 1
+        },
         {
             name: 'Eloi',
-            producerId: 'eloi',
+            placeId: 'eloi',
+            placeType: 'PORT',
+            description: 'See the pretty little flowers.',
             x: 3,
             y: 3
+        },
+        {
+            name: 'Port Harbor',
+            placeId: 'portharbor',
+            placeType: 'PORT',
+            description: 'A nice little fishing village',
+            x: 2,
+            y: 5
         }
     ],
-    routes: [
-        {
-            routeId:'route1',
-            routeLabel: 'The Hard Way',
-            startPortId: 'morlock',
-            endPortId: 'eloi',
-            stages: [{x:1, y:1}, {x:2, y:2}, {x:3, y:3})],
-            shipType: 'boat'
+    defaultPlaceId: 'portharbor',
+
+    getPlaceById(id) {
+        for (let i = 0; i < this.places.length; i++) {
+            if (this.places[i].placeId === id) {
+                return this.places[i]
+            }
         }
-    ],
-    producers: [
-        {
-            producerId: 'morlock_iron_producer',
-            ....
-        }
-    ]
+        return null
+    }
+
 }
 
 export default staticState

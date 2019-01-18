@@ -1,7 +1,8 @@
 
 const state0 = {
     showingWelcomePage: true,
-    cash: 500
+    cash: 500,
+    currentPlaceId: 'portharbor'
 }
 /*
 	tabbedStuff1: {
