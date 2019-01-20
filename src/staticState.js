@@ -1,3 +1,7 @@
+/* This is data about the game world that doesn't change
+ * like places on the map, kinds of ships, etc.
+ */
+
 const staticState = {
     places: [
         {
@@ -27,15 +31,10 @@ const staticState = {
     ],
     defaultPlaceId: 'portharbor',
 
-    getPlaceById(id) {
-        for (let i = 0; i < this.places.length; i++) {
-            if (this.places[i].placeId === id) {
-                return this.places[i]
-            }
-        }
-        return null
+    shipInfoByType: {
+        fishboat: {shipType: 'fishboat', shipTypeName: 'fishboat', basePrice: 500},
+        longboat: {shipType: 'longboat', shipTypeName: 'longboat', basePrice: 700}
     }
-
 }
 
 export default staticState

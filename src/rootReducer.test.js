@@ -5,8 +5,6 @@ function state0() {
     return JSON.parse(JSON.stringify(state00))
 }
 
-console.log("state0="+JSON.stringify(state0()))
-
 test('Nonexistent action type', () => {
     let s0 = state0()
     let bogusAction = {type:'BOGOBOGOBOGUSSS'}

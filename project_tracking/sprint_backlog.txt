@@ -4,7 +4,7 @@ Thurs Jan 17 - Sat Jan 26
 
 --- 1 See my location ("port")
 
-1 See ships for sale at my current port
+--- 1 See ships for sale at my current port
 
 1 Buy a ship
 
