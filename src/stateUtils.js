@@ -15,8 +15,8 @@ import staticState from './staticState'
 */
 export function currentPlaceInfo(state) {
     let currentPlaceId = state.currentPlaceId || staticState.defaultPlaceId
-    let staticPlace = _getStaticPlaceById(currentPlaceId)
-    let dynamicPlace = _getDynamicPlaceById(currentPlaceId, state)
+    let staticPlace = getStaticPlaceById(currentPlaceId)
+    let dynamicPlace = getDynamicPlaceById(currentPlaceId, state)
     let shipsWithTypeName = dynamicPlace.shipsForSale.map((shipId)=>{
         return getShipById(shipId, state)
     })
@@ -35,7 +35,11 @@ export function getShipById(shipId, state) {
     return null
 }
 
-function _getStaticPlaceById(id) {
+export function getMyShip(state) {
+    return state.myShipId && getShipById(state.myShipId, state)
+}
+
+export function getStaticPlaceById(id) {
     for (let i = 0; i < staticState.places.length; i++) {
         if (staticState.places[i].placeId === id) {
             return staticState.places[i]
@@ -44,11 +48,15 @@ function _getStaticPlaceById(id) {
     return null
 }
 
-function _getDynamicPlaceById(id, state) {
+export function getDynamicPlaceById(id, state) {
     for (let i = 0; i < state.placeData.length; i++) {
         if (state.placeData[i].placeId === id) {
             return state.placeData[i]
         }
     }
     return null
+}
+
+export function getCurrentDynamicPlace(state) {
+    return getDynamicPlaceById(state.currentPlaceId, state)
 }

@@ -13,15 +13,14 @@ const ships = [
     {shipId: 'ship1', shipType: 'fishboat', shipName: 'The Flying Flea'},
     {shipId: 'ship2', shipType: 'fishboat', shipName: 'Fishy 1'}
 ]
-    
-
 
 const state0 = {
     showingWelcomePage: true,
     cash: 500,
     currentPlaceId: 'portharbor',
     placeData: placeData,
-    ships: ships
+    ships: ships,
+    myShipId: null
 }
 
 export default state0

@@ -36,6 +36,8 @@
 
 1 Buy fuel
 
+1 Buy a ship with a trade-in
+
 1 See travel time and fuel required to reach any other port
 
 1 Sell my ship
