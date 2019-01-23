@@ -8,8 +8,13 @@ function rootReducer(state = state0, action) {
             return {...state, showingWelcomePage: action.showing}
 
         case 'BUY_SHIP':
-            //Make the ship my ship
-            let newState = {...state, myShipId: action.shipId}
+            //Make the ship my ship and pay for it
+            let newCash = state.cash - stateUtils.getShipById(action.shipId, state).basePrice
+            //...but not if I don't have the money.
+            if (newCash < 0) {
+                return state
+            }
+            let newState = {...state, myShipId: action.shipId, cash: newCash}
             //Remove the ship from the local shipsForSale
             let newHere = {...stateUtils.getCurrentDynamicPlace(state)}
             newHere.shipsForSale = newHere.shipsForSale.filter((shipId)=>(shipId !== action.shipId))

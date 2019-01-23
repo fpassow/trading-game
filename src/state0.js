@@ -16,7 +16,7 @@ const ships = [
 
 const state0 = {
     showingWelcomePage: true,
-    cash: 500,
+    cash: 800,
     currentPlaceId: 'portharbor',
     placeData: placeData,
     ships: ships,
