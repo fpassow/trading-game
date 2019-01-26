@@ -1,5 +1,5 @@
 import React from 'react'
-import PlacePanel from './PlacePanel'
+import PlacePanel from './place/PlacePanel'
 import ShipPanel from './ship/ShipPanel'
 import ShiplessPanel from './ship/ShiplessPanel'
 import MapPanel from './MapPanel'
