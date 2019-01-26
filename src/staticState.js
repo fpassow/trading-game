@@ -9,6 +9,7 @@ const staticState = {
             placeId: 'morlock',
             placeType: 'PORT',
             description: 'Shrouded in hissing steam and sulphurous smogg',
+            foodPrice: 5,
             x: 1,
             y: 1
         },
@@ -17,6 +18,7 @@ const staticState = {
             placeId: 'eloi',
             placeType: 'PORT',
             description: 'See the pretty little flowers.',
+            foodPrice: 5,
             x: 3,
             y: 3
         },
@@ -25,6 +27,7 @@ const staticState = {
             placeId: 'portharbor',
             placeType: 'PORT',
             description: 'A nice little fishing village',
+            foodPrice: 5,
             x: 2,
             y: 5
         }

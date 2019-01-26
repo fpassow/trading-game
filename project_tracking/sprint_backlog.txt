@@ -17,7 +17,7 @@ Thurs Jan 17 - Sat Jan 26
 
 --- 1 See food stores on my ship
 
-1 See current port's price for food stores
+--- 1 See current port's price for food stores
 
 --- 1 See my current crew count
 
