@@ -2,6 +2,7 @@ import state0 from './state0'
 import * as stateUtils from './stateUtils'
 
 function rootReducer(state = state0, action) {
+    console.log(action)
     switch (action.type) {
 
   	    case 'SHOW_WELCOME_PAGE':
@@ -22,6 +23,26 @@ function rootReducer(state = state0, action) {
                 place.placeId === newHere.placeId ? newHere : place
             ))
             return newState
+
+        case 'BUY_FOOD': {
+            let newState = {...state}
+            let myShip = stateUtils.getMyShip(state)
+            //Bail out if there's no room for more food
+            if (myShip.food >= myShip.maxFood) {
+                return state
+            }
+            let myShipId = myShip.shipId
+            let newFood = myShip.food + 1
+            newState.cash = state.cash - stateUtils.currentPlaceInfo(state).foodPrice
+            newState.ships = state.ships.map((ship)=>{
+                if (ship.shipId === myShipId) {
+                    return {...ship, food: newFood}
+                } else {
+                    return ship
+                }
+            })
+            return newState
+        }
 
         default:
             return state;

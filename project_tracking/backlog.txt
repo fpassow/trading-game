@@ -1,5 +1,8 @@
 1. Buy food
 
+1. Display something when you try to buy food you don't have room for.
+1. Display something when you try to buy food without a ship (or grey out buy button)
+
 1. Move place stuff to it's own directory
 
 1. See cargos for sale at my location

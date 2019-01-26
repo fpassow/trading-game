@@ -1,18 +1,6 @@
 import staticState from './staticState'
 
-/*Returns an object like:
-    {
-        name
-        placeId
-        placeType
-        description
-        x
-        y
-        shipsForSale: [
-            {shipId, shipType, shipTypeName, shipName: 'Fishy 1'}
-        ]
-    }
-*/
+//Get an object combining static and dynamic info about the current place
 export function currentPlaceInfo(state) {
     let currentPlaceId = state.currentPlaceId || staticState.defaultPlaceId
     let staticPlace = getStaticPlaceById(currentPlaceId)
