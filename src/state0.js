@@ -10,8 +10,8 @@ const placeData = [
 ]
 
 const ships = [
-    {shipId: 'ship1', shipType: 'fishboat', shipName: 'The Flying Flea', crew: 1, fuel: 0},
-    {shipId: 'ship2', shipType: 'fishboat', shipName: 'Fishy 1', crew: 1, fuel: 0}
+    {shipId: 'ship1', shipType: 'fishboat', shipName: 'The Flying Flea', crew: 1, fuel: 0, food: 0},
+    {shipId: 'ship2', shipType: 'fishboat', shipName: 'Fishy 1', crew: 1, fuel: 0, food: 0}
 ]
 
 const state0 = {
