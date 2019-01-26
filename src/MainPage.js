@@ -1,12 +1,13 @@
 import React from 'react'
 import PlacePanel from './PlacePanel'
 import ShipPanel from './ShipPanel'
+import ShiplessPanel from './ShiplessPanel'
 import MapPanel from './MapPanel'
 
-const MainPage = ({showWelcomePage}) => (
+const MainPage = ({showWelcomePage, hasShip}) => (
     <div >
         <PlacePanel />
-        <ShipPanel />
+        {hasShip ? <ShipPanel /> : <ShiplessPanel />}
         <MapPanel />
         <button onClick={showWelcomePage} >Help</button>
     </div>

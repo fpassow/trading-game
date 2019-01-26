@@ -4,17 +4,18 @@ import WelcomePage from './WelcomePage'
 import MainPage from './MainPage'
 import { showWelcomePage } from './actions'
 
-const AppComponent = ({showingWelcomePage, showWelcomePage, hideWelcomePage}) => (
+const AppComponent = ({showingWelcomePage, showWelcomePage, hideWelcomePage, hasShip}) => (
     <div className="App">
         {showingWelcomePage ? <WelcomePage hideWelcomePage={hideWelcomePage} /> :
-                              <MainPage showWelcomePage={showWelcomePage} />
+                              <MainPage showWelcomePage={showWelcomePage} hasShip={hasShip} />
         }
     </div>
 )
 
 
 const mapStateToProps = state => ({
-  showingWelcomePage: state.showingWelcomePage
+  showingWelcomePage: state.showingWelcomePage,
+  hasShip: !!state.myShipId
 })
 
 const mapDispatchToProps = dispatch => ({
