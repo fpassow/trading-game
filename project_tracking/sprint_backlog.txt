@@ -1,25 +1,18 @@
-Second Sprint
-Thurs Jan 17 - Sat Jan 26
-"BEGINNING OF PLAY, WITH MINIMAL UI"
+Third Sprint
+Thurs Sat Jan 26 -- Sat Feb 2
+"Get out'a port"
 
---- 1 See my location ("port")
+1/2. Move place stuff to it's own directory
 
---- 1 See ships for sale at my current port
+1. Buy food
 
----- 1 Buy a ship
+1 See cargos for sale at my location
 
---- 1 See my ship's required crew
+1. Buy cargos
 
---- 1 See fuel supply, and max capacity, of my ship
+1/2. See cargo in my hold
 
-   --- Move ship components to a subdirectory
-   --- Put a heading on the ship panel
+2. See a map with all the locations
 
---- 1 See food stores on my ship
-
---- 1 See current port's price for food stores
-
---- 1 See my current crew count
-
-
+2. See moves I can make
 
