@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Cash from './Cash'
 import Crew from './Crew'
-import * as stateUtils from './stateUtils'
+import * as stateUtils from '../stateUtils'
 
 const ShipPanelComponent = ({cash, myShip}) => (
     <div >

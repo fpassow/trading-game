@@ -1,7 +1,7 @@
 import React from 'react'
 import PlacePanel from './PlacePanel'
-import ShipPanel from './ShipPanel'
-import ShiplessPanel from './ShiplessPanel'
+import ShipPanel from './ship/ShipPanel'
+import ShiplessPanel from './ship/ShiplessPanel'
 import MapPanel from './MapPanel'
 
 const MainPage = ({showWelcomePage, hasShip}) => (

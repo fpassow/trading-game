@@ -10,7 +10,9 @@ Thurs Jan 17 - Sat Jan 26
 
 --- 1 See my ship's required crew
 
-1 See fuel supply, and max capacity, of my ship
+- 1 See fuel supply, and max capacity, of my ship
+
+   - Move ship components to a subdirectory
 
 1 See food stores on my ship
 
