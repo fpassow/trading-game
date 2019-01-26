@@ -32,8 +32,8 @@ const staticState = {
     defaultPlaceId: 'portharbor',
 
     shipInfoByType: {
-        fishboat: {shipType: 'fishboat', shipTypeName: 'fishboat', basePrice: 500},
-        longboat: {shipType: 'longboat', shipTypeName: 'longboat', basePrice: 700}
+        fishboat: {shipType: 'fishboat', shipTypeName: 'fishboat', basePrice: 500, crewSize:1, maxFuel: 0, maxFood: 8, speed: 1, fuelPerMove: 0},
+        longboat: {shipType: 'longboat', shipTypeName: 'longboat', basePrice: 700, crewSize:12, maxFuel: 0, maxFood: 36, speed: 3, fuelPerMove: 0}
     }
 }
 

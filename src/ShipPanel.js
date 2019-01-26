@@ -1,17 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Cash from './Cash'
+import Crew from './Crew'
+import * as stateUtils from './stateUtils'
 
-const ShipPanelComponent = ({cash}) => (
+const ShipPanelComponent = ({cash, myShip}) => (
     <div >
-      My ship
+        {myShip ? <Crew myShip={myShip} /> : ''}
         <Cash />
     </div>
 )
 
-
 const mapStateToProps = state => ({
-  cash: state.cash
+  cash: state.cash,
+  myShip: stateUtils.getMyShip(state)
 })
 
 export default connect(

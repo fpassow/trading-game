@@ -10,8 +10,8 @@ const placeData = [
 ]
 
 const ships = [
-    {shipId: 'ship1', shipType: 'fishboat', shipName: 'The Flying Flea'},
-    {shipId: 'ship2', shipType: 'fishboat', shipName: 'Fishy 1'}
+    {shipId: 'ship1', shipType: 'fishboat', shipName: 'The Flying Flea', crew: 1},
+    {shipId: 'ship2', shipType: 'fishboat', shipName: 'Fishy 1', crew: 1}
 ]
 
 const state0 = {
@@ -20,7 +20,8 @@ const state0 = {
     currentPlaceId: 'portharbor',
     placeData: placeData,
     ships: ships,
-    myShipId: null
+    myShipId: null,
+    
 }
 
 export default state0

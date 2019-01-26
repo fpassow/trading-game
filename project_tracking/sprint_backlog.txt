@@ -6,10 +6,9 @@ Thurs Jan 17 - Sat Jan 26
 
 --- 1 See ships for sale at my current port
 
-- 1 Buy a ship
->>>>>>>NEXT STEP IS TO WIRE THE ACTION INTO THE UI<<<<<<<<<<<<<<
+---- 1 Buy a ship
 
-1 See my ship's required crew
+- 1 See my ship's required crew
 
 1 See fuel supply, and max capacity, of my ship
 
