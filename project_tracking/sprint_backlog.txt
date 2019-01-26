@@ -12,15 +12,15 @@ Thurs Jan 17 - Sat Jan 26
 
 - 1 See fuel supply, and max capacity, of my ship
 
-   - Move ship components to a subdirectory
+   --- Move ship components to a subdirectory
+   --- Put a heading on the ship panel
 
 1 See food stores on my ship
 
-1 Buy fuel
-
 1 See current port's price for food stores
 
-1 See my current crew count
+--- 1 See my current crew count
 
 1 Hire crew
+
 

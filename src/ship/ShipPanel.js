@@ -6,7 +6,8 @@ import * as stateUtils from '../stateUtils'
 
 const ShipPanelComponent = ({cash, myShip}) => (
     <div >
-        {myShip ? <Crew myShip={myShip} /> : ''}
+        <h3>The {myShip.shipTypeName} &nbsp;<em>{myShip.shipName}</em></h3>
+        <Crew myShip={myShip} />
         <Cash />
     </div>
 )
