@@ -2,12 +2,14 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Cash from './Cash'
 import Crew from './Crew'
+import Fuel from './Fuel'
 import * as stateUtils from '../stateUtils'
 
 const ShipPanelComponent = ({cash, myShip}) => (
     <div >
         <h3>The {myShip.shipTypeName} &nbsp;<em>{myShip.shipName}</em></h3>
         <Crew myShip={myShip} />
+        <Fuel myShip={myShip} />
         <Cash />
     </div>
 )
