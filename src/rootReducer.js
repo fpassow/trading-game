@@ -44,6 +44,22 @@ function rootReducer(state = state0, action) {
             return newState
         }
 
+        case 'BUY_CARGO': //action.cargoId
+            //Get the cargo object
+            let here = currentPlaceInfo(state)
+            let cargoArr = here.cargoForSale.filter((cargo)=>(cargo.cargoId === action.cargoId))
+            if (!cargoArr) {
+                //bail out of cargo doesn't exist
+                return state
+            }
+            let cargo = cargoArr[0]
+            //remove from place's cargoForSale array
+            let newCargoForSale = here.cargoForSale.filter((cargo)=>(cargo.cargoId !== action.cargoId))
+            //add to ship's cargo array
+            //deduct from cash
+            //Build new state object
+
+
         default:
             return state;
     }

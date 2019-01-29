@@ -23,6 +23,10 @@
 
 1 Buy fuel
 
+1. System clock (100 ticks/day)
+
+1. Cargo suppliers run off system clock
+
 1 Buy a ship with a trade-in
 
 1 See travel time and fuel required to reach any other port

@@ -5,13 +5,18 @@
 const placeData = [
     {
         placeId: 'portharbor',
-        shipsForSale: ['ship1', 'ship2']
+        shipsForSale: ['ship1', 'ship2'],
+        cargosForSale: [
+            {cargoId:'cargo1', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', cargoPrice: 50},
+            {cargoId:'cargo2', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', cargoPrice: 50},
+            {cargoId:'cargo3', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', cargoPrice: 50}
+        ]
     }
 ]
 
 const ships = [
-    {shipId: 'ship1', shipType: 'fishboat', shipName: 'The Flying Flea', crew: 1, fuel: 0, food: 0},
-    {shipId: 'ship2', shipType: 'fishboat', shipName: 'Fishy 1', crew: 1, fuel: 0, food: 0}
+    {shipId: 'ship1', shipType: 'fishboat', shipName: 'The Flying Flea', crew: 1, fuel: 0, food: 0, cargo: []},
+    {shipId: 'ship2', shipType: 'fishboat', shipName: 'Fishy 1', crew: 1, fuel: 0, food: 0, cargo: []}
 ]
 
 const state0 = {
