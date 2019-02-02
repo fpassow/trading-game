@@ -54,6 +54,10 @@ export function getCargoInPort(placeId, state) {
     return state.cargos.filter((cargo)=>(!cargo.isLoaded && cargo.placeId === placeId))
 }
 
+export function getCargoForSaleHere(state) {
+    return getCargoInPort(state.currentPlaceId, state)
+}
+
 export function getCargoOnBoard(shipId, state) {
     return state.cargos.filter((cargo)=>(cargo.isLoaded && cargo.shipId === shipId))
 }

@@ -19,6 +19,7 @@ function rootReducer(state = state0, action) {
                 return state
             }
             ship.isForSale = false
+            ship.crew = 1
             let newState = stateUtils.replaceShip(ship, state)
             newState.myShipId = ship.shipId
             newState.cash = newCash
@@ -35,18 +36,25 @@ function rootReducer(state = state0, action) {
                 return state
             }
             myShip.food++
-            newSate = stateUtils.replaceShip(myShip, state)
+            let newState = stateUtils.replaceShip(myShip, state)
             newState.cash = newCash
             return newState
         }
 
-        case 'BUY_CARGO': //action.cargoId
+        case 'BUY_CARGO': {
             let cargo = stateUtils.getCargoById(action.cargoId, state)
+            let newCash = state.cash - cargo.cargoPrice
+            if (newCash <= 0) {
+                return state
+            }
             cargo.isForSale = false
             cargo.isLoaded = true
             cargo.placeId = null
             cargo.shipId = stateUtils.getMyShip(state).shipId
-            return stateUtils.replaceCargo(cargo, state)
+            let newState = stateUtils.replaceCargo(cargo, state)
+            newState.cash = newCash
+            return newState
+        }
             
         default:
             return state;

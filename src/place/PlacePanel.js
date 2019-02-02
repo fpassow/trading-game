@@ -3,28 +3,31 @@ import { connect } from 'react-redux'
 import ShipsForSale from './ShipsForSale'
 import CargosForSale from './CargosForSale'
 import Chandler from './Chandler'
-import { currentPlaceInfo } from '../stateUtils'
+import { getCurrentPlace, getShipsForSaleHere, getCargoForSaleHere } from '../stateUtils'
 import { buyShip, buyFood, buyCargo } from '../actions'
 
-const PlacePanelComponent = ({place, cash, buyShip, buyFood}) => (
+const PlacePanelComponent = ({place, cash, shipsForSale, cargosForSale, hasShip, buyShip, buyFood, buyCargo}) => (
     <div >
         <h2>{place.name}</h2>
         <h3>{place.description}</h3>
-        <ShipsForSale shipsForSale={place.shipsForSale} cash={cash} buyShip={buyShip} />
-        <CargosForSale cargosForSale={place} cash={cash} buyCargo={buyCargo} />
-        <Chandler place={place} buyFood={buyFood} />
+        <ShipsForSale shipsForSale={shipsForSale} cash={cash} buyShip={buyShip} />
+        <CargosForSale cargosForSale={cargosForSale} cash={cash} buyCargo={buyCargo} />
+        <Chandler hasShip={hasShip} place={place} buyFood={buyFood} />
     </div>
 )
 
 const mapStateToProps = state => ({
-  place: currentPlaceInfo(state),
-  cash: state.cash
+  place: getCurrentPlace(state),
+  shipsForSale: getShipsForSaleHere(state),
+  cargosForSale: getCargoForSaleHere(state),
+  cash: state.cash,
+  hasShip: !!state.myShipId
 })
 
 const mapDispatchToProps = dispatch => ({
   buyShip: (shipId) => { dispatch(buyShip(shipId)) },
   buyFood: () => { dispatch(buyFood()) },
-  buuCargo: (cargoId) => { dispatch(buyCargo(cargoId, placeId)) }
+  buyCargo: (cargoId) => {dispatch(buyCargo(cargoId)) }
 })
 
 export default connect(

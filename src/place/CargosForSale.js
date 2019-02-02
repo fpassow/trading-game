@@ -1,17 +1,17 @@
 import React from 'react'
 
-export default function CargosForSaleComponent({place, cash, buyCargo}) {
+export default function CargosForSaleComponent({cargosForSale, cash, buyCargo}) {
     return (
         <div >
             <h3>Cargos for Sale</h3>
-            {place.cargosForSale.map((cargo)=>(
+            {cargosForSale.map((cargo)=>(
                 <CargoForSale
                     key={cargo.cargoId} 
                     buyCargo={buyCargo} 
                     cargo={cargo} 
                     canBuy={cargo.cargoPrice <= cash}
                 />
-            )}
+            ))}
         </div>
     )
 }

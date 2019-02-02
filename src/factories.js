@@ -31,6 +31,7 @@ export function shipyard(placeId, shipType, shipName) {
             newShip.speed = 1
             newShip.fueldPerMove = 0
             newShip.maxCargo = 4
+            newShip.maxFood = 4
             break
         case 'longboat':
             newShip.shipTypeName = 'longboat'
@@ -40,7 +41,10 @@ export function shipyard(placeId, shipType, shipName) {
             newShip.speed = 3
             newShip.fueldPerMove = 0
             newShip.maxCargo = 8
+            newShip.maxFood = 60
             break
+        default:
+            alert('Unknown ship type "'+shipType+'"')
     }
     return newShip
 }
