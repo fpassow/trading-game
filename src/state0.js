@@ -1,32 +1,32 @@
-
-//First we create some objects describing mutable state about the world in general
-//These object will then be added to the final state0 object.
-
-const placeData = [
-    {
-        placeId: 'portharbor',
-        shipsForSale: ['ship1', 'ship2'],
-        cargosForSale: [
-            {cargoId:'cargo1', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', cargoPrice: 50},
-            {cargoId:'cargo2', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', cargoPrice: 50},
-            {cargoId:'cargo3', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', cargoPrice: 50}
-        ]
-    }
-]
-
-const ships = [
-    {shipId: 'ship1', shipType: 'fishboat', shipName: 'The Flying Flea', crew: 1, fuel: 0, food: 0, cargo: []},
-    {shipId: 'ship2', shipType: 'fishboat', shipName: 'Fishy 1', crew: 1, fuel: 0, food: 0, cargo: []}
-]
+import { shipyard } from './factories'
 
 const state0 = {
     showingWelcomePage: true,
     cash: 800,
     currentPlaceId: 'portharbor',
-    placeData: placeData,
-    ships: ships,
+    defaultPlaceId: 'portharbor',
     myShipId: null,
-    
+    ships: [
+        shipyard('portharbor', 'fishboat', 'The Flying Flea'),
+        shipyard('portharbor', 'fishboat', 'Fishy'),
+    ],
+    places: [
+        {
+            name: 'Port Harbor',
+            placeId: 'portharbor',
+            placeType: 'PORT',
+            description: 'A nice little fishing village',
+            foodPrice: 5,
+            x: 2,
+            y: 5
+        }
+    ],
+    cargos: [
+        {isForSale: true, cargoId:'cargo1', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', cargoPrice: 50, isLoaded: false, placeId: 'portharbor', shipId: null},
+        {isForSale: true, cargoId:'cargo2', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', cargoPrice: 50, isLoaded: false, placeId: 'portharbor', shipId: null},
+        {isForSale: true, cargoId:'cargo3', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', cargoPrice: 50, isLoaded: false, placeId: 'portharbor', shipId: null},
+        {isForSale: true, cargoId:'cargo4', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', cargoPrice: 50, isLoaded: false, placeId: 'portharbor', shipId: null}
+    ]
 }
 
 export default state0

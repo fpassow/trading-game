@@ -1,23 +1,11 @@
-import staticState from './staticState'
+//By convention, "get..." functions all return new obejcts, not references to existing state.
+//           And "replace..." functions expect new objects, not references to existing state.
 
-//Get an object combining static and dynamic info about the current place
-export function currentPlaceInfo(state) {
-    let currentPlaceId = state.currentPlaceId || staticState.defaultPlaceId
-    let staticPlace = getStaticPlaceById(currentPlaceId)
-    let dynamicPlace = getDynamicPlaceById(currentPlaceId, state)
-    let shipsWithTypeName = dynamicPlace.shipsForSale.map((shipId)=>{
-        return getShipById(shipId, state)
-    })
-    return {...staticPlace, ...dynamicPlace, shipsForSale: shipsWithTypeName}
-}
 
-//Get info about a ship, combining dynamic and static info
-//Returns {shipId, shipType, shipTypeName shipName}
 export function getShipById(shipId, state) {
     for (let i = 0; i < state.ships.length; i++) {
         if (state.ships[i].shipId === shipId) {
-            let ship = state.ships[i]
-            return {...ship, ...staticState.shipInfoByType[ship.shipType]}
+            return {...state.ships[i]}
         }
     }
     return null
@@ -27,24 +15,51 @@ export function getMyShip(state) {
     return state.myShipId && getShipById(state.myShipId, state)
 }
 
-export function getStaticPlaceById(id) {
-    for (let i = 0; i < staticState.places.length; i++) {
-        if (staticState.places[i].placeId === id) {
-            return staticState.places[i]
+export function getPlaceById(id, state) {
+    for (let i = 0; i < state.places.length; i++) {
+        if (state.places[i].placeId === id) {
+            return {...state.places[i]}
         }
     }
     return null
 }
 
-export function getDynamicPlaceById(id, state) {
-    for (let i = 0; i < state.placeData.length; i++) {
-        if (state.placeData[i].placeId === id) {
-            return state.placeData[i]
+export function getCurrentPlace(state) {
+    return getPlaceById(state.currentPlaceId, state)
+}
+
+export function getShipsForSale(placeId, state) {
+    return state.ships.filter((ship)=>(ship.placeId === placeId && ship.isForSale))
+}
+
+export function getShipsForSaleHere(state) {
+    return getShipsForSale(state.currentPlaceId, state)
+}
+
+export function replaceShip(ship, state) {
+    let newShips = state.ships.map((s)=>( (s.shipId === ship.shipId) ? ship : s) )
+    return { ...state, ships: newShips}
+}
+
+export function getCargoById(id, state) {
+    for (let i = 0; i < state.cargos.length; i++) {
+        if (state.cargos[i].cargoId === id) {
+            return {...state.cargos[i]}
         }
     }
     return null
 }
 
-export function getCurrentDynamicPlace(state) {
-    return getDynamicPlaceById(state.currentPlaceId, state)
+export function getCargoInPort(placeId, state) {
+    return state.cargos.filter((cargo)=>(!cargo.isLoaded && cargo.placeId === placeId))
 }
+
+export function getCargoOnBoard(shipId, state) {
+    return state.cargos.filter((cargo)=>(cargo.isLoaded && cargo.shipId === shipId))
+}
+
+export function replaceCargo(cargo, state) {
+    let newCargos = state.cargos.map((c)=>( (c.cargoId === cargo.cargoId) ? cargo : c) )
+    return { ...state, cargos: newCargos}
+}
+
