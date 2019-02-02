@@ -1,10 +1,12 @@
 Third Sprint
-Thurs Sat Feb 2 -- Sat Feb 9
+Thurs Sat Jan 26 -- Sat Feb 2
 "Get out'a port"
 
-1. Buy food
+--- 1/2. Move place stuff to it's own directory
 
-   Don't buy if there isn't room
+--- 1. Buy food
+
+    --- Don't buy if there isn't room
 
 1 See cargos for sale at my location
 

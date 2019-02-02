@@ -4,3 +4,8 @@ Jan 26: Was often a bit burned out by the time my lunch time arrived.
 I pushed the end of the sprint to the middle of my Saturday study time. But then finished the sprint backlog.
 Overall, the points see to be pretty accurate.
 
+Feb 2: Redesigned state to be strictly one-level (with arrays), wrote a bunch of stateUtils, 
+and wrote or updated a bunch of tests for all of the above.
+I'm haven't finished multiple "See my..." UI items. But I now have much better utils for getting
+the data which will be used by that kind of UI elements
+
