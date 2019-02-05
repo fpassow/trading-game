@@ -1,15 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import TimeView from './TimeView'
 
-const MapPanelComponent = ({cash}) => (
+const MapPanelComponent = ({ticks, days, ticksToday}) => (
     <div >
+        <TimeView days={days} ticks={ticks} ticksToday={ticksToday} />
         <h2>Map</h2>
     </div>
 )
 
 
 const mapStateToProps = state => ({
-  cash: state.cash
+  days: state.days,
+  ticks: state.ticks,
+  ticksToday: state.ticksToday
 })
 
 export default connect(

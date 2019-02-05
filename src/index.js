@@ -11,6 +11,10 @@ import rootReducer from './rootReducer'
 
 const store = createStore(rootReducer, state0)
 
+//The "system clock" dispatches one TICK per second.
+//This drives everything that isn't driven by UI events.
+setInterval( ()=>{store.dispatch({type:'TICK'})}, 1000)
+
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

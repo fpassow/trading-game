@@ -1,12 +1,22 @@
 import state0 from './state0'
 import * as stateUtils from './stateUtils'
+import tickHandler from './tickHandler'
 
 function rootReducer(state = state0, action) {
-    console.log(action)
+
+    //See actions. Might remove this later.
+    //But never show TICKs. There are too many.
+    if (action.type !== 'TICK') {
+        console.log(action)
+    }
+    
     switch (action.type) {
 
         //Note: The convention is that get functions in stateUtils return shallow copies, not objects from state
         //  and replace functions expect new objects that can be safely returned from the reducer
+
+        case 'TICK':
+            return tickHandler(state)
 
   	    case 'SHOW_WELCOME_PAGE':
             return {...state, showingWelcomePage: action.showing}

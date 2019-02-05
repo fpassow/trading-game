@@ -2,6 +2,9 @@ import { shipyard } from './factories'
 
 const state0 = {
     showingWelcomePage: true,
+    ticks: 0,
+    days: 0,
+    ticksToday: 0,
     cash: 800,
     currentPlaceId: 'portharbor',
     defaultPlaceId: 'portharbor',
