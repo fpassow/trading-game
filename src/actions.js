@@ -1,5 +1,9 @@
 //Redux action creators
 
+export function tick() {
+	return {type: 'TICK'}
+}
+
 export function showWelcomePage(showing) {
 	return {type: 'SHOW_WELCOME_PAGE', showing: showing}
 }
