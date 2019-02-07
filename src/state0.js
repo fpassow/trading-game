@@ -2,6 +2,7 @@ import { shipyard } from './factories'
 
 const state0 = {
     showingWelcomePage: true,
+    gameOver: false,
     ticks: 0,
     days: 0,
     ticksToday: 0,
@@ -19,6 +20,7 @@ const state0 = {
             placeId: 'portharbor',
             placeType: 'PORT',
             description: 'A nice little fishing village',
+            isFoodForSale: true,
             foodPrice: 5,
             x: 2,
             y: 5

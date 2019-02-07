@@ -15,11 +15,13 @@ Thurs Sat Feb 2 -- Sat Feb 9
 
 --- 1. Buy cargos
 
-1. System clock (100 ticks/day)
+--- 1. System clock (100 ticks/day)
 
-1 Food stores go away over time
+- 1 Food stores go away over time
 
-    Buy food automatically if in port, and show a brief popup (or ?)
+    Buy food automatically if in port, 
+    
+    and show a brief popup (or ?)
 
 1 Crew starves and dies
 
