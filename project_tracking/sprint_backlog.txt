@@ -2,7 +2,7 @@ Third Sprint
 Thurs Sat Feb 9 -- Sat Feb 16
 "Set sail: This week we travel"
 
-- .5 Don't let player buy cargo without a ship
+--- .5 Don't let player buy cargo without a ship
 
 1. show a brief popup (or ?) when food was bought
 

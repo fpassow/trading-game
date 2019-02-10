@@ -55,7 +55,7 @@ function eatFood(s) {
                         s = stateUtils.replaceShip(myShip)
                     } else {
                         floatNote("You starve.")
-                        s = {...s, gameOver: true}
+                        s = {...s, gameOver: true, gameOverMessage: 'You starved.'}
                     }
                 }
             }
