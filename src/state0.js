@@ -1,52 +1,27 @@
+import { shipyard } from './factories'
+import places from './state0_places'
 
 const state0 = {
     showingWelcomePage: true,
-    cash: 500
-}
-/*
-	tabbedStuff1: {
-        selectedTab: 0,
-        tabs: [
-            {tabId:0, tabLabel:"Tab Zero", tabContent:"This is tab zero's content."},
-            {tabId:1, tabLabel:"Tab One", tabContent:"This is tab one's content."},
-            {tabId:2, tabLabel:"Tab Two", tabContent:"This is tab two's content."}
-        ]
-    },
-    tabbedStuff2: {
-        selectedTab: 0,
-        tabs: [
-            {tabId:0, tabLabel:"Tab 2 Zero", tabContent:"This is tab 2/zero's content."},
-            {tabId:1, tabLabel:"Tab 2 One", tabContent:"This is tab 2/one's content."},
-            {tabId:2, tabLabel:"Tab 2 Two", tabContent:"This is tab 2/two's content."}
-        ]
-    },
-
-
-    ports: [
-        {
-            name: 'Morlock',
-            portId: 'morlock'
-        {
-            name: 'Eloi',
-            producerId: 'eloi'
-        }
+    gameOver: false,
+    ticks: 0,
+    days: 0,
+    ticksToday: 0,
+    cash: 800,
+    currentPlaceId: 'portharbor',
+    defaultPlaceId: 'portharbor',
+    myShipId: null,
+    ships: [
+        shipyard('portharbor', 'fishboat', 'The Flying Flea'),
+        shipyard('portharbor', 'fishboat', 'Fishy'),
     ],
-    routes: [
-        {
-            routeId:'route1',
-            routeLabel: 'The Hard Way',
-            startPortId: 'morlock',
-            endPortId: 'eloi',
-            stages: [{x:1, y:1}, {x:2, y:2}, {x:3, y:3})],
-            shipType: 'boat'
-        }
-    ],
-    producers: [
-        {
-            producerId: 'morlock_iron_producer',
-            ....
-        }
+    places: places,
+    cargos: [
+        {isForSale: true, cargoId:'cargo1', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', cargoPrice: 50, isLoaded: false, placeId: 'portharbor', shipId: null},
+        {isForSale: true, cargoId:'cargo2', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', cargoPrice: 50, isLoaded: false, placeId: 'portharbor', shipId: null},
+        {isForSale: true, cargoId:'cargo3', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', cargoPrice: 50, isLoaded: false, placeId: 'portharbor', shipId: null},
+        {isForSale: true, cargoId:'cargo4', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', cargoPrice: 50, isLoaded: false, placeId: 'portharbor', shipId: null}
     ]
 }
-*/
+
 export default state0

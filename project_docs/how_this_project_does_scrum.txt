@@ -12,10 +12,10 @@ Backlog items are a single line:
 Sub-tasks are indented lines under an item. (Or they are split into new items.)
 
 A point corresponds to the amount of coding which I think you could be done in 5 to 15 minutes.
-In reality, all the work associated with a point is expected to take about an hour. (i.e. 1 weekday)
+In reality, all the work associated with a point is expected to take about an hour. (i.e. 1 weekday lunch)
 
 Since this is just a game, priority doesn't have its usual meaning. However, all the stories needed
-to do something meaningful should be added to a sprint together. And items still needed to make a
+to do something meaningful should be added to a sprint together. And remaining items needed to make a
 completed item useful have top priority in the next sprint.
 
 Notes and minor planning can be added under an item, on lines prefixed with "//".
@@ -54,21 +54,8 @@ Update to "---", for done, with tests, all green, and manual testing good too.
 
 STANDUPS:
 
-Standups are 5 minutes, max, at the END of each weekday lunch break or weekend programming time.
-
-Detailed discussions (i.e. me thinking about technical details) are NOT allowed.
-
-Update project_tracking/standup_log.txt with one or more COMP and PLAN lines.
-    COMP: What did I complete today that contributed to the team meeting our sprint goal?
-    PLAN: What do I plan to complete tomorrow to contribute to the team meeting our sprint goal?
-   [PED: Do I see any impediment that could prevent me or the team from meeting our sprint goal?]
-
-If there's a PED, I will likely turn it into a backlog item, because I use backlog items for everything,
- and maybe remove a backlog item to balance the points.
-
-(I'm putting the standup at the end of the "day" because, with "days" only one hour long, it has
-to be the start or the end. And my background processor is more productive if I know exactly what I'm
-going to start working on at the beginning of the next day.)
+I had a process for updating a log with what I would have said in a standup. 
+But it didn't add anything beyond what I got from looking at the sprint backlog file.
 
 
 COMPLETING A SPRINT EARLY:

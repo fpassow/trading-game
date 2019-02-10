@@ -1,40 +1,33 @@
+1. Buy food
 
+1. Display something when you try to buy food you don't have room for.
+1. Display something when you try to buy food without a ship (or grey out buy button)
 
-1 See my location ("port")
+1. Move place stuff to it's own directory
 
-1. Define ship types, with descriptions and stats
+1. See cargos for sale at my location
 
-1. Learn to create svg
+1. New cargos appear in a port
 
-1. v0 ship images (svg?)
-
-2 See ships for sale at my current port
-
-2 See cargos for sale at my location
+1. Buy cargos
 
 2 See market prices for cargo types at any other port
-
-2 Buy a ship
-
-1 See food stores on my ship
 
 1 Food stores go away over time
 
 1 Crew starves and dies
 
-1 See fuel supply, and max capacity, of my ship
-
-1 See current port's price for food stores
-
-1 See my current crew count
-
 1 Hire crew
 
 1 Fire crew
 
-1 See my ships required crew
-
 1 Buy fuel
+
+1. System clock (100 ticks/day)
+
+1. Cargo suppliers run off system clock
+
+1 Buy a ship with a trade-in
 
 1 See travel time and fuel required to reach any other port
 
@@ -42,5 +35,10 @@
 
 1 Start a voyage to another port
 
+1. Learn to create svg
+
+1. v0 ship images (svg?)
+
 See previous game state when returning on same computer and browser
 //Doesn't require much data. Could fit in a cookie. But there's a newer thing, too.
+

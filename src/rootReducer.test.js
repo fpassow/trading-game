@@ -1,11 +1,13 @@
 import rootReducer from './rootReducer'
 import state00 from './state0'
+import * as actions from './actions'
+import * as stateUtils from './stateUtils'
 
+//Util to create a new state0 object, not === to any other.
 function state0() {
     return JSON.parse(JSON.stringify(state00))
 }
 
-console.log("state0="+JSON.stringify(state0()))
 
 test('Nonexistent action type', () => {
     let s0 = state0()
@@ -17,12 +19,22 @@ test('Nonexistent action type', () => {
 
 test('showWelcomePage off and on', () => {
     let s0 = state0()
-    let offAction = {type:'SHOW_WELCOME_PAGE', showing: false}
-    let onAction = {type:'SHOW_WELCOME_PAGE', showing: true}
+    let offAction = actions.showWelcomePage(false)//{type:'SHOW_WELCOME_PAGE', showing: false}
+    let onAction = actions.showWelcomePage(true)//{type:'SHOW_WELCOME_PAGE', showing: true}
     let state0Str = JSON.stringify(s0)
     let s1 = rootReducer(s0, offAction)
     expect(s1.showingWelcomePage).toBe(false)
     let s2 = rootReducer(s1, onAction)
     expect(s2.showingWelcomePage).toBe(true)
+});
+
+test('Buy a ship', () => {
+    let s0 = state0()
+    expect(actions.buyShip('testid')).toEqual({type: 'BUY_SHIP', shipId: 'testid'})
+    let s1 = rootReducer(s0, actions.buyShip('ship_fishboat_111'))
+    expect(s1.myShipId).toBe('ship_fishboat_111')
+    expect(s1.cash).toBe(300)
+    expect(stateUtils.getMyShip(s1).shipId).toBe('ship_fishboat_111')
+    expect(stateUtils.getShipsForSale('portharbor', s1).indexOf('ship_fishboat_111')).toBe(-1)
 });
 

@@ -1,0 +1,25 @@
+Second Sprint
+Thurs Jan 17 - Sat Jan 26
+"BEGINNING OF PLAY, WITH MINIMAL UI"
+
+--- 1 See my location ("port")
+
+--- 1 See ships for sale at my current port
+
+---- 1 Buy a ship
+
+--- 1 See my ship's required crew
+
+--- 1 See fuel supply, and max capacity, of my ship
+
+   --- Move ship components to a subdirectory
+   --- Put a heading on the ship panel
+
+--- 1 See food stores on my ship
+
+--- 1 See current port's price for food stores
+
+--- 1 See my current crew count
+
+
+

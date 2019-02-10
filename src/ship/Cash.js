@@ -7,7 +7,6 @@ const CashComponent = ({cash}) => (
     </div>
 )
 
-
 const mapStateToProps = state => ({
   cash: state.cash
 })

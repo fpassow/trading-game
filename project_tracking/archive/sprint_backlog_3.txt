@@ -1,0 +1,20 @@
+Third Sprint
+Thurs Sat Jan 26 -- Sat Feb 2
+"Get out'a port"
+
+--- 1/2. Move place stuff to it's own directory
+
+--- 1. Buy food
+
+    --- Don't buy if there isn't room
+
+1 See cargos for sale at my location
+
+1. Buy cargos
+
+1/2. See cargo in my hold
+
+2. See a map with all the locations
+
+2. See moves I can make
+
