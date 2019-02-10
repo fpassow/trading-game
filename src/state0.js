@@ -1,4 +1,5 @@
 import { shipyard } from './factories'
+import places from './state0_places'
 
 const state0 = {
     showingWelcomePage: true,
@@ -14,18 +15,7 @@ const state0 = {
         shipyard('portharbor', 'fishboat', 'The Flying Flea'),
         shipyard('portharbor', 'fishboat', 'Fishy'),
     ],
-    places: [
-        {
-            name: 'Port Harbor',
-            placeId: 'portharbor',
-            placeType: 'PORT',
-            description: 'A nice little fishing village',
-            isFoodForSale: true,
-            foodPrice: 5,
-            x: 2,
-            y: 5
-        }
-    ],
+    places: places,
     cargos: [
         {isForSale: true, cargoId:'cargo1', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', cargoPrice: 50, isLoaded: false, placeId: 'portharbor', shipId: null},
         {isForSale: true, cargoId:'cargo2', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', cargoPrice: 50, isLoaded: false, placeId: 'portharbor', shipId: null},
