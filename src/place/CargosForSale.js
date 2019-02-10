@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function CargosForSaleComponent({cargosForSale, cash, buyCargo}) {
+export default function CargosForSaleComponent({hasShip, cargosForSale, cash, buyCargo}) {
     return (
         <div >
             <h3>Cargos for Sale</h3>
@@ -9,7 +9,7 @@ export default function CargosForSaleComponent({cargosForSale, cash, buyCargo}) 
                     key={cargo.cargoId} 
                     buyCargo={buyCargo} 
                     cargo={cargo} 
-                    canBuy={cargo.cargoPrice <= cash}
+                    canBuy={hasShip && (cargo.cargoPrice <= cash)}
                 />
             ))}
         </div>

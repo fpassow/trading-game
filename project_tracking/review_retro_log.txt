@@ -9,3 +9,9 @@ and wrote or updated a bunch of tests for all of the above.
 I'm haven't finished multiple "See my..." UI items. But I now have much better utils for getting
 the data which will be used by that kind of UI elements
 
+Feb 9: Completed enough in-port stuff to be ready to set sail. Also made some map.
+Things flowed well using the redesigned state and stateUtils. And I got a system clock
+going and used it to drive food usage. Next sprint has a new feature branch "set sail".
+
+
+

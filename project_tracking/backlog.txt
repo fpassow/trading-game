@@ -1,29 +1,22 @@
-1. Buy food
+2. Move
 
 1. Display something when you try to buy food you don't have room for.
+
 1. Display something when you try to buy food without a ship (or grey out buy button)
 
-1. Move place stuff to it's own directory
+2 See market prices for my cargos
 
-1. See cargos for sale at my location
+1. Sell cargos
 
 1. New cargos appear in a port
 
-1. Buy cargos
-
-2 See market prices for cargo types at any other port
-
-1 Food stores go away over time
-
-1 Crew starves and dies
+1. Sell cargo
 
 1 Hire crew
 
 1 Fire crew
 
 1 Buy fuel
-
-1. System clock (100 ticks/day)
 
 1. Cargo suppliers run off system clock
 

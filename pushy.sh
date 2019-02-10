@@ -1,4 +1,4 @@
-echo "Pushing branch get-a-ship..."
-git push origin get-a-ship
+echo "Pushing branch set-sail..."
+git push origin set-sail 
 
 

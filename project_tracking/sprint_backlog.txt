@@ -1,35 +1,17 @@
 Third Sprint
-Thurs Sat Feb 2 -- Sat Feb 9
-"Get out'a port"
+Thurs Sat Feb 9 -- Sat Feb 16
+"Set sail: This week we travel"
 
---- 1. Buy food
-   --- Don't buy if there isn't room
+- .5 Don't let player buy cargo without a ship
 
---- 1 See cargos for sale at my location
+1. show a brief popup (or ?) when food was bought
 
---- .5 Gray-out [buy food] if you don't have a ship
+1. Put up a "game over screen" when you starve. Display "gameOverMessage"
 
---- 1. Automatically add the player as crew when buying a ship
+1. Display something when you try to buy food you don't have room for.
 
---- 1/2. See cargo in my hold
+1. Display something when you try to buy food without a ship (or grey out buy button)
 
---- 1. Buy cargos
+2. Move
 
---- 1. System clock (100 ticks/day)
-
---- 1 Food stores go away over time
-
-  ---  Buy food automatically if in port, 
-    
-    and show a brief popup (or ?)
-
-- 1 Crew starves and dies
-
-- 2. See a map with all the locations
-    
-    - Add location data to state0
-
-    Display places as text in a grid
-
-2. See moves I can make
 
