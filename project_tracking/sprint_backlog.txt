@@ -12,7 +12,7 @@ Thurs Sat Feb 9 -- Sat Feb 16
 
 2. Move
    --- See your ship on a square
-    Neighbors are highlighted
+    --- Neighbors are highlighted
     Click a neighbor to move there
     Old and new squares have a different highlight during the move
 

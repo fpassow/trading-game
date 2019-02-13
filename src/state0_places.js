@@ -75,7 +75,7 @@ const places = [
         foodPrice: 5,
         x: 2,
         y: 5,
-        neighbors: ['wet_1_5']
+        neighbors: ['wet_1_5', 'wet_2_6']
     },
     {
         name: 'Ocean', placeId: 'wet_2_6', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
