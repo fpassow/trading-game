@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import TimeView from './TimeView'
 import * as stateUtils from './stateUtils'
+import * as actions from './actions'
 
 const mapStyle = {
     display: 'grid',
@@ -9,10 +10,18 @@ const mapStyle = {
     gridTemplateRows: 'repeat(6, 200px)'
 }
 
-const Square = ({p, myShip, isDestination}) => {
+const Square = ({p, myShip, isDestination, moveShip}) => {
+    const moveHandler = () => {
+        if (isDestination) {
+            moveShip(myShip.shipId, p.placeId)
+        }
+    }
     return (
-        <div style={{gridColumn: p.x, gridRow: p.y, background: isDestination ? 'yellow':'inherit'   }} key={p.placeId}>
-            {p.placeId} {(myShip && (myShip.placeId === p.placeId)) ? <span>{myShip.shipName}</span> : <span> </span>} 
+        <div style={{gridColumn: p.x, gridRow: p.y, background: isDestination ? 'yellow':'inherit'   }} 
+             key={p.placeId}
+             onClick={moveHandler}
+        >
+            {p.placeId} {(myShip && (myShip.placeId === p.placeId)) ? <span>{'<<<'+myShip.shipName+'>>>'}</span> : <span> </span>} 
         </div>
     )
 }
@@ -21,7 +30,7 @@ function _isDestination(destinations, placeId) {
     return destinations.indexOf(placeId) > -1
 }
 
-const MapPanelComponent = ({ticks, days, ticksToday, places, myShip, myPlace, myShipId}) => {
+const MapPanelComponent = ({ticks, days, ticksToday, places, myShip, myPlace, moveShip}) => {
     let destinations = (myShip && myPlace) ? myPlace.neighbors : []
     return (
         <div>
@@ -30,7 +39,8 @@ const MapPanelComponent = ({ticks, days, ticksToday, places, myShip, myPlace, my
                 {places.map((p)=>(<Square key={p.placeId} 
                                           p={p} 
                                           myShip={myShip} 
-                                          isDestination={_isDestination(destinations, p.placeId)} 
+                                          isDestination={_isDestination(destinations, p.placeId)}
+                                          moveShip={moveShip} 
                                   />
                 ))}
             </div>
@@ -48,6 +58,11 @@ const mapStateToProps = state => ({
   myPlace: stateUtils.getCurrentPlace(state)
 })
 
+const mapDispatchToProps = dispatch => ({
+    moveShip: (shipId, placeId) => { dispatch(actions.moveShip(shipId, placeId)) }
+  })
+
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(MapPanelComponent)

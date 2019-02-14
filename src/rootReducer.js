@@ -65,6 +65,19 @@ function rootReducer(state = state0, action) {
             newState.cash = newCash
             return newState
         }
+
+        case 'MOVE_SHIP': {
+            //action.shipId, action.placeId
+            let newState = {...state}
+            //If player is aboard, the player also moves.
+            if (newState.myShipId === action.shipId) {
+                newState.currentPlaceId = action.placeId
+            }
+            let newShip = stateUtils.getShipById(action.shipId, newState)
+            newShip.placeId = action.placeId
+            let newerState = stateUtils.replaceShip(newShip, newState)
+            return newerState
+        }
             
         default:
             return state;
