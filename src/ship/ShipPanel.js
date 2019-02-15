@@ -6,14 +6,15 @@ import Fuel from './Fuel'
 import Food from './Food'
 import Hold from './Hold'
 import * as stateUtils from '../stateUtils'
+import * as actions from '../actions'
 
-const ShipPanelComponent = ({cash, myShip, cargo, localPrices}) => (
+const ShipPanelComponent = ({cash, myShip, cargo, localPrices, sellCargo}) => (
     <div >
         <h3>The {myShip.shipTypeName} &nbsp;<em>{myShip.shipName}</em></h3>
         <Crew myShip={myShip} />
         <Food myShip={myShip} />
         <Fuel myShip={myShip} />
-        <Hold cargo ={cargo} localPrices={localPrices} />
+        <Hold cargo ={cargo} localPrices={localPrices} sellCargo={sellCargo} />
         <Cash />
     </div>
 )
@@ -25,6 +26,11 @@ const mapStateToProps = state => ({
   localPrices: stateUtils.getCurrentPlace(state).prices
 })
 
+const mapDispatchToProps = dispatch => ({
+  sellCargo: (cargoId) => { dispatch(actions.sellCargo(cargoId)) }
+})
+
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(ShipPanelComponent)

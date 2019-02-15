@@ -24,3 +24,7 @@ export function buyFood() {
 export function moveShip(shipId, placeId) {
 	return {type: 'MOVE_SHIP', shipId:shipId, placeId: placeId}
 }
+
+export function sellCargo(cargoId) {
+	return {type: 'SELL_CARGO', cargoId: cargoId}
+}

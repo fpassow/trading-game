@@ -78,6 +78,14 @@ function rootReducer(state = state0, action) {
             let newerState = stateUtils.replaceShip(newShip, newState)
             return newerState
         }
+
+        case 'SELL_CARGO': {
+            let cargo = stateUtils.getCargoById(action.cargoId, state)
+            let newCash = state.cash + stateUtils.getCurrentPlace(state).prices[cargo.cargoType]
+            let newState = stateUtils.removeCargo(cargo, state)
+            newState.cash = newCash
+            return newState
+        }
             
         default:
             return state;

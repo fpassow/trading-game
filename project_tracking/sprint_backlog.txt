@@ -22,7 +22,7 @@ Thurs Sat Feb 9 -- Sat Feb 16
    --- Modify cargo display to use ^^
    --- Display local prices on *your* cargos
 
-1. Click cargo to sell
+- 1. Click cargo to sell
 
 1. show a brief popup (or ?) when food was bought
 
