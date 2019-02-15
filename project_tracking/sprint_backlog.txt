@@ -10,19 +10,25 @@ Thurs Sat Feb 9 -- Sat Feb 16
 
 --  1. Don't display port stuff when it isn't there
 
-2. Move
+--- 2. Move
    --- See your ship on a square
     --- Neighbors are highlighted
-    Click a neighbor to move there
-    Old and new squares have a different highlight during the move
+    --- Click a neighbor to move there
+    
 
-1. Display local prices on cargos
+- 1. Display local prices on cargos
+   --- Add marketPrices[cargoType] to places
+   --- Remove from cargo objects
+   --- Modify cargo display to use ^^
+   --- Display local prices on *your* cargos
 
 1. Click cargo to sell
 
 1. show a brief popup (or ?) when food was bought
 
 1. Display something when you try to buy food you don't have room for.
+
+Old and new squares have a different highlight during the move
 
 
 

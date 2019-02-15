@@ -11,7 +11,7 @@ const PlacePanelComponent = ({place, cash, shipsForSale, cargosForSale, hasShip,
         <h2>{place.name}</h2>
         <h3>{place.description}</h3>
         <ShipsForSale shipsForSale={shipsForSale} cash={cash} buyShip={buyShip} />
-        <CargosForSale hasShip={hasShip} cargosForSale={cargosForSale} cash={cash} buyCargo={buyCargo} />
+        <CargosForSale prices={place.prices} hasShip={hasShip} cargosForSale={cargosForSale} cash={cash} buyCargo={buyCargo} />
         <Chandler hasShip={hasShip} place={place} buyFood={buyFood} />
     </div>
 )
