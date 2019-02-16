@@ -9,6 +9,16 @@ export function resetNextId() {
     ___nextId = 111
 }
 
+const baseCargo = {isForSale: true, isLoaded: false, shipId: null}
+const labelForCargoType = {oliveoil: 'Olive oil'}
+export function cargoFactory(cargoType, placeId) {
+    return {...baseCargo, 
+            cargoLabel: labelForCargoType[cargoType], 
+            cargoId: 'cargo_' + cargoType + '_' + nextId(),
+            placeId: placeId,
+            cargoType: cargoType
+    }
+}
 
 export function shipyard(placeId, shipType, shipName) {
     let newShip = {

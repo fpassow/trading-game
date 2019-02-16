@@ -2,9 +2,9 @@ Sprint
 Sat Feb 16 - Sat Feb 23
 "New cargos appear. Then make this look like a thing!"
 
-New cargos appear
-  .5 Add "producers" to state
-  .5 Run them from the system clock
+--- New cargos appear
+---   .5 Add "producers" to state
+---  .5 Run them from the system clock
 
 .5 Google CSS columns
 .5 Make three panels with grid or columns or something

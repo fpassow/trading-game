@@ -1,4 +1,5 @@
 import * as stateUtils from './stateUtils'
+import * as factories from './factories'
 
 export default function tickHandler(state) {
     //A day is 100 ticks.
@@ -19,9 +20,8 @@ function doTickly(s) {
     return s
 }
 
-function doDaily(s) {
-    let ss = eatFood(s)
-    return ss
+function doDaily(state) {
+    return producersProduce(eatFood(state))
 }
 
 function eatFood(s) {
@@ -62,6 +62,24 @@ function eatFood(s) {
         }
         return s
     }
+}
+
+//state.cargoProducers: [
+//    {placeId: 'portharbor', period: 2, cargoType: 'oliveoil', quantity: 1}
+//cargos: [
+//    {isForSale: true, cargoId:'cargo1', cargoLabel: 'Olive Oil', 
+//       cargoType: 'oliveoil', cargoPrice: 50, isLoaded: false, placeId: 'portharbor', 
+//       shipId: null},
+function producersProduce(oldState) {
+    let newCargos = [ ...oldState.cargos]
+    oldState.cargoProducers.forEach((p)=>{
+        if (!(oldState.days % p.period)) {
+            for (let i = 0; i < p.quantity; i++) {
+                newCargos.push(factories.cargoFactory(p.cargoType, p.placeId))
+            }
+        }
+    })
+    return {...oldState, cargos: newCargos}
 }
 
 function floatNote(text) {
