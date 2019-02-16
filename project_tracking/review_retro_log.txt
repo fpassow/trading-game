@@ -13,5 +13,9 @@ Feb 9: Completed enough in-port stuff to be ready to set sail. Also made some ma
 Things flowed well using the redesigned state and stateUtils. And I got a system clock
 going and used it to drive food usage. Next sprint has a new feature branch "set sail".
 
+Feb 16: I can sail between ports and buy and sell. Really wanting to make this look like
+something soon.
+Working on the stateUtils was a good fit for TDD. Other things, not so much. 
+
 
 

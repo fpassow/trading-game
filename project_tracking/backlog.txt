@@ -1,16 +1,26 @@
-2. Move
+More ports
+
+More ship types
+
+Zeplins and more steam
+
+Graphical map
+
+Graphical ship
+
+Graphical cargos
+
+Layout the main page
+
+graphical ships for sale
+
 
 1. Display something when you try to buy food you don't have room for.
 
 1. Display something when you try to buy food without a ship (or grey out buy button)
 
-2 See market prices for my cargos
-
-1. Sell cargos
 
 1. New cargos appear in a port
-
-1. Sell cargo
 
 1 Hire crew
 
@@ -22,11 +32,12 @@
 
 1 Buy a ship with a trade-in
 
-1 See travel time and fuel required to reach any other port
+1. show a brief popup (or ?) when food was bought
+
+1. Display something when you try to buy food you don't have room for.
+
 
 1 Sell my ship
-
-1 Start a voyage to another port
 
 1. Learn to create svg
 
