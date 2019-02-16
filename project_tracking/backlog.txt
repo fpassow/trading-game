@@ -15,6 +15,9 @@ Layout the main page
 graphical ships for sale
 
 
+
+1. show a brief popup (or ?) when food was bought
+
 1. Display something when you try to buy food you don't have room for.
 
 1. Display something when you try to buy food without a ship (or grey out buy button)

@@ -1,34 +1,26 @@
-Third Sprint
-Thurs Sat Feb 9 -- Sat Feb 16
-"Set sail: This week we travel"
+Sprint
+Sat Feb 16 - Sat Feb 23
+"New cargos appear. Then make this look like a thing!"
 
---- .5 Don't let player buy cargo without a ship
+New cargos appear
+  .5 Add "producers" to state
+  .5 Run them from the system clock
 
---- 1. Put up a "game over screen" when you starve. Display "gameOverMessage"
+.5 Google CSS columns
+.5 Make three panels with grid or columns or something
 
---- 1. Display something when you try to buy food without a ship (or grey out buy button)
+2. Graphical map
 
---  1. Don't display port stuff when it isn't there
+1. Graphical ship
 
---- 2. Move
-   --- See your ship on a square
-    --- Neighbors are highlighted
-    --- Click a neighbor to move there
-    
+1. Graphical cargos
 
-- 1. Display local prices on cargos
-   --- Add marketPrices[cargoType] to places
-   --- Remove from cargo objects
-   --- Modify cargo display to use ^^
-   --- Display local prices on *your* cargos
+1. graphical ships for sale
 
---- 1. Click cargo to sell
 
-1. show a brief popup (or ?) when food was bought
 
-1. Display something when you try to buy food you don't have room for.
 
-Old and new squares have a different highlight during the move
+
 
 
 
