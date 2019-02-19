@@ -11,9 +11,11 @@ Sat Feb 16 - Sat Feb 23
 --- .5 Make three panels with grid
 
 - 2. Graphical map
-    - backgrounds for land and sea
+    --- backgrounds for land and sea, ---And port
 
-1. Graphical ship
+--- 1. Graphical ship
+
+.5 Image for port
 
 1. Graphical cargos
 

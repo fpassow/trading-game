@@ -27,24 +27,25 @@ const Square = ({p, myShip, isDestination, moveShip}) => {
         background = '#db8'
     }
     if (p.placeType === 'PORT') {
-        background = '#df0'
+        background = '#ad0'
     }
+    let border = '1px solid blue'
     if (isDestination) {
-        background = 'yellow'
+        border = '4px solid yellow'
     }
-    let style = {
-        border:'1px solid blue', 
+    let squareStyle = {
+        border:border, 
         background: background,
         gridColumn: p.x, 
         gridRow: p.y, 
         margin:'0px'
     }
     return (
-        <div style={style} 
+        <div style={squareStyle} 
              key={p.placeId}
              onClick={moveHandler}
         >
-            {p.placeId} {(myShip && (myShip.placeId === p.placeId)) ? <span>{'<<<'+myShip.shipName+'>>>'}</span> : <span> </span>} 
+            {p.placeId} {(myShip && (myShip.placeId === p.placeId)) ? <img src="fishboat.png" /> : <span> </span>} 
         </div>
     )
 }
