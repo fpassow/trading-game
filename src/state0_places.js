@@ -59,7 +59,7 @@ const places = [
         prices: {}
     },
     {
-        name: 'Ocean', placeId: 'dry_2_2', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
+        name: 'Ocean', placeId: 'dry_2_2', placeType: 'LAND', description: 'At sea', isFoodForSale: false, foodPrice: -1,
         x: 2,
         y: 2,
         neighbors: ['wet_1_2', 'wet_2_1'],

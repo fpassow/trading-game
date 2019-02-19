@@ -4,7 +4,6 @@ export default function CargosForSaleComponent({prices, hasShip, cargosForSale, 
     return (
         <div >
             <h3>Cargos for Sale</h3>
-            {JSON.stringify(cargosForSale)}
             {cargosForSale.map((cargo)=>{
                 let price = prices[cargo.cargoType]
                 return (

@@ -6,10 +6,12 @@ Sat Feb 16 - Sat Feb 23
 ---   .5 Add "producers" to state
 ---  .5 Run them from the system clock
 
-.5 Google CSS columns
-.5 Make three panels with grid or columns or something
+--- .5 Google CSS columns (Content flows from column to column. Very cool for text. But not what I need.)
 
-2. Graphical map
+--- .5 Make three panels with grid
+
+- 2. Graphical map
+    - backgrounds for land and sea
 
 1. Graphical ship
 

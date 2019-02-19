@@ -4,10 +4,16 @@ import TimeView from './TimeView'
 import * as stateUtils from './stateUtils'
 import * as actions from './actions'
 
+let mapPanelStyle = {
+    border: '1px solid blue',
+    padding: '10px',
+    background: '#88f'
+}
+
 const mapStyle = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(6, 200px)',
-    gridTemplateRows: 'repeat(6, 200px)'
+    gridTemplateColumns: 'repeat(2, 100px)',
+    gridTemplateRows: 'repeat(6, 100px)'
 }
 
 const Square = ({p, myShip, isDestination, moveShip}) => {
@@ -16,8 +22,25 @@ const Square = ({p, myShip, isDestination, moveShip}) => {
             moveShip(myShip.shipId, p.placeId)
         }
     }
+    let background = 'inherit'
+    if (p.placeType === 'LAND') {
+        background = '#db8'
+    }
+    if (p.placeType === 'PORT') {
+        background = '#df0'
+    }
+    if (isDestination) {
+        background = 'yellow'
+    }
+    let style = {
+        border:'1px solid blue', 
+        background: background,
+        gridColumn: p.x, 
+        gridRow: p.y, 
+        margin:'0px'
+    }
     return (
-        <div style={{gridColumn: p.x, gridRow: p.y, background: isDestination ? 'yellow':'inherit'   }} 
+        <div style={style} 
              key={p.placeId}
              onClick={moveHandler}
         >
@@ -33,7 +56,7 @@ function _isDestination(destinations, placeId) {
 const MapPanelComponent = ({ticks, days, ticksToday, places, myShip, myPlace, moveShip}) => {
     let destinations = (myShip && myPlace) ? myPlace.neighbors : []
     return (
-        <div>
+        <div style={mapPanelStyle}>
             <TimeView days={days} ticks={ticks} ticksToday={ticksToday} />
             <div style={mapStyle}>
                 {places.map((p)=>(<Square key={p.placeId} 
