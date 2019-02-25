@@ -16,10 +16,13 @@ function rootReducer(state = state0, action) {
         //  and replace functions expect new objects that can be safely returned from the reducer
 
         case 'TICK':
+            if (state.timeStop) {
+                return state
+            }
             return tickHandler(state)
 
   	    case 'SHOW_WELCOME_PAGE':
-            return {...state, showingWelcomePage: action.showing}
+            return {...state, showingWelcomePage: action.showing, timeStop: action.showing}
 
         case 'BUY_SHIP':
             let ship = stateUtils.getShipById(action.shipId, state)

@@ -17,7 +17,7 @@ Sat Feb 16 - Sat Feb 23
 
 Ship appears at new location with transition from old (just to see it. Loose on time.)
 
-- Stop clock when showing intro screen
+--- Stop clock when showing intro screen
 
 .5 Image for port
 

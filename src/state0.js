@@ -3,6 +3,7 @@ import places from './state0_places'
 
 const state0 = {
     showingWelcomePage: true,
+    timeStop: true,
     gameOver: false,
     gameOverMessage: '',
     ticks: 0,
