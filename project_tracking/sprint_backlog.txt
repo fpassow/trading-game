@@ -15,6 +15,10 @@ Sat Feb 16 - Sat Feb 23
 
 --- 1. Graphical ship
 
+Ship appears at new location with transition from old (just to see it. Loose on time.)
+
+- Stop clock when showing intro screen
+
 .5 Image for port
 
 1. Graphical cargos

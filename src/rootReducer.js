@@ -53,7 +53,7 @@ function rootReducer(state = state0, action) {
 
         case 'BUY_CARGO': {
             let cargo = stateUtils.getCargoById(action.cargoId, state)
-            let newCash = state.cash - cargo.cargoPrice
+            let newCash = state.cash - stateUtils.getPlaceById(cargo.placeId, state).prices[cargo.cargoType]
             if (newCash <= 0) {
                 return state
             }

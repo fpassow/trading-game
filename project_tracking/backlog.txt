@@ -1,3 +1,6 @@
+Decide how time is really going to work
+Make that happen
+
 More ports
 
 More ship types
@@ -6,11 +9,7 @@ Zeplins and more steam
 
 Graphical map
 
-Graphical ship
-
 Graphical cargos
-
-Layout the main page
 
 graphical ships for sale
 
