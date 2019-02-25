@@ -19,7 +19,7 @@ Ship appears at new location with transition from old (just to see it. Loose on 
 
 --- Stop clock when showing intro screen
 
-.5 Image for port
+--- .5 Image for port
 
 1. Graphical cargos
 

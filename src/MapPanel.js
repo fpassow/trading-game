@@ -27,7 +27,7 @@ const Square = ({p, myShip, isDestination, moveShip}) => {
         background = '#db8'
     }
     if (p.placeType === 'PORT') {
-        background = '#ad0'
+        background = '#ad0 no-repeat url("port.png")'
     }
     let border = '1px solid blue'
     if (isDestination) {
@@ -45,7 +45,9 @@ const Square = ({p, myShip, isDestination, moveShip}) => {
              key={p.placeId}
              onClick={moveHandler}
         >
-            {p.placeId} {(myShip && (myShip.placeId === p.placeId)) ? <img src="fishboat.png" /> : <span> </span>} 
+            {p.placeId} <br />
+            {p.placeType === 'PORT' ? p.name : ''}
+            {(myShip && (myShip.placeId === p.placeId)) ? <img src="fishboat.png" /> : <span> </span>} 
         </div>
     )
 }
