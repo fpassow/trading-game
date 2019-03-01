@@ -2,13 +2,25 @@ import * as stateUtils from './stateUtils'
 import * as factories from './factories'
 
 export default function tickHandler(state) {
-    //A day is 100 ticks.
+    let newState = {...state}
+
+    //Slow time by 20x when in port or deciding where to move next at sea,
+    //    i.e. when state.isMoving is false.
+    if (!state.isMoving) {
+        if (state.slowTimeCounter <= 20) {
+            return {...state, slowTimeCounter: state.slowTimeCounter + 1}
+        } else {
+            newState.slowTimeCounter = 0
+        }
+    }
+
+    //A day is 24 ticks.
     //state contains ticks, days, and ticksToday for other logic to use.
     //ticksToday rolls back to zero at the end of each day, like a clock. While ticks just
     //  keeps rising.
-    let newState = {...state, ticks: state.ticks + 1, ticksToday: state.ticksToday + 1}
+    newState = {...newState, ticks: state.ticks + 1, ticksToday: state.ticksToday + 1}
     newState = doTickly(newState)
-    if (newState.ticksToday === 100) {
+    if (newState.ticksToday === 24) {
         newState.days = newState.days + 1
         newState.ticksToday = 0
         newState = doDaily(newState)

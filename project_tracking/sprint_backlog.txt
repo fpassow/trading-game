@@ -27,8 +27,8 @@ xxx Ship appears at new location with transition from old (just to see it. Loose
 --- Rock the boat while it's moving
 --- Ignore new clicks to move while already moving
 
-Fast time while at sea!!!
-  How?
+--- Fast time while at sea
+ 
 
 --- Stop clock when showing intro screen
 
