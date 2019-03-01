@@ -1,42 +1,11 @@
 Sprint
-Sat Feb 16 - Sat Feb 23
-"New cargos appear. Then make this look like a thing!"
+"Looing better, thing-by-thing"
 
---- New cargos appear
----   .5 Add "producers" to state
----  .5 Run them from the system clock
+Hide placeId's
+Graphical cargos
+graphical ships for sale
 
---- .5 Google CSS columns (Content flows from column to column. Very cool for text. But not what I need.)
-
---- .5 Make three panels with grid
-
-- 2. Graphical map
-    --- backgrounds for land and sea, ---And port
-
---- 1. Graphical ship
-
-xxx Ship appears at new location with transition from old (just to see it. Loose on time.)
---- Once you select a square to move to, we switch to a "moving" state
----  In the moving state, the marks showing places you can move to go away
----  In the moving state, the boat is at your destination (WHICh IS RECORDED AS CURRENT LOCATION!!!!)
----  Your location updates at the start of the move
----  "moving" state resets at the end of the move
- --- Time area displays "Sailing..." and a countdown.
----  When a move starts, we also record the time it will end
----  Tick processing checks time and removes the moving state at the given time (then everything draws naturally)
---- Rock the boat while it's moving
---- Ignore new clicks to move while already moving
-
---- Fast time while at sea
- 
-
---- Stop clock when showing intro screen
-
---- .5 Image for port
-
-1. Graphical cargos
-
-1. graphical ships for sale
+...add more graphical things...
 
 
 

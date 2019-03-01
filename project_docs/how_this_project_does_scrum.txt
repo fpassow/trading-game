@@ -1,6 +1,16 @@
 HOW THIS PROJECT DOES SCRUM
 ---------------------------
 
+************
+***UPDATE***
+One person just doesn't gain much from weekly sprint planning.
+Named sprints are helpful for focus. But if I decide to study something else for a few
+days, the plan of what I will do in a week goes out the window.
+Therefore, keep sprints as themes and goals. But they no longer equate to a tracked
+period of time.
+***********
+
+
 The Scrum Master role equates to my general intention to do Scrum. It won't explicitly
 appear unless I record a task to "remove an impediment to progress".
 
