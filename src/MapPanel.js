@@ -16,7 +16,7 @@ const mapStyle = {
     gridTemplateRows: 'repeat(6, 100px)'
 }
 
-const Square = ({p, myShip, isDestination, moveShip}) => {
+const Square = ({p, myShip, isDestination, isMoving, moveShip}) => {
     const moveHandler = () => {
         if (isDestination) {
             moveShip(myShip.shipId, p.placeId)
@@ -30,7 +30,7 @@ const Square = ({p, myShip, isDestination, moveShip}) => {
         background = '#ad0 no-repeat url("port.png")'
     }
     let border = '1px solid blue'
-    if (isDestination) {
+    if (isDestination && !isMoving) {
         border = '4px solid yellow'
     }
     let squareStyle = {
@@ -40,6 +40,7 @@ const Square = ({p, myShip, isDestination, moveShip}) => {
         gridRow: p.y, 
         margin:'0px'
     }
+    let shipCssClass = isMoving ? 'bobbing' : 'notbobbing'
     return (
         <div style={squareStyle} 
              key={p.placeId}
@@ -47,7 +48,7 @@ const Square = ({p, myShip, isDestination, moveShip}) => {
         >
             {p.placeId} <br />
             {p.placeType === 'PORT' ? p.name : ''}
-            {(myShip && (myShip.placeId === p.placeId)) ? <img src="fishboat.png" /> : <span> </span>} 
+            {(myShip && (myShip.placeId === p.placeId)) ? <img className={shipCssClass} alt={myShip.shipName} src="fishboat.png" /> : <span> </span>} 
         </div>
     )
 }
@@ -56,15 +57,16 @@ function _isDestination(destinations, placeId) {
     return destinations.indexOf(placeId) > -1
 }
 
-const MapPanelComponent = ({ticks, days, ticksToday, places, myShip, myPlace, moveShip}) => {
+const MapPanelComponent = ({ticks, days, ticksToday, places, myShip, myPlace, isMoving, moveEndTime, moveShip}) => {
     let destinations = (myShip && myPlace) ? myPlace.neighbors : []
     return (
         <div style={mapPanelStyle}>
-            <TimeView days={days} ticks={ticks} ticksToday={ticksToday} />
+            <TimeView days={days} ticks={ticks} ticksToday={ticksToday} isMoving={isMoving} moveEndTime={moveEndTime} />
             <div style={mapStyle}>
                 {places.map((p)=>(<Square key={p.placeId} 
                                           p={p} 
                                           myShip={myShip} 
+                                          isMoving={isMoving}
                                           isDestination={_isDestination(destinations, p.placeId)}
                                           moveShip={moveShip} 
                                   />
@@ -81,7 +83,9 @@ const mapStateToProps = state => ({
   ticksToday: state.ticksToday,
   places: state.places,
   myShip: stateUtils.getMyShip(state),
-  myPlace: stateUtils.getCurrentPlace(state)
+  myPlace: stateUtils.getCurrentPlace(state),
+  isMoving: state.isMoving,
+  moveEndTime: state.moveEndTime
 })
 
 const mapDispatchToProps = dispatch => ({

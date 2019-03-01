@@ -9,6 +9,8 @@ const state0 = {
     ticks: 0,
     days: 0,
     ticksToday: 0,
+    isMoving: false,
+    moveEndTime: null,
     cash: 800,
     currentPlaceId: 'portharbor',
     defaultPlaceId: 'portharbor',

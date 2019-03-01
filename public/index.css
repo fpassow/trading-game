@@ -1,0 +1,13 @@
+
+/* Used to animate the players ship when it's moving */
+@keyframes bobbingkeyframes {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg) ;}
+    50% { transform: rotate(0deg) translate3d(0, 6px, 0); }
+    75% { transform: rotate(-15deg) ;}
+    100% {transform: rotate(0deg) translate3d(0, 0, 0);}
+  }
+  .bobbing {
+    animation: bobbingkeyframes 3s infinite linear;
+    border: 1px solid blue;
+  }

@@ -17,7 +17,15 @@ export default function tickHandler(state) {
 }
 
 function doTickly(s) {
-    return s
+    return checkMoveCompleted(s)
+}
+
+function checkMoveCompleted(state) {
+    if (state.isMoving && (state.ticks >= state.moveEndTime)) {
+        return {...state, isMoving:false, moveEndTime:null}
+    } else {
+        return state
+    }
 }
 
 function doDaily(state) {

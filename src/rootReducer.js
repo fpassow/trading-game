@@ -71,7 +71,12 @@ function rootReducer(state = state0, action) {
 
         case 'MOVE_SHIP': {
             //action.shipId, action.placeId
-            let newState = {...state}
+            
+            //You can't start a new move until the current move finishes
+            if (state.isMoving) {
+                return state
+            }
+            let newState = {...state, isMoving:true, moveEndTime:state.ticks+100}
             //If player is aboard, the player also moves.
             if (newState.myShipId === action.shipId) {
                 newState.currentPlaceId = action.placeId
