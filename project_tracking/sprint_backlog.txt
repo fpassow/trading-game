@@ -1,7 +1,7 @@
 Sprint
 "Looing better, thing-by-thing"
 
-Hide placeId's
+--- Hide placeId's
 Graphical cargos
 graphical ships for sale
 
