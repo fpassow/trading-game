@@ -46,7 +46,6 @@ const Square = ({p, myShip, isDestination, isMoving, moveShip}) => {
              key={p.placeId}
              onClick={moveHandler}
         >
-            {p.placeId} <br />
             {p.placeType === 'PORT' ? p.name : ''}
             {(myShip && (myShip.placeId === p.placeId)) ? <img className={shipCssClass} alt={myShip.shipName} src="fishboat.png" /> : <span> </span>} 
         </div>
