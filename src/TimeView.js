@@ -1,10 +1,10 @@
 import React from 'react'
 
 
-const TimeView = ({ticks, days, ticksToday}) => (
+const TimeView = ({ticks, days, ticksToday, isMoving, moveEndTime}) => (
     <div >
-        <h3>The Celestial Sphere</h3>
-        days={days} ticks={ticks} ticksToday={ticksToday} 
+        <h3 style={{color:'white'}}>Day {days}  [{ticksToday}] &nbsp; 
+        {(isMoving) ? "Sailing... " + (moveEndTime - ticks) : ""}</h3>
     </div>
 )
 

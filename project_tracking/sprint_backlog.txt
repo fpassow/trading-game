@@ -1,35 +1,48 @@
-Third Sprint
-Thurs Sat Feb 2 -- Sat Feb 9
-"Get out'a port"
+Sprint
+Sat Feb 16 - Sat Feb 23
+"New cargos appear. Then make this look like a thing!"
 
---- 1. Buy food
-   --- Don't buy if there isn't room
+--- New cargos appear
+---   .5 Add "producers" to state
+---  .5 Run them from the system clock
 
---- 1 See cargos for sale at my location
+--- .5 Google CSS columns (Content flows from column to column. Very cool for text. But not what I need.)
 
---- .5 Gray-out [buy food] if you don't have a ship
+--- .5 Make three panels with grid
 
---- 1. Automatically add the player as crew when buying a ship
+- 2. Graphical map
+    --- backgrounds for land and sea, ---And port
 
---- 1/2. See cargo in my hold
+--- 1. Graphical ship
 
---- 1. Buy cargos
+xxx Ship appears at new location with transition from old (just to see it. Loose on time.)
+--- Once you select a square to move to, we switch to a "moving" state
+---  In the moving state, the marks showing places you can move to go away
+---  In the moving state, the boat is at your destination (WHICh IS RECORDED AS CURRENT LOCATION!!!!)
+---  Your location updates at the start of the move
+---  "moving" state resets at the end of the move
+ --- Time area displays "Sailing..." and a countdown.
+---  When a move starts, we also record the time it will end
+---  Tick processing checks time and removes the moving state at the given time (then everything draws naturally)
+--- Rock the boat while it's moving
+--- Ignore new clicks to move while already moving
 
---- 1. System clock (100 ticks/day)
+--- Fast time while at sea
+ 
 
---- 1 Food stores go away over time
+--- Stop clock when showing intro screen
 
-  ---  Buy food automatically if in port, 
-    
-    and show a brief popup (or ?)
+--- .5 Image for port
 
-- 1 Crew starves and dies
+1. Graphical cargos
 
-- 2. See a map with all the locations
-    
-    - Add location data to state0
+1. graphical ships for sale
 
-    Display places as text in a grid
 
-2. See moves I can make
+
+
+
+
+
+
 

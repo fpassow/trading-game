@@ -16,10 +16,13 @@ function rootReducer(state = state0, action) {
         //  and replace functions expect new objects that can be safely returned from the reducer
 
         case 'TICK':
+            if (state.timeStop) {
+                return state
+            }
             return tickHandler(state)
 
   	    case 'SHOW_WELCOME_PAGE':
-            return {...state, showingWelcomePage: action.showing}
+            return {...state, showingWelcomePage: action.showing, timeStop: action.showing}
 
         case 'BUY_SHIP':
             let ship = stateUtils.getShipById(action.shipId, state)
@@ -53,7 +56,7 @@ function rootReducer(state = state0, action) {
 
         case 'BUY_CARGO': {
             let cargo = stateUtils.getCargoById(action.cargoId, state)
-            let newCash = state.cash - cargo.cargoPrice
+            let newCash = state.cash - stateUtils.getPlaceById(cargo.placeId, state).prices[cargo.cargoType]
             if (newCash <= 0) {
                 return state
             }
@@ -62,6 +65,32 @@ function rootReducer(state = state0, action) {
             cargo.placeId = null
             cargo.shipId = stateUtils.getMyShip(state).shipId
             let newState = stateUtils.replaceCargo(cargo, state)
+            newState.cash = newCash
+            return newState
+        }
+
+        case 'MOVE_SHIP': {
+            //action.shipId, action.placeId
+            
+            //You can't start a new move until the current move finishes
+            if (state.isMoving) {
+                return state
+            }
+            let newState = {...state, isMoving:true, moveEndTime:state.ticks+24}
+            //If player is aboard, the player also moves.
+            if (newState.myShipId === action.shipId) {
+                newState.currentPlaceId = action.placeId
+            }
+            let newShip = stateUtils.getShipById(action.shipId, newState)
+            newShip.placeId = action.placeId
+            let newerState = stateUtils.replaceShip(newShip, newState)
+            return newerState
+        }
+
+        case 'SELL_CARGO': {
+            let cargo = stateUtils.getCargoById(action.cargoId, state)
+            let newCash = state.cash + stateUtils.getCurrentPlace(state).prices[cargo.cargoType]
+            let newState = stateUtils.removeCargo(cargo, state)
             newState.cash = newCash
             return newState
         }

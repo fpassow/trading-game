@@ -19,3 +19,12 @@ export function buyCargo(cargoId) {
 export function buyFood() {
 	return {type: 'BUY_FOOD'}
 }
+
+//Also moves the player, if it's their ship.
+export function moveShip(shipId, placeId) {
+	return {type: 'MOVE_SHIP', shipId:shipId, placeId: placeId}
+}
+
+export function sellCargo(cargoId) {
+	return {type: 'SELL_CARGO', cargoId: cargoId}
+}

@@ -67,3 +67,8 @@ export function replaceCargo(cargo, state) {
     return { ...state, cargos: newCargos}
 }
 
+export function removeCargo(cargo, state) {
+    let newCargos = state.cargos.filter((c)=>(c.cargoId !== cargo.cargoId))
+    return { ...state, cargos: newCargos}
+}
+
