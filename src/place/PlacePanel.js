@@ -26,7 +26,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   buyShip: (shipId) => { dispatch(buyShip(shipId)) },
-  buyFood: () => { dispatch(buyFood()) },
+  buyFood: (placeId) => { dispatch(buyFood(placeId)) },
   buyCargo: (cargoId) => {dispatch(buyCargo(cargoId)) }
 })
 

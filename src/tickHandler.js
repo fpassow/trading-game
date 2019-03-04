@@ -29,7 +29,8 @@ export default function tickHandler(state) {
 }
 
 function doTickly(s) {
-    return checkMoveCompleted(s)
+    let newState =  checkMoveCompleted(s)
+    return refreshRations(newState)
 }
 
 function checkMoveCompleted(state) {
@@ -38,6 +39,17 @@ function checkMoveCompleted(state) {
     } else {
         return state
     }
+}
+
+function refreshRations(state) {
+    let newPlaces = state.places.map((p)=>{
+        if (p.isFoodForSale && (p.foods < 1)) {
+            return {...p, foods: 1}
+        } else {
+            return p
+        }
+    })
+    return {...state, places: newPlaces}
 }
 
 function doDaily(state) {
