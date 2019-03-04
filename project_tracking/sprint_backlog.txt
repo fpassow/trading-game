@@ -3,13 +3,13 @@ Sprint
 
 --- Hide placeId's
 ---Graphical cargos
--Show the rations supply "refreshing"
+---Show the rations supply "refreshing"
   --- Put fadein on rations
   --- Remove rations when bought
       --- Record how many (1/0)
   ---  ONly display rations if they exist
 
-  -  Replace missing rations every tick
+  ---  Replace missing rations every tick
 
 
 graphical ships for sale
