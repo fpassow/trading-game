@@ -12,9 +12,16 @@ Sprint
   ---  Replace missing rations every tick
 
 
-graphical ships for sale
+---graphical ships for sale
 
 ...add more graphical things...
+
+Ship panel hints at being a ship
+  Water and rails
+  Deck
+  Hold
+  title block
+  food store
 
 
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import cargoImages from './cargoImages'
+import imagesByType from '../imagesByType'
 
 export default function CargosForSaleComponent({prices, hasShip, cargosForSale, cash, buyCargo}) {
     return (
@@ -25,7 +25,7 @@ export default function CargosForSaleComponent({prices, hasShip, cargosForSale, 
 function  CargoForSale({cargo, canBuy, buyCargo, price}) {
     return (
         <div >
-            {cargo.cargoLabel} &nbsp; <img alt="" src={cargoImages[cargo.cargoType]}/>
+            {cargo.cargoLabel} &nbsp; <img alt="" src={imagesByType[cargo.cargoType]}/>
             {price}&#402; &nbsp;
             {canBuy ? <button onClick={()=>{buyCargo(cargo.cargoId)}}>buy</button> : ' '}
         </div>
