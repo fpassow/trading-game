@@ -14,20 +14,32 @@ const shipStyle = {
   margin: '20px',
   borderRadius: '40px',
   border: '5px solid brown',
-  padding: '20px'
+  padding: '20px 20px 5px 20px'
+}
+
+const nameplateStyle = {
+  //background: 'white',
+  fontSize: '20px',
+  fontWeight: 'bold',
+  //border: '1px solid black',
+  width: '200px',
+  textAlign: 'center',
+  margin: '10px auto 10px auto'
 }
 
 const ShipPanelComponent = ({cash, myShip, cargo, localPrices, sellCargo}) => (
-    <div style={{background:seaBlue}}>
-      <div style={shipStyle}>
-        <h3>The {myShip.shipTypeName} &nbsp;<em>{myShip.shipName}</em></h3>
-        <Crew myShip={myShip} />
-        <Food myShip={myShip} />
-        <Fuel myShip={myShip} />
-        <Hold cargo ={cargo} localPrices={localPrices} sellCargo={sellCargo} />
-        <Cash />
+  <div style={{background:seaBlue}}>
+    <div style={shipStyle}>
+      <Hold cargo ={cargo} localPrices={localPrices} sellCargo={sellCargo} />
+      <Food myShip={myShip} />
+      <Fuel myShip={myShip} />
+      <Crew myShip={myShip} />
+      <Cash />
+      <div style={nameplateStyle}>
+        {"\{\{\{"} <em>{myShip.shipName}</em> {"\}\}\}"}
       </div>
     </div>
+  </div>
 )
 
 const mapStateToProps = state => ({

@@ -1,8 +1,13 @@
 import React from 'react'
 
+const holdStyle = {
+    border: '3px solid brown',
+    background: 'grey',
+    borderRadius: '5px'
+}
 const Hold = ({cargo, localPrices, sellCargo}) => {
     return (
-        <div>
+        <div style={holdStyle}>
             <h3>Cargo </h3>
             {cargo.map((aCargo)=>(<Cargo key={aCargo.cargoId} sellCargo={sellCargo} aCargo={aCargo} prices={localPrices} />))}
         </div>

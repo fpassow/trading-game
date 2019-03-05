@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 const cashBoxStyle = {
   background: 'gold',
   border: '5px solid brown',
-  width: '200px',
+  width: '150px',
   textAlign: 'center',
   margin: '10px auto 10px auto'
 }
