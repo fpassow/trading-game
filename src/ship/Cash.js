@@ -1,9 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+const cashBoxStyle = {
+  background: 'gold',
+  border: '5px solid brown',
+  width: '200px',
+  textAlign: 'center',
+  margin: '10px auto 10px auto'
+}
 const CashComponent = ({cash}) => (
-    <div >
-        <h2>Strongbox: {cash} florins ( &#402; ) </h2>
+    <div style={cashBoxStyle}>
+        Cash: {cash} florins
     </div>
 )
 

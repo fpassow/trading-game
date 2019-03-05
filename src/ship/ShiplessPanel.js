@@ -1,9 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Cash from './Cash'
+import {seaBlue} from '../styleConstants'
 
 const ShiplessPanelComponent = ({cash, myShip}) => (
-    <div >
+    <div style={{background: seaBlue}}>
         Time to buy a ship.
         <Cash />
     </div>

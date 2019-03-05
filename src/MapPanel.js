@@ -3,11 +3,12 @@ import { connect } from 'react-redux'
 import TimeView from './TimeView'
 import * as stateUtils from './stateUtils'
 import * as actions from './actions'
+import {seaBlue} from './styleConstants'
 
 let mapPanelStyle = {
     border: '1px solid blue',
     padding: '10px',
-    background: '#88f'
+    background: seaBlue
 }
 
 const mapStyle = {

@@ -7,15 +7,26 @@ import Food from './Food'
 import Hold from './Hold'
 import * as stateUtils from '../stateUtils'
 import * as actions from '../actions'
+import {seaBlue} from '../styleConstants'
+
+const shipStyle = {
+  background: 'tan',
+  margin: '20px',
+  borderRadius: '40px',
+  border: '5px solid brown',
+  padding: '20px'
+}
 
 const ShipPanelComponent = ({cash, myShip, cargo, localPrices, sellCargo}) => (
-    <div >
+    <div style={{background:seaBlue}}>
+      <div style={shipStyle}>
         <h3>The {myShip.shipTypeName} &nbsp;<em>{myShip.shipName}</em></h3>
         <Crew myShip={myShip} />
         <Food myShip={myShip} />
         <Fuel myShip={myShip} />
         <Hold cargo ={cargo} localPrices={localPrices} sellCargo={sellCargo} />
         <Cash />
+      </div>
     </div>
 )
 

@@ -1,9 +1,10 @@
 import React from 'react'
 import imagesByType from '../imagesByType'
+import {seaBlue} from '../styleConstants'
 
 export default function ShipsForSaleComponent({shipsForSale, cash, buyShip}) {
     return (
-        <div style={{background:'#88f'}} >
+        <div style={{background:seaBlue}} >
             <h3>Ships for Sale</h3>
             {shipsForSale.map((ship)=><ShipForSale key={ship.shipId} buyShip={buyShip} ship={ship} canBuy={ship.basePrice <= cash}/>)}
         </div>
