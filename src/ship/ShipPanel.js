@@ -36,7 +36,7 @@ const ShipPanelComponent = ({cash, myShip, cargo, localPrices, sellCargo}) => (
       <Crew myShip={myShip} />
       <Cash />
       <div style={nameplateStyle}>
-        {"\{\{\{"} <em>{myShip.shipName}</em> {"\}\}\}"}
+        {"{{{"} <em>{myShip.shipName}</em> {"}}}"}
       </div>
     </div>
   </div>

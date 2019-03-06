@@ -16,12 +16,21 @@ Sprint
 
 ...add more graphical things...
 
-Ship panel hints at being a ship
-  Water and rails
-  Deck
-  Hold
-  title block
-  food store
+
+  food store with images
+  cargo images in hold
+  Click-to-sell hover (alt text?)
+  crew images
+
+Arrows for possible moves
+   direction
+   transparent
+   z-axis
+
+Other cargo types
+
+  Other ship types
+
 
 
 
