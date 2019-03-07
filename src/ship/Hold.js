@@ -1,4 +1,5 @@
 import React from 'react'
+import imagesByType from '../imagesByType'
 
 const holdStyle = {
     border: '3px solid brown',
@@ -17,8 +18,11 @@ const Hold = ({cargo, localPrices, sellCargo}) => {
 const Cargo = ({aCargo, prices, sellCargo}) => {
     return (
         <div>
-            {aCargo.cargoLabel} {prices[aCargo.cargoType] ? 
-                <span>{prices[aCargo.cargoType]}&#402; <button onClick={()=>{sellCargo(aCargo.cargoId)}}>Sell</button></span> :
+            <img src={imagesByType[aCargo.cargoType]} alt={aCargo.cargoLabel} />
+            {prices[aCargo.cargoType] ? 
+                <span>
+                <button onClick={()=>{sellCargo(aCargo.cargoId)}}>Sell for {prices[aCargo.cargoType]}&#402;</button>
+                </span> :
                  ''
             } 
         </div>
