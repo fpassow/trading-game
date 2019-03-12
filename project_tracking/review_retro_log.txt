@@ -17,5 +17,13 @@ Feb 16: I can sail between ports and buy and sell. Really wanting to make this l
 something soon.
 Working on the stateUtils was a good fit for TDD. Other things, not so much. 
 
+March 1: Dropping weekly sprints because spending a few days learning something else,
+or a few days without free lunch hours, makes the plan for what to do that week completely invalid.
+Keeping the idea of a sprint with a theme and goal.
+This last "sprint" added UI elements for moving and seeing where I can move. Also, time
+is really flowing and feels right. The next sprint "looking-better" will focus on replacing
+place-holder visual elements with thing that actually look good.
+
+
 
 

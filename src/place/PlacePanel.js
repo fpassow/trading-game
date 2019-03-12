@@ -8,8 +8,10 @@ import { buyShip, buyFood, buyCargo } from '../actions'
 
 const PlacePanelComponent = ({place, cash, shipsForSale, cargosForSale, hasShip, buyShip, buyFood, buyCargo}) => (
     <div >
-        <h2>{place.name}</h2>
-        <h3>{place.description}</h3>
+        <div style={{background:'#ad0'}}>
+          <h2>{place.name}</h2>
+          <h3>{place.description}</h3>
+        </div>
         <ShipsForSale shipsForSale={shipsForSale} cash={cash} buyShip={buyShip} />
         <CargosForSale prices={place.prices} hasShip={hasShip} cargosForSale={cargosForSale} cash={cash} buyCargo={buyCargo} />
         <Chandler hasShip={hasShip} place={place} buyFood={buyFood} />
@@ -26,7 +28,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   buyShip: (shipId) => { dispatch(buyShip(shipId)) },
-  buyFood: () => { dispatch(buyFood()) },
+  buyFood: (placeId) => { dispatch(buyFood(placeId)) },
   buyCargo: (cargoId) => {dispatch(buyCargo(cargoId)) }
 })
 

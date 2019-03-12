@@ -16,7 +16,7 @@ const store = createStore(rootReducer, state0)
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 
 //TICK actions drive everything that depends on the passage of time
-setInterval(()=>{store.dispatch(tick())}, 100)
+setInterval(()=>{store.dispatch(tick())}, 50)
 
 
 // If you want your app to work offline and load faster, you can change

@@ -3,11 +3,12 @@ import { connect } from 'react-redux'
 import TimeView from './TimeView'
 import * as stateUtils from './stateUtils'
 import * as actions from './actions'
+import {seaBlue} from './styleConstants'
 
 let mapPanelStyle = {
     border: '1px solid blue',
     padding: '10px',
-    background: '#88f'
+    background: seaBlue
 }
 
 const mapStyle = {
@@ -16,7 +17,7 @@ const mapStyle = {
     gridTemplateRows: 'repeat(6, 100px)'
 }
 
-const Square = ({p, myShip, isDestination, isMoving, moveShip}) => {
+const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
     const moveHandler = () => {
         if (isDestination) {
             moveShip(myShip.shipId, p.placeId)
@@ -31,14 +32,22 @@ const Square = ({p, myShip, isDestination, isMoving, moveShip}) => {
     }
     let border = '1px solid blue'
     if (isDestination && !isMoving) {
-        border = '4px solid yellow'
+        border = '1px solid yellow'
     }
     let squareStyle = {
         border:border, 
         background: background,
         gridColumn: p.x, 
         gridRow: p.y, 
-        margin:'0px'
+        margin:'0px',
+        position: 'relative'
+    }
+    let arrowStyle = {
+        transform: 'rotate('+_arrowRotation(p, myPlace)+'deg)',
+        left: '25px',
+        top: '25px',
+        zIndex: 10,
+        position: 'absolute'
     }
     let shipCssClass = isMoving ? 'bobbing' : 'notbobbing'
     return (
@@ -46,9 +55,9 @@ const Square = ({p, myShip, isDestination, isMoving, moveShip}) => {
              key={p.placeId}
              onClick={moveHandler}
         >
-            {p.placeId} <br />
             {p.placeType === 'PORT' ? p.name : ''}
             {(myShip && (myShip.placeId === p.placeId)) ? <img className={shipCssClass} alt={myShip.shipName} src="fishboat.png" /> : <span> </span>} 
+            {(isDestination && !isMoving) ? <img style={arrowStyle} src="arrow_up.png" alt="You can move to here" /> : <span> </span>}
         </div>
     )
 }
@@ -57,7 +66,25 @@ function _isDestination(destinations, placeId) {
     return destinations.indexOf(placeId) > -1
 }
 
-const MapPanelComponent = ({ticks, days, ticksToday, places, myShip, myPlace, isMoving, moveEndTime, moveShip}) => {
+//For a given place and the player's ships place, compute the degrees rotation
+// from verticle for an arrow pointing away from the ship.
+function _arrowRotation(place, myPlace) {
+    if (myPlace.y > place.y) {
+        return 0
+    }
+    if (myPlace.x > place.x) {
+        return 270
+    }
+    if (myPlace.x < place.x) {
+        return 90
+    }
+    //my y < y, arrow stays pointing up
+    return 180
+}
+
+const MapPanelComponent = ({
+        ticks, days, ticksToday, places, myShip, myPlace, isMoving, moveEndTime, moveShip
+    }) => {
     let destinations = (myShip && myPlace) ? myPlace.neighbors : []
     return (
         <div style={mapPanelStyle}>
@@ -66,6 +93,7 @@ const MapPanelComponent = ({ticks, days, ticksToday, places, myShip, myPlace, is
                 {places.map((p)=>(<Square key={p.placeId} 
                                           p={p} 
                                           myShip={myShip} 
+                                          myPlace={myPlace}
                                           isMoving={isMoving}
                                           isDestination={_isDestination(destinations, p.placeId)}
                                           moveShip={moveShip} 

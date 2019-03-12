@@ -24,6 +24,11 @@ export function getPlaceById(id, state) {
     return null
 }
 
+export function replacePlace(newPlace, state) {
+    let newPlaces = state.places.map((p)=>( (p.placeId === newPlace.placeId) ? newPlace : p) )
+    return { ...state, places: newPlaces}
+}
+
 export function getCurrentPlace(state) {
     return getPlaceById(state.currentPlaceId, state)
 }

@@ -71,7 +71,7 @@ test('getCargoById bogus id', () => {
 test('getCargoInPort', () => {
     let s0 = state0()
     let cip = su.getCargoInPort('portharbor', s0)
-    expect(cip.length).toBe(5)
+    expect(cip.length).toBe(2)
     expect(cip[0].cargoType).toBe('oliveoil')
 });
 
