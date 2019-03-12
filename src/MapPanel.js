@@ -39,10 +39,15 @@ const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
         background: background,
         gridColumn: p.x, 
         gridRow: p.y, 
-        margin:'0px'
+        margin:'0px',
+        position: 'relative'
     }
     let arrowStyle = {
-        transform: 'rotate('+_arrowRotation(p, myPlace)+'deg)'
+        transform: 'rotate('+_arrowRotation(p, myPlace)+'deg)',
+        left: '25px',
+        top: '25px',
+        zIndex: 10,
+        position: 'absolute'
     }
     let shipCssClass = isMoving ? 'bobbing' : 'notbobbing'
     return (

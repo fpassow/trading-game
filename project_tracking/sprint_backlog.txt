@@ -20,10 +20,12 @@ Sprint
   ---Click-to-sell hover (alt text?)
   ---crew images
 
-Arrows for possible moves
-   direction
-   transparent
-   z-axis
+---Arrows for possible moves
+  --- direction
+  --- z-axis
+   ---center
+
+Center the ship
 
 Other cargo types
 
