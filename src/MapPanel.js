@@ -49,6 +49,12 @@ const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
         zIndex: 10,
         position: 'absolute'
     }
+    let shipStyle={
+        left: '18px',
+        top: '18px',
+        zIndex: 5,
+        position: 'absolute'
+    }
     let shipCssClass = isMoving ? 'bobbing' : 'notbobbing'
     return (
         <div style={squareStyle} 
@@ -56,7 +62,7 @@ const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
              onClick={moveHandler}
         >
             {p.placeType === 'PORT' ? p.name : ''}
-            {(myShip && (myShip.placeId === p.placeId)) ? <img className={shipCssClass} alt={myShip.shipName} src="fishboat.png" /> : <span> </span>} 
+            {(myShip && (myShip.placeId === p.placeId)) ? <img className={shipCssClass} style={shipStyle} alt={myShip.shipName} src="fishboat.png" /> : <span> </span>} 
             {(isDestination && !isMoving) ? <img style={arrowStyle} src="arrow_up.png" alt="You can move to here" /> : <span> </span>}
         </div>
     )
