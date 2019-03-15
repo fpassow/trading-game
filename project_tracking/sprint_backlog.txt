@@ -30,7 +30,10 @@ Sprint
 
 ---Remove that blue border on my boat
 
-Button for "New game" after starve
+Button for "Start new game" after starve
+    ---Add START_NEW_GAME action
+    ---In reducer, ^ returns state0
+    ---Wire it into App.js
 
 Put ship secton labels into background images
 
