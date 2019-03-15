@@ -28,7 +28,9 @@ Sprint
 ---Center the ship
 
 
-Remove that blue border on my boat
+---Remove that blue border on my boat
+
+Button for "New game" after starve
 
 Put ship secton labels into background images
 
@@ -50,6 +52,22 @@ ships
 Other cargo types
 
 Other ship types
+    Albion Steam Clipper 
+    Steam Turbine Hovercraft
+    Silver Zeplin
+    Engine Barge
+
+More Places
+    Point A (An actual point of land)
+    Point B
+    Heck
+    3rd Place 
+    Nether
+    Gibber
+
+
+
+
 
 
 

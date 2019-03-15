@@ -53,7 +53,8 @@ const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
         left: '18px',
         top: '18px',
         zIndex: 5,
-        position: 'absolute'
+        position: 'absolute',
+        border: 'none'
     }
     let shipCssClass = isMoving ? 'bobbing' : 'notbobbing'
     return (
