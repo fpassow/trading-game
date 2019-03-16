@@ -37,7 +37,7 @@ Button for "Start new game" after starve
 
 Put ship secton labels into background images
 
-Add products
+Add cargo types
     Coal
     Titanium
     Leopard Wood
@@ -50,15 +50,6 @@ ships
     Engine Barge
     Silver Zeplin (adjacent to any square, semilimited cargo)
     Steam Turbine Hovercraft (Fastest, fuel hog, limited cargo)
-
-
-Other cargo types
-
-Other ship types
-    Albion Steam Clipper 
-    Steam Turbine Hovercraft
-    Silver Zeplin
-    Engine Barge
 
 More Places
     Point A (An actual point of land)
