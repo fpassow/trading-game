@@ -1,4 +1,4 @@
-echo "Pushing branch looking-better..."
-git push origin looking-better 
+echo "Pushing branch looking-nice..."
+git push origin looking-nice
 
 

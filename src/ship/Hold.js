@@ -14,7 +14,26 @@ const Hold = ({cargo, localPrices, sellCargo}) => {
         </div>
     )
 }
+let cargoStyle = {
+    display: "inline-block"
+}
+const Cargo = ({aCargo, prices, sellCargo}) => {
+    return (
+        <div style={cargoStyle}>
+            {prices[aCargo.cargoType] ? 
+                <div>
 
+                <button onClick={()=>{sellCargo(aCargo.cargoId)}}>
+                    <img src={imagesByType[aCargo.cargoType]} alt={aCargo.cargoLabel} /><br/>
+                    {prices[aCargo.cargoType]}&#402;
+                 </button>
+                </div> :
+                 ''
+            } 
+        </div>
+    )
+}
+/*
 const Cargo = ({aCargo, prices, sellCargo}) => {
     return (
         <div>
@@ -28,5 +47,6 @@ const Cargo = ({aCargo, prices, sellCargo}) => {
         </div>
     )
 }
+*/
 
 export default Hold

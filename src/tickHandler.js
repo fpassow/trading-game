@@ -7,7 +7,7 @@ export default function tickHandler(state) {
     //Slow time by 20x when in port or deciding where to move next at sea,
     //    i.e. when state.isMoving is false.
     if (!state.isMoving) {
-        if (state.slowTimeCounter <= 20) {
+        if (state.slowTimeCounter <= 4) {
             return {...state, slowTimeCounter: state.slowTimeCounter + 1}
         } else {
             newState.slowTimeCounter = 0

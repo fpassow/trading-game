@@ -24,6 +24,9 @@ function rootReducer(state = state0, action) {
   	    case 'SHOW_WELCOME_PAGE':
             return {...state, showingWelcomePage: action.showing, timeStop: action.showing}
 
+        case 'START_NEW_GAME':
+            return state0
+
         case 'BUY_SHIP':
             let ship = stateUtils.getShipById(action.shipId, state)
             let newCash = state.cash - ship.basePrice
