@@ -1,41 +1,18 @@
 Sprint
-"Looing better, thing-by-thing"
-
---- Hide placeId's
----Graphical cargos
----Show the rations supply "refreshing"
-  --- Put fadein on rations
-  --- Remove rations when bought
-      --- Record how many (1/0)
-  ---  ONly display rations if they exist
-
-  ---  Replace missing rations every tick
-
-
----graphical ships for sale
-
-
-  ---food store with images
-  ---cargo images in hold
-  ---Click-to-sell hover (alt text?)
-  ---crew images
-
----Arrows for possible moves
-  --- direction
-  --- z-axis
-   ---center
-
----Center the ship
-
-
----Remove that blue border on my boat
-
-Button for "Start new game" after starve
-    ---Add START_NEW_GAME action
-    ---In reducer, ^ returns state0
-    ---Wire it into App.js
+"adding-things"
 
 Put ship secton labels into background images
+    Make "cargo hold" image
+    Make "Food store" image
+    Make "crew" image
+    Make "Fuel" image
+
+Make background deck image for fishboat
+
+Postion over fishboat image
+
+Generalize code for other ship types
+    How?
 
 Add cargo types
     Coal
@@ -58,6 +35,11 @@ More Places
     3rd Place 
     Nether
     Gibber
+
+Intro/Rules view
+    Write Intro
+    Write how-to-play
+    Info on ship types and cargos
 
 
 
