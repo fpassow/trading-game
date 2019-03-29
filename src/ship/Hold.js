@@ -4,13 +4,20 @@ import imagesByType from '../imagesByType'
 const holdStyle = {
     border: '3px solid brown',
     background: 'grey',
-    borderRadius: '5px'
+    borderRadius: '5px',
+    height: '300px',
+    position: 'relative'
+}
+const cargoDivStyle = {
+    position: 'absolute'
 }
 const Hold = ({cargo, localPrices, sellCargo}) => {
     return (
         <div style={holdStyle}>
+            <div style={cargoDivStyle}>
+                {cargo.map((aCargo)=>(<Cargo key={aCargo.cargoId} sellCargo={sellCargo} aCargo={aCargo} prices={localPrices} />))}
+            </div>
             <h3>Cargo </h3>
-            {cargo.map((aCargo)=>(<Cargo key={aCargo.cargoId} sellCargo={sellCargo} aCargo={aCargo} prices={localPrices} />))}
         </div>
     )
 }
@@ -22,11 +29,10 @@ const Cargo = ({aCargo, prices, sellCargo}) => {
         <div style={cargoStyle}>
             {prices[aCargo.cargoType] ? 
                 <div>
-
-                <button onClick={()=>{sellCargo(aCargo.cargoId)}}>
-                    <img src={imagesByType[aCargo.cargoType]} alt={aCargo.cargoLabel} /><br/>
-                    {prices[aCargo.cargoType]}&#402;
-                 </button>
+                    <button onClick={()=>{sellCargo(aCargo.cargoId)}}>
+                        <img src={imagesByType[aCargo.cargoType]} alt={aCargo.cargoLabel} /><br/>
+                        {prices[aCargo.cargoType]}&#402;
+                    </button>
                 </div> :
                  ''
             } 

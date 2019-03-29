@@ -1,0 +1,1 @@
+export constant FLORIN_MARK = '&#402;'

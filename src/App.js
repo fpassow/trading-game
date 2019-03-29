@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import WelcomePage from './WelcomePage'
+import WelcomePage from './welcome/WelcomePage'
 import MainPage from './MainPage'
 import { showWelcomePage, startNewGame } from './actions'
 import * as stateUtils from './stateUtils'

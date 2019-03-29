@@ -10,7 +10,15 @@ export function resetNextId() {
 }
 
 const baseCargo = {isForSale: true, isLoaded: false, shipId: null}
-const labelForCargoType = {oliveoil: 'Olive oil'}
+const labelForCargoType = {
+    oliveoil: 'Olive oil',
+    coal: 'Coal',
+    titanium:'Titanium',
+    leopardwood:'Leopard Wood',
+    clockworks:'Clockworks',
+    kippers:'Kippers',
+    fluf:'Fluff'
+}
 export function cargoFactory(cargoType, placeId) {
     return {...baseCargo, 
             cargoLabel: labelForCargoType[cargoType], 
@@ -34,24 +42,54 @@ export function shipyard(placeId, shipType, shipName) {
     }
     switch (shipType) {
         case 'fishboat':
-            newShip.shipTypeName = 'fishboat'
+            newShip.shipTypeName = 'Fish Boat'
             newShip.basePrice = 500
             newShip.crewSize = 1
             newShip.maxFuel = 0
             newShip.speed = 1
             newShip.fueldPerMove = 0
             newShip.maxCargo = 4
-            newShip.maxFood = 4
+            newShip.maxFood = 8
             break
-        case 'longboat':
-            newShip.shipTypeName = 'longboat'
-            newShip.basePrice = 800
-            newShip.crewSize = 12
-            newShip.maxFuel = 0
+        case 'albionsteamclipper':
+            newShip.shipTypeName = 'Albion Steam Clipper'
+            newShip.basePrice = 12000
+            newShip.crewSize = 6
+            newShip.maxFuel = 12
             newShip.speed = 3
-            newShip.fueldPerMove = 0
-            newShip.maxCargo = 8
+            newShip.fueldPerMove = 1
+            newShip.maxCargo = 12
             newShip.maxFood = 60
+            break
+        case 'enginebarge':
+            newShip.shipTypeName = 'Engine Barge'
+            newShip.basePrice = 4000
+            newShip.crewSize = 3
+            newShip.maxFuel = 20
+            newShip.speed = 1
+            newShip.fueldPerMove = 1
+            newShip.maxCargo = 20
+            newShip.maxFood = 60
+            break
+        case 'silverzeplin':
+            newShip.shipTypeName = 'Silver Zeplin'
+            newShip.basePrice = 20000
+            newShip.crewSize = 4
+            newShip.maxFuel = 10
+            newShip.speed = 2
+            newShip.fueldPerMove = 2
+            newShip.maxCargo = 6
+            newShip.maxFood = 16
+            break
+        case 'steamturbinehovercraft':
+            newShip.shipTypeName = 'Steam Turbine Hovercraft'
+            newShip.basePrice = 5000
+            newShip.crewSize = 2
+            newShip.maxFuel = 12
+            newShip.speed = 3
+            newShip.fueldPerMove = 3
+            newShip.maxCargo = 4
+            newShip.maxFood = 10
             break
         default:
             alert('Unknown ship type "'+shipType+'"')

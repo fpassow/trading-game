@@ -2,12 +2,19 @@ Sprint
 "adding-things"
 
 Put ship secton labels into background images
+
+  -- Or put text on a div underneith
+
     Make "cargo hold" image
     Make "Food store" image
     Make "crew" image
     Make "Fuel" image
 
+CREW IS AUTOMATIC. (STILL NEED PAY??)
+
 Make background deck image for fishboat
+
+COMBINE constants.js styleConstants.js & ???
 
 Postion over fishboat image
 
