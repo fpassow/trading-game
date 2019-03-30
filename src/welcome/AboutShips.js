@@ -3,15 +3,18 @@ import { shipyard } from '../factories'
 
 const allShipTypes = [
     'fishboat', 
-    'longboat', 
     'albionsteamclipper', 
     'enginebarge', 
     'silverzeplin',
     'steamturbinehovercraft'
 ]
 
+const exampleShips = allShipTypes.map((shipType)=>(shipyard('bogoPlace', shipType, 'bogoName')))
+
 const AboutShips = () => (
-    {allShipTypes.map((sType)=>(<ShipTypeData sample={shipyard('bogoPlace', sType, 'bogoName')} />))}
+    <div>
+        {exampleShips.map((ship)=>(<ShipTypeData key={ship.shipType} sample={ship} />))}
+    </div>
 )
 
 const ShipTypeData = (ship) => (
@@ -19,7 +22,11 @@ const ShipTypeData = (ship) => (
         <img src={ship.shipType + '_large.png'} alt="" />
         <h3>{ship.shipTypeName}</h3> 
          <table>
-             <tr><td>Price</td><td>ship.basePrice</td></tr></table>ship.basePrice = 5000
+             <tbody>
+                 <tr><td>Price</td><td>{ship.basePrice}</td></tr>
+             </tbody>
+        </table>
+             ship.basePrice = 5000
          ship.crewSize = 2
          ship.maxFuel = 12
          ship.speed = 3
