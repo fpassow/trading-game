@@ -47,7 +47,7 @@ export function shipyard(placeId, shipType, shipName) {
             newShip.crewSize = 1
             newShip.maxFuel = 0
             newShip.speed = 1
-            newShip.fueldPerMove = 0
+            newShip.fuelPerMove = 0
             newShip.maxCargo = 4
             newShip.maxFood = 8
             break
@@ -57,7 +57,7 @@ export function shipyard(placeId, shipType, shipName) {
             newShip.crewSize = 6
             newShip.maxFuel = 12
             newShip.speed = 3
-            newShip.fueldPerMove = 1
+            newShip.fuelPerMove = 1
             newShip.maxCargo = 12
             newShip.maxFood = 60
             break
@@ -67,7 +67,7 @@ export function shipyard(placeId, shipType, shipName) {
             newShip.crewSize = 3
             newShip.maxFuel = 20
             newShip.speed = 1
-            newShip.fueldPerMove = 1
+            newShip.fuelPerMove = 1
             newShip.maxCargo = 20
             newShip.maxFood = 60
             break
@@ -77,7 +77,7 @@ export function shipyard(placeId, shipType, shipName) {
             newShip.crewSize = 4
             newShip.maxFuel = 10
             newShip.speed = 2
-            newShip.fueldPerMove = 2
+            newShip.fuelPerMove = 2
             newShip.maxCargo = 6
             newShip.maxFood = 16
             break
@@ -87,7 +87,7 @@ export function shipyard(placeId, shipType, shipName) {
             newShip.crewSize = 2
             newShip.maxFuel = 12
             newShip.speed = 3
-            newShip.fueldPerMove = 3
+            newShip.fuelPerMove = 3
             newShip.maxCargo = 4
             newShip.maxFood = 10
             break
