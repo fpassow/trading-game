@@ -34,7 +34,9 @@ const Cargo = ({aCargo, prices, sellCargo}) => {
                         {prices[aCargo.cargoType]}&#402;
                     </button>
                 </div> :
-                 ''
+                <div>
+                    <img src={imagesByType[aCargo.cargoType]} alt={aCargo.cargoLabel} /><br/>
+                </div>
             } 
         </div>
     )

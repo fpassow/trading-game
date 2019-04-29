@@ -19,6 +19,10 @@ const state0 = {
     ships: [
         shipyard('portharbor', 'fishboat', 'The Flying Flea'),
         shipyard('portharbor', 'fishboat', 'Fishy'),
+        shipyard('portharbor', 'albionsteamclipper', 'Clippy'),
+        shipyard('portharbor', 'enginebarge', 'Grummpy'),
+        shipyard('portharbor', 'silverzeplin', 'Puffy'),
+        shipyard('portharbor', 'steamturbinehovercraft', 'Zippy'),
     ],
     places: places,
     cargos: [
