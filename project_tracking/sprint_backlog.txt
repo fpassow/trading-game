@@ -1,25 +1,21 @@
 Sprint
 "adding-things"
 
-Put ship secton labels into background images
+In port, include space (and a border) for ships for sale and cargos for sale areas
+   SO THEY LOOK GOOD EVEN WHEN EMPTY.
 
-  -- Or put text on a div underneith
+SHIPS FOR SALE IMAGE FOR STEAMTURBINEHOVERCRAFT NO SHOWING.
 
-    Make "cargo hold" image
-    Make "Food store" image
-    Make "crew" image
-    Make "Fuel" image
+WHAT DOES A "HOLD SPACE" LOOK LIKE?
+  > MAKE IT EASY TO SEE HOW MANY YOU HAVE. :-)
+
+
+
 
 CREW IS AUTOMATIC. (STILL NEED PAY??)
 
-Make background deck image for fishboat
-
 COMBINE constants.js styleConstants.js & ???
 
-Postion over fishboat image
-
-Generalize code for other ship types
-    How?
 
 Add cargo types
     Coal
@@ -29,11 +25,6 @@ Add cargo types
     Kippers
     Fluff
 
-ships
-    Albion Steam Clipper
-    Engine Barge
-    Silver Zeplin (adjacent to any square, semilimited cargo)
-    Steam Turbine Hovercraft (Fastest, fuel hog, limited cargo)
 
 More Places
     Point A (An actual point of land)
