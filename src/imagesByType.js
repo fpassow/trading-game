@@ -4,5 +4,5 @@ export default {
     albionsteamclipper: 'albionsteamclipper.png',
     enginebarge: 'enginebarge.png',
     silverzeplin: 'silverzeplin.png',
-    steamturbinehovercraft: 'steamturbinehovercraft.pg'
+    steamturbinehovercraft: 'steamturbinehovercraft.png'
 }
