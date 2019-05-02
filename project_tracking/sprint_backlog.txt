@@ -1,10 +1,18 @@
 Sprint
 "adding-things"
 
-In port, include space (and a border) for ships for sale and cargos for sale areas
-   SO THEY LOOK GOOD EVEN WHEN EMPTY.
 
-SHIPS FOR SALE IMAGE FOR STEAMTURBINEHOVERCRAFT NO SHOWING.
+I want to pack cargos in rows on the dock. (could be more than one)
+WE DON'T ACTUALLY NEED THE LABELS!!!
+
+AND WITH NO LABELS, WE DON'T NEED TO SORT THEM!!!!!
+
+I LIKE THE BUTTON-WITH-PRICE COMPONENT I USE IN THE HOLD!!!
+
+*****************************************************
+***  reusable cargo component for both places!!!  *** <<<<<<<<<<<<
+*****************************************************
+
 
 WHAT DOES A "HOLD SPACE" LOOK LIKE?
   > MAKE IT EASY TO SEE HOW MANY YOU HAVE. :-)

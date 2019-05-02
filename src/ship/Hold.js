@@ -1,5 +1,5 @@
 import React from 'react'
-import imagesByType from '../imagesByType'
+import Cargo from '../shared_components/Cargo'
 
 const holdStyle = {
     border: '3px solid brown',
@@ -15,15 +15,18 @@ const Hold = ({cargo, localPrices, sellCargo}) => {
     return (
         <div style={holdStyle}>
             <div style={cargoDivStyle}>
-                {cargo.map((aCargo)=>(<Cargo key={aCargo.cargoId} sellCargo={sellCargo} aCargo={aCargo} prices={localPrices} />))}
+                {cargo.map((aCargo)=>(
+                    <Cargo key={aCargo.cargoId} sellCargo={sellCargo} aCargo={aCargo} 
+                           enabled={!!localPrices[aCargo.cargoType]} price={localPrices[aCargo.cargoType]} 
+                    />
+                ))}
             </div>
             <h3>Cargo </h3>
         </div>
     )
 }
-let cargoStyle = {
-    display: "inline-block"
-}
+
+/*
 const Cargo = ({aCargo, prices, sellCargo}) => {
     return (
         <div style={cargoStyle}>

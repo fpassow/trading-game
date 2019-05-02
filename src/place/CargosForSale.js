@@ -1,5 +1,5 @@
 import React from 'react'
-import imagesByType from '../imagesByType'
+import Cargo from '../shared_components/Cargo'
 
 export default function CargosForSaleComponent({prices, hasShip, cargosForSale, cash, buyCargo}) {
     return (
@@ -8,12 +8,12 @@ export default function CargosForSaleComponent({prices, hasShip, cargosForSale, 
             {cargosForSale.map((cargo)=>{
                 let price = prices[cargo.cargoType]
                 return (
-                    <CargoForSale
+                    <Cargo
                         key={cargo.cargoId} 
-                        buyCargo={buyCargo} 
-                        cargo={cargo} 
+                        cargoClicked={buyCargo} 
+                        aCargo={cargo} 
                         price={price}
-                        canBuy={hasShip && (price <= cash)}
+                        enabled={hasShip && (price <= cash)}
                     />
                 )
                 
@@ -21,7 +21,7 @@ export default function CargosForSaleComponent({prices, hasShip, cargosForSale, 
         </div>
     )
 }
-
+/*
 function  CargoForSale({cargo, canBuy, buyCargo, price}) {
     return (
         <div >
@@ -31,4 +31,5 @@ function  CargoForSale({cargo, canBuy, buyCargo, price}) {
         </div>
     )
 }
+*/
 
