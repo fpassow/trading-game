@@ -2,17 +2,9 @@ Sprint
 "adding-things"
 
 
-I want to pack cargos in rows on the dock. (could be more than one)
-WE DON'T ACTUALLY NEED THE LABELS!!!
+Make all Cargo's a fixed size (square) (50x50)<<<<<<<<<<<<<<<<<<<
 
-AND WITH NO LABELS, WE DON'T NEED TO SORT THEM!!!!!
-
-I LIKE THE BUTTON-WITH-PRICE COMPONENT I USE IN THE HOLD!!!
-
-*****************************************************
-***  reusable cargo component for both places!!!  *** <<<<<<<<<<<<
-*****************************************************
-
+visually separate "Rations" section on the dock.
 
 WHAT DOES A "HOLD SPACE" LOOK LIKE?
   > MAKE IT EASY TO SEE HOW MANY YOU HAVE. :-)
