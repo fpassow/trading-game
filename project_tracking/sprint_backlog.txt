@@ -18,8 +18,6 @@ COMBINE constants.js styleConstants.js & ???
 
 
 Add cargo types
-    Coal
-    Titanium
     Leopard Wood
     Clockworks
     Kippers
