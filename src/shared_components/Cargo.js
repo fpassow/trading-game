@@ -35,7 +35,7 @@ const disabledStyle = {
 const Cargo = ({aCargo, price, enabled, cargoClicked}) => {
     if (enabled) {
         return (
-            <button onClick={()=>{cargoClicked(aCargo.cargoId)}} style={buttonStyle(aCargo)}>
+            <button title={aCargo.cargoLabel} onClick={()=>{cargoClicked(aCargo.cargoId)}} style={buttonStyle(aCargo)}>
                 {price}&#402;
             </button>
         )
