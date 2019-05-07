@@ -13,7 +13,6 @@ const baseCargo = {isForSale: true, isLoaded: false, shipId: null}
 const labelForCargoType = {
     oliveoil: 'Olive oil',
     coal: 'Coal',
-    titanium:'Titanium',
     leopardwood:'Leopard Wood',
     clockworks:'Clockworks',
     kippers:'Kippers',

@@ -5,7 +5,12 @@
 
 const  basePrices = {
     oliveoil: 50,
-    smallbagofgold: 290
+    smallbagofgold: 290,
+    coal: 10,
+    leopardwood: 100,
+    clockworks: 200,
+    kippers: 50,
+    fluff: 20
 }
 
 const places = [

@@ -2,7 +2,7 @@ Sprint
 "adding-things"
 
 
-Make all Cargo's a fixed size (square) (50x50)<<<<<<<<<<<<<<<<<<<
+Add alt text or hover or something to cargos. 
 
 visually separate "Rations" section on the dock.
 
@@ -16,12 +16,6 @@ CREW IS AUTOMATIC. (STILL NEED PAY??)
 
 COMBINE constants.js styleConstants.js & ???
 
-
-Add cargo types
-    Leopard Wood
-    Clockworks
-    Kippers
-    Fluff
 
 
 More Places

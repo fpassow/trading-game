@@ -27,7 +27,13 @@ const state0 = {
     places: places,
     cargos: [
         {isForSale: true, cargoId:'cargo1', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', isLoaded: false, placeId: 'portharbor', shipId: null},
-        {isForSale: true, cargoId:'cargo2', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', isLoaded: false, placeId: 'portharbor', shipId: null}
+        {isForSale: true, cargoId:'cargo2', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', isLoaded: false, placeId: 'portharbor', shipId: null},
+
+        {isForSale: true, cargoId:'cargo3', cargoLabel: 'Coal', cargoType: 'coal', isLoaded: false, placeId: 'portharbor', shipId: null},
+        {isForSale: true, cargoId:'cargo4', cargoLabel: 'Leopard Wood', cargoType: 'leopardwood', isLoaded: false, placeId: 'portharbor', shipId: null},
+        {isForSale: true, cargoId:'cargo5', cargoLabel: 'Clockworks', cargoType: 'clockworks', isLoaded: false, placeId: 'portharbor', shipId: null},
+        {isForSale: true, cargoId:'cargo6', cargoLabel: 'Kippers', cargoType: 'kippers', isLoaded: false, placeId: 'portharbor', shipId: null},
+        {isForSale: true, cargoId:'cargo7', cargoLabel: 'Fluff', cargoType: 'fluff', isLoaded: false, placeId: 'portharbor', shipId: null}
       //  {isForSale: true, cargoId:'cargo5', cargoLabel: 'small bag of gold', cargoType: 'smallbagofgold', isLoaded: false, placeId: 'portharbor', shipId: null}
     ],
     cargoProducers: [
