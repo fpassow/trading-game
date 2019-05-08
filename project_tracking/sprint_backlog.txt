@@ -2,14 +2,12 @@ Sprint
 "adding-things"
 
 
-Add alt text or hover or something to cargos. 
-
-visually separate "Rations" section on the dock.
+cargo image vs cargo button, different HEIGHTS ON THE LINE.
 
 WHAT DOES A "HOLD SPACE" LOOK LIKE?
   > MAKE IT EASY TO SEE HOW MANY YOU HAVE. :-)
 
-
+Space below fishboat on hello page
 
 
 CREW IS AUTOMATIC. (STILL NEED PAY??)
