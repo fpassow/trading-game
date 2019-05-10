@@ -11,53 +11,32 @@ const holdStyle = {
 const cargoDivStyle = {
     position: 'absolute'
 }
-const Hold = ({cargo, localPrices, sellCargo}) => {
+const emptyBayStyle = {
+    display: 'inline-block',
+    boxSizing: 'border-box',
+    width: '50px',
+    height: '50px',
+    background: '#333',
+    border: '2px solid #666'
+}
+const Hold = ({myShip, cargo, localPrices, sellCargo}) => {
+    const emptyCargoBays = []
+    for (let i = 0; i < (myShip.maxCargo - cargo.length); i++) {
+        emptyCargoBays.push(<div key={i} style={emptyBayStyle}></div>)
+    }
     return (
         <div style={holdStyle}>
             <div style={cargoDivStyle}>
                 {cargo.map((aCargo)=>(
-                    <Cargo key={aCargo.cargoId} sellCargo={sellCargo} aCargo={aCargo} 
+                    <Cargo key={aCargo.cargoId} cargoClicked={sellCargo} aCargo={aCargo} 
                            enabled={!!localPrices[aCargo.cargoType]} price={localPrices[aCargo.cargoType]} 
                     />
                 ))}
+                {emptyCargoBays}
             </div>
             <h3>Cargo </h3>
         </div>
     )
 }
-
-/*
-const Cargo = ({aCargo, prices, sellCargo}) => {
-    return (
-        <div style={cargoStyle}>
-            {prices[aCargo.cargoType] ? 
-                <div>
-                    <button onClick={()=>{sellCargo(aCargo.cargoId)}}>
-                        <img src={imagesByType[aCargo.cargoType]} alt={aCargo.cargoLabel} /><br/>
-                        {prices[aCargo.cargoType]}&#402;
-                    </button>
-                </div> :
-                <div>
-                    <img src={imagesByType[aCargo.cargoType]} alt={aCargo.cargoLabel} /><br/>
-                </div>
-            } 
-        </div>
-    )
-}
-/*
-const Cargo = ({aCargo, prices, sellCargo}) => {
-    return (
-        <div>
-            <img src={imagesByType[aCargo.cargoType]} alt={aCargo.cargoLabel} />
-            {prices[aCargo.cargoType] ? 
-                <span>
-                <button onClick={()=>{sellCargo(aCargo.cargoId)}}>Sell for {prices[aCargo.cargoType]}&#402;</button>
-                </span> :
-                 ''
-            } 
-        </div>
-    )
-}
-*/
 
 export default Hold

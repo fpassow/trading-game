@@ -30,7 +30,7 @@ const nameplateStyle = {
 const ShipPanelComponent = ({cash, myShip, cargo, localPrices, sellCargo}) => (
   <div style={{background:seaBlue}}>
     <div style={shipStyle}>
-      <Hold cargo ={cargo} localPrices={localPrices} sellCargo={sellCargo} />
+      <Hold myShip ={myShip} cargo={cargo} localPrices={localPrices} sellCargo={sellCargo} />
       <Food myShip={myShip} />
       <Fuel myShip={myShip} />
       <Crew myShip={myShip} />

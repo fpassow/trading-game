@@ -45,23 +45,5 @@ const Cargo = ({aCargo, price, enabled, cargoClicked}) => {
     }
 }
 
-// <img src={} alt={aCargo.cargoLabel} /><br/>
-
-
-/*
-const Cargo = ({aCargo, prices, sellCargo}) => {
-    return (
-        <div>
-            <img src={imagesByType[aCargo.cargoType]} alt={aCargo.cargoLabel} />
-            {prices[aCargo.cargoType] ? 
-                <span>
-                <button onClick={()=>{sellCargo(aCargo.cargoId)}}>Sell for {prices[aCargo.cargoType]}&#402;</button>
-                </span> :
-                 ''
-            } 
-        </div>
-    )
-}
-*/
 
 export default Cargo
