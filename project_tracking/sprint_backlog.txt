@@ -2,19 +2,25 @@ Sprint
 "adding-things"
 
 
-Fix selling cargo
+Move images to their own dir
 
+Better arrows
 
-Space below fishboat on hello page
+White text for towns (or better position, or?)
 
+Better look for help button
+Better position for help button
+
+More attractive "Play" button
+Change to "return to game" once the game is started (by the clock?)
+
+Headline image (made from ship images, etc?)
 
 Slight vertical difference between empty bays and cargos.
 
 
 
 CREW IS AUTOMATIC. (STILL NEED PAY??)
-
-COMBINE constants.js styleConstants.js & ???
 
 
 
