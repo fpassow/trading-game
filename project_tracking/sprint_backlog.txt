@@ -2,11 +2,7 @@ Sprint
 "adding-things"
 
 
-Move images to their own dir
-
 Better backgrounds on shore
-
-White text for towns (or better position, or?)
 
 Better look for help button
 Better position for help button
@@ -19,6 +15,8 @@ Headline image (made from ship images, etc?)
 Non-Tux crew image
 
 Custom favicon
+
+Remove wait for rations to replenish. It's just too annoying.
 
 Other ship types ready for play
    Use the right image on the map

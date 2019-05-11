@@ -40,7 +40,8 @@ const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
         gridColumn: p.x, 
         gridRow: p.y, 
         margin:'0px',
-        position: 'relative'
+        position: 'relative',
+        backgroundPosition: 'center'
     }
     let arrowStyle = {
         transform: 'rotate('+_arrowRotation(p, myPlace)+'deg)',
