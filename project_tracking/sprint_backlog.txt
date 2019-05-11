@@ -16,6 +16,15 @@ Change to "return to game" once the game is started (by the clock?)
 
 Headline image (made from ship images, etc?)
 
+Non-Tux crew image
+
+Custom favicon
+
+Other ship types ready for play
+   Use the right image on the map
+
+Fuel stuff
+
 Slight vertical difference between empty bays and cargos.
 
 

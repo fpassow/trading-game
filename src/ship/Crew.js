@@ -4,7 +4,7 @@ const Crew = ({myShip}) => {
     let maybeRed = {color: ((myShip.crew < myShip.crewSize) ? 'red' : 'inherit')}
     let crewArr = []
     for (let i = 0; i < myShip.crew; i++) {
-        crewArr.push(<img key={i} src="crew.png" alt="crewperson" />)
+        crewArr.push(<img key={i} src="img/crew.png" alt="crewperson" />)
     }
     return (
         <div>

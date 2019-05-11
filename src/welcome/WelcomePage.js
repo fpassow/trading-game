@@ -19,11 +19,10 @@ const WelcomePage = ({hideWelcomePage}) => (
     <div style={wrapperStyle}>
         <div style={welcomePageStyle}>
             <div style={{textAligh:'right'}}> <button onClick={hideWelcomePage} >Play</button> </div>
-            <div>
-                <IntroText />
-                <PlayingTheGame />
-                <AboutShips />
-            </div>
+            <img src="img/albionsteamclipper_large.png" alt="A ship with steam and sail" />
+            <IntroText />
+            <PlayingTheGame />
+            <AboutShips />
             <button onClick={hideWelcomePage} >Play</button>
         </div>
     </div>

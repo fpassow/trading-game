@@ -5,7 +5,7 @@ const Chandler = ({place, buyFood, hasShip}) => {
     return (
         <div>
             <h3>Buy food</h3> 
-            <img alt="" className={place.foods ? "fade-in fade-in-isin" : "fade-in"} src="rations.png"/>
+            <img alt="" className={place.foods ? "fade-in fade-in-isin" : "fade-in"} src="img/rations.png"/>
             {place.foodPrice}  &#402; &nbsp; &nbsp; 
             {(hasShip && place.foods) ? <button onClick={()=>{buyFood(place.placeId)}}>Buy</button> : ''}
         </div>

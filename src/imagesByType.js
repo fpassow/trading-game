@@ -1,13 +1,13 @@
 export default {
-    oliveoil: 'oliveoil.png',
-    fishboat: 'fishboat.png',
-    albionsteamclipper: 'albionsteamclipper.png',
-    enginebarge: 'enginebarge.png',
-    silverzeplin: 'silverzeplin.png',
-    steamturbinehovercraft: 'steamturbinehovercraft.png',
-    coal: 'coal.png',
-    leopardwood: 'leopardwood.png',
-    clockworks: 'clockworks.png',
-    kippers: 'kippers.png',
-    fluff: 'fluff.png'
+    oliveoil: 'img/oliveoil.png',
+    fishboat: 'img/fishboat.png',
+    albionsteamclipper: 'img/albionsteamclipper.png',
+    enginebarge: 'img/enginebarge.png',
+    silverzeplin: 'img/silverzeplin.png',
+    steamturbinehovercraft: 'img/steamturbinehovercraft.png',
+    coal: 'img/coal.png',
+    leopardwood: 'img/leopardwood.png',
+    clockworks: 'img/clockworks.png',
+    kippers: 'img/kippers.png',
+    fluff: 'img/fluff.png'
 }
