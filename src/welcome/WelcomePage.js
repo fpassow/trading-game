@@ -15,11 +15,15 @@ const welcomePageStyle = {
     background: 'white',
     borderRadius: '40px'
 }
+const welcomeImageStyle = {
+    display: 'block',
+    margin: '0 auto'
+}
 const WelcomePage = ({hideWelcomePage}) => (
     <div style={wrapperStyle}>
         <div style={welcomePageStyle}>
             <div style={{textAligh:'right'}}> <button onClick={hideWelcomePage} >Play</button> </div>
-            <img src="img/albionsteamclipper_large.png" alt="A ship with steam and sail" />
+            <img src="img/albionsteamclipper_large.png" alt="A ship with steam and sail" style={welcomeImageStyle} />
             <IntroText />
             <PlayingTheGame />
             <AboutShips />
