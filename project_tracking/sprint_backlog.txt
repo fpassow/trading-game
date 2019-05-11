@@ -4,7 +4,7 @@ Sprint
 
 Move images to their own dir
 
-Better arrows
+Better backgrounds on shore
 
 White text for towns (or better position, or?)
 
