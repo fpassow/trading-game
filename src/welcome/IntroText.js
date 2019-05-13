@@ -2,7 +2,7 @@ import React from 'react'
 
 const IntroText = () => (
     <div>
-        <h1>A Steampunk Traiding Game</h1>
+        <h1>A Steampunk Trading Game</h1>
 
         <p>This is a classic trading game. You start with some money. Buy a ship. Buy some cargo. Sail to another port. Sell
         the cargo at a profit. And repeat until rich</p>

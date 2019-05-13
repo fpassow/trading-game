@@ -2,15 +2,8 @@ Sprint
 "adding-things"
 
 
-Better backgrounds on shore
-
 Better look for help button
 Better position for help button
-
-More attractive "Play" button
-Change to "return to game" once the game is started (by the clock?)
-
-Better headline image (made from ship images, etc?)
 
 Non-Tux crew image
 

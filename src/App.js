@@ -5,7 +5,7 @@ import MainPage from './MainPage'
 import { showWelcomePage, startNewGame } from './actions'
 import * as stateUtils from './stateUtils'
 
-const AppComponent = ({showingWelcomePage, showWelcomePage, hideWelcomePage, hasShip, isInPort, gameOver, gameOverMessage, startNewGame}) => {
+const AppComponent = ({showingWelcomePage, showWelcomePage, hideWelcomePage, hasShip, isInPort, gameOver, gameOverMessage, startNewGame, ticks}) => {
     if (gameOver) {
         return (
             <div className="App" style={{textAlign:'center'}}>
@@ -15,7 +15,7 @@ const AppComponent = ({showingWelcomePage, showWelcomePage, hideWelcomePage, has
             </div>
         )
     } else if (showingWelcomePage) {
-        return <div className="App"><WelcomePage hideWelcomePage={hideWelcomePage} /></div>
+        return <div className="App"><WelcomePage hideWelcomePage={hideWelcomePage} ticks={ticks} /></div>
     } else {
         return <div className="App"><MainPage showWelcomePage={showWelcomePage} hasShip={hasShip} isInPort={isInPort} /></div>
     }
@@ -26,7 +26,8 @@ const mapStateToProps = state => ({
   hasShip: !!state.myShipId,
   isInPort: stateUtils.getCurrentPlace(state).placeType === 'PORT',
   gameOver: state.gameOver,
-  gameOverMessage: state.gameOverMessage
+  gameOverMessage: state.gameOverMessage,
+  ticks: state.ticks
 })
 
 const mapDispatchToProps = dispatch => ({
