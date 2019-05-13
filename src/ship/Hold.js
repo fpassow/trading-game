@@ -34,7 +34,6 @@ const Hold = ({myShip, cargo, localPrices, sellCargo}) => {
                 ))}
                 {emptyCargoBays}
             </div>
-            <h3>Cargo </h3>
         </div>
     )
 }

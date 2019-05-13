@@ -10,7 +10,7 @@ Better position for help button
 More attractive "Play" button
 Change to "return to game" once the game is started (by the clock?)
 
-Headline image (made from ship images, etc?)
+Better headline image (made from ship images, etc?)
 
 Non-Tux crew image
 
@@ -20,8 +20,11 @@ Remove wait for rations to replenish. It's just too annoying.
 
 Other ship types ready for play
    Use the right image on the map
+   Speeds
 
 Fuel stuff
+
+Flyer and hovercraft movement
 
 Slight vertical difference between empty bays and cargos.
 

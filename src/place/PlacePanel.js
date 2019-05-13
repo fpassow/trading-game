@@ -17,8 +17,8 @@ const PlacePanelComponent = (
     buyFood, 
     buyCargo}
 ) => {
-    return (<div>
-      <div style={{ background: '#ad0' }}>
+    return (<div style={{ background: '#ad0' }}>
+      <div >
         <h2>{place.name}</h2>
         <h3>{place.description}</h3>
       </div>
