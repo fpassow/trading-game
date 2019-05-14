@@ -90,13 +90,26 @@ function _arrowRotation(place, myPlace) {
     return 180
 }
 
+const backToWelcomePageStyle = {
+    color: 'white',
+    background: 'blue',
+    fontSize: '16px',
+    borderRadius: '10px'
+}
 const MapPanelComponent = ({
-        ticks, days, ticksToday, places, myShip, myPlace, isMoving, moveEndTime, moveShip
+        ticks, days, ticksToday, places, myShip, myPlace, isMoving, moveShip, showWelcomePage
     }) => {
     let destinations = (myShip && myPlace) ? myPlace.neighbors : []
     return (
         <div style={mapPanelStyle}>
-            <TimeView days={days} ticks={ticks} ticksToday={ticksToday} isMoving={isMoving} moveEndTime={moveEndTime} />
+            <div style={{display:'inline-block', width:'200px'}}>
+                <TimeView 
+                    days={days} 
+                    ticks={ticks} 
+                    ticksToday={ticksToday}
+                />
+            </div>
+            <button onClick={showWelcomePage} style={backToWelcomePageStyle}>&lt;&lt; Back to home page</button>
             <div style={mapStyle}>
                 {places.map((p)=>(<Square key={p.placeId} 
                                           p={p} 
@@ -120,8 +133,7 @@ const mapStateToProps = state => ({
   places: state.places,
   myShip: stateUtils.getMyShip(state),
   myPlace: stateUtils.getCurrentPlace(state),
-  isMoving: state.isMoving,
-  moveEndTime: state.moveEndTime
+  isMoving: state.isMoving
 })
 
 const mapDispatchToProps = dispatch => ({

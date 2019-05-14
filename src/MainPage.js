@@ -13,8 +13,7 @@ const MainPage = ({showWelcomePage, hasShip, isInPort}) => (
     <div style={mainPageStyle}>
         {isInPort ? <PlacePanel /> : <div>At sea....</div>}
         {hasShip ? <ShipPanel /> : <ShiplessPanel />}
-        <MapPanel />
-        <button onClick={showWelcomePage} >Help</button>
+        <MapPanel showWelcomePage={showWelcomePage} />
     </div>
 )
 

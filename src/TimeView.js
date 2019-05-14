@@ -1,10 +1,29 @@
 import React from 'react'
 
-
-const TimeView = ({ticks, days, ticksToday, isMoving, moveEndTime}) => (
-    <div >
-        <h3 style={{color:'white'}}>Day {days}  [{ticksToday}] &nbsp; 
-        {(isMoving) ? "Sailing... " + (moveEndTime - ticks) : ""}</h3>
+const timeViewStyle = {
+    fontWeight: 'bold',
+    border: '2px solid white',
+    borderRadius: '4px',
+    color: 'white',
+    paddingLeft: '5px',
+    fontWeight: 'bold',
+    fontSize: '16px',
+    width: '120px'
+}
+const dayStyle = {
+    display: 'inline-block',
+    width: '60px',
+    textAlign: 'left'
+}
+const bellsStyle = {
+    display: 'inline-block',
+    width: '50px',
+    textAlign: 'right'
+}
+const TimeView = ({ticks, days, ticksToday}) => (
+    <div style={timeViewStyle}>
+        <div style={dayStyle}>Day {days},</div>
+        <div style={bellsStyle}>{ticksToday}:00</div>
     </div>
 )
 
