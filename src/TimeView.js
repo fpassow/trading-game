@@ -22,7 +22,7 @@ const bellsStyle = {
 }
 const TimeView = ({ticks, days, ticksToday}) => (
     <div style={timeViewStyle}>
-        <div style={dayStyle}>Day {days},</div>
+        <div style={dayStyle}>Day {days}</div>
         <div style={bellsStyle}>{ticksToday}:00</div>
     </div>
 )
