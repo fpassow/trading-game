@@ -3,6 +3,7 @@ import PlacePanel from './place/PlacePanel'
 import ShipPanel from './ship/ShipPanel'
 import ShiplessPanel from './ship/ShiplessPanel'
 import MapPanel from './MapPanel'
+import {seaBlue} from './styleConstants'
 
 let mainPageStyle = {
     display: 'grid',
@@ -11,7 +12,7 @@ let mainPageStyle = {
 
 const MainPage = ({showWelcomePage, hasShip, isInPort}) => (
     <div style={mainPageStyle}>
-        {isInPort ? <PlacePanel /> : <div>At sea....</div>}
+        {isInPort ? <PlacePanel /> : <div style={{background:seaBlue}}> </div>}
         {hasShip ? <ShipPanel /> : <ShiplessPanel />}
         <MapPanel showWelcomePage={showWelcomePage} />
     </div>

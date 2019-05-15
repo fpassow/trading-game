@@ -2,9 +2,6 @@ Sprint
 "adding-things"
 
 
-Better look for help button
-Better position for help button
-
 Non-Tux crew image
 
 Custom favicon
