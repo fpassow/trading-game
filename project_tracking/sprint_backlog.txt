@@ -2,11 +2,12 @@ Sprint
 "adding-things"
 
 
-Non-Tux crew image
-
-Custom favicon
-
 Remove wait for rations to replenish. It's just too annoying.
+
+Add the other places
+Cargo prices everywhere
+
+Cargo production everywherer
 
 Other ship types ready for play
    Use the right image on the map
@@ -18,10 +19,9 @@ Flyer and hovercraft movement
 
 Slight vertical difference between empty bays and cargos.
 
-
-
 CREW IS AUTOMATIC. (STILL NEED PAY??)
 
+==============================================
 
 
 More Places
