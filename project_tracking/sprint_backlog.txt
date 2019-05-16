@@ -2,8 +2,8 @@ Sprint
 "adding-things"
 
 
-Remove wait for rations to replenish. It's just too annoying.
-
+Smaller food icon
+Fitted space for food in the ship
 
 Add the other places
 Cargo prices everywhere
