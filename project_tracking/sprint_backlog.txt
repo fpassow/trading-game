@@ -1,6 +1,7 @@
 Sprint
 "adding-things"
 
+Fit hold to cargo bays
 
 Smaller food icon
 Fitted space for food in the ship

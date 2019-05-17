@@ -5,7 +5,7 @@ const holdStyle = {
     border: '3px solid brown',
     background: 'grey',
     borderRadius: '5px',
-    height: '300px',
+    //height: '300px',
     position: 'relative'
 }
 const cargoDivStyle = {
@@ -26,14 +26,14 @@ const Hold = ({myShip, cargo, localPrices, sellCargo}) => {
     }
     return (
         <div style={holdStyle}>
-            <div style={cargoDivStyle}>
+            
                 {cargo.map((aCargo)=>(
                     <Cargo key={aCargo.cargoId} cargoClicked={sellCargo} aCargo={aCargo} 
                            enabled={!!localPrices[aCargo.cargoType]} price={localPrices[aCargo.cargoType]} 
                     />
                 ))}
                 {emptyCargoBays}
-            </div>
+            
         </div>
     )
 }

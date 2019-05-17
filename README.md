@@ -22,6 +22,12 @@ src    -- ES6/JSX source code
     stateUtils.js      -- Functions for finding and changing state. Used in reducers and mapStateToProps
     actions.js         -- All of the Redux action creators
     rootReducer.js     -- Redux reducer function
+    place              -- Directory containing componets for the port the player is currently at,
+                          where you buy and sell cargo, etc. It's just blue water while sailing between
+                          ports.
+    ship               -- Directory containing components show the player's ship, the contents
+                          of it's hold, food supply, etc. The players "cash box" also displays here.
+    welcome            -- Components for the initial welcome screen, with rules and info.
 
 
     
