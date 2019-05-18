@@ -1,10 +1,9 @@
 Sprint
 "adding-things"
 
-Fit hold to cargo bays
 
-Smaller food icon
-Fitted space for food in the ship
+Add empty "food bays"
+Fit food store to bays, like cargos
 
 Add the other places
 Cargo prices everywhere
