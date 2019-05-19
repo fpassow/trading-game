@@ -8,9 +8,6 @@ const holdStyle = {
     //height: '300px',
     position: 'relative'
 }
-const cargoDivStyle = {
-    position: 'absolute'
-}
 const emptyBayStyle = {
     display: 'inline-block',
     boxSizing: 'border-box',

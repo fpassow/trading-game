@@ -2,7 +2,6 @@ Sprint
 "adding-things"
 
 
-Add the other places
 Cargo prices everywhere
 
 Cargo production everywhere
@@ -23,12 +22,3 @@ Slight vertical difference between empty bays and cargos.
 CREW IS AUTOMATIC. (STILL NEED PAY??)
 
 ==============================================
-
-Remove "other place"
-More Places
-    Point A (An actual point of land)
-    Point B
-    Heck
-    3rd Place 
-    Nether
-    Gibber

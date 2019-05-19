@@ -6,7 +6,6 @@ const timeViewStyle = {
     borderRadius: '4px',
     color: 'white',
     paddingLeft: '5px',
-    fontWeight: 'bold',
     fontSize: '16px',
     width: '120px'
 }

@@ -13,8 +13,8 @@ let mapPanelStyle = {
 
 const mapStyle = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(2, 100px)',
-    gridTemplateRows: 'repeat(6, 100px)'
+    gridTemplateColumns: 'repeat(4, 100px)',
+    gridTemplateRows: 'repeat(8, 100px)'
 }
 
 const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
@@ -69,9 +69,15 @@ const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
         </div>
     )
 }
-//  let isDestination = myShip && (destinations.indexOf(myShip.placeId) > -1)
-function _isDestination(destinations, placeId) {
-    return destinations.indexOf(placeId) > -1
+
+function _isDestination(place, myPlace) {
+    //True if they are one square apart (not diagonal), and place is a port or sea square,
+    // and you are not going overland from port to port
+    return (
+        (place.placeType === 'PORT' || place.placeType === 'AT_SEA') && 
+        !(myPlace.placeType === 'PORT' && place.placeType === 'PORT') &&
+        ((Math.abs(place.x - myPlace.x) + Math.abs(place.y - myPlace.y)) === 1)
+    )
 }
 
 //For a given place and the player's ships place, compute the degrees rotation
@@ -99,7 +105,6 @@ const backToWelcomePageStyle = {
 const MapPanelComponent = ({
         ticks, days, ticksToday, places, myShip, myPlace, isMoving, moveShip, showWelcomePage
     }) => {
-    let destinations = (myShip && myPlace) ? myPlace.neighbors : []
     return (
         <div style={mapPanelStyle}>
             <div style={{display:'inline-block', width:'200px'}}>
@@ -116,7 +121,7 @@ const MapPanelComponent = ({
                                           myShip={myShip} 
                                           myPlace={myPlace}
                                           isMoving={isMoving}
-                                          isDestination={_isDestination(destinations, p.placeId)}
+                                          isDestination={myShip && _isDestination(p, myPlace)}
                                           moveShip={moveShip} 
                                   />
                 ))}

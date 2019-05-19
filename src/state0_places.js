@@ -16,103 +16,79 @@ const  basePrices = {
 const places = [
     {
         name: 'Ocean', placeId: 'wet_1_1', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
-        foods: 0,
         x: 1,
         y: 1,
-        neighbors: ['wet_1_2', 'wet_2_1'],
         prices: {}
     },
     {
         name: 'Ocean', placeId: 'wet_1_2', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
-        foods: 0,
         x: 1,
         y: 2,
-        neighbors: ['wet_1_1', 'wet_2_2', 'wet_1_3'],
         prices: {}
     },
     {
         name: 'Ocean', placeId: 'wet_1_3', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
-        foods: 0,
         x: 1,
         y: 3,
-        neighbors: ['otherplace', 'wet_1_2', 'wet_1_4'],
         prices: {}
     },
     {
         name: 'Ocean', placeId: 'wet_1_4', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
-        foods: 0,
         x: 1,
         y: 4,
-        neighbors: ['wet_1_5', 'wet_1_3'],
         prices: {}
     },
     {
         name: 'Ocean', placeId: 'wet_1_5', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
-        foods: 0,
         x: 1,
         y: 5,
-        neighbors: ['portharbor', 'wet_1_4', 'wet_1_6'],
         prices: {}
     },
     {
         name: 'Ocean', placeId: 'wet_1_6', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
-        foods: 0,
         x: 1,
         y: 6,
-        neighbors: ['wet_2_6', 'wet_1_5'],
         prices: {}
     },
     {
         name: 'Ocean', placeId: 'wet_1_7', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
-        foods: 0,
         x: 1,
         y: 7,
-        neighbors: ['nether', 'wet_1_6', 'wet_1_8'],
         prices: {}
     },
     {
         name: 'Ocean', placeId: 'wet_1_8', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
-        foods: 0,
         x: 1,
         y: 8,
-        neighbors: ['wet_1_7', 'wet_2_8'],
         prices: {}
     },
     {
         name: 'Ocean', placeId: 'wet_2_1', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
-        foods: 0,
         x: 2,
         y: 1,
-        neighbors: ['wet_1_1'],
         prices: {}
     },
     {
-        name: 'Ocean', placeId: 'dry_2_2', placeType: 'LAND', description: 'At sea', isFoodForSale: false, foodPrice: -1,
-        foods: 0,
+        name: 'Point A', placeId: 'pointa', placeType: 'PORT', description: 'Not far frmo Point B', isFoodForSale: true, foodPrice: 5,
         x: 2,
         y: 2,
-        neighbors: ['wet_1_2', 'wet_2_1'],
-        prices: {}
+        prices: basePrices
     },
     {
-        name: 'Other Place',
-        placeId: 'otherplace',
+        name: 'Third Place',
+        placeId: 'thirdplace',
         placeType: 'PORT',
-        description: 'A nasty little fishing village',
+        description: 'Not home or work',
         isFoodForSale: true,
-        foodPrice: 5,
-        foods: 1,
+        foodPrice: 15,
         x: 2,
         y: 3,
-        neighbors: ['wet_1_3'],
-        prices: {...basePrices, oliveoil: 100}
+        prices: basePrices
     },
     {
         name: 'Land', placeId: 'dry_2_4', placeType: 'LAND', description: 'Land', isFoodForSale: false, foodPrice: -1,
-        foods: 0,
         x: 2,
         y: 4,
-        neighbors: [],
         prices: {}
     },
     {
@@ -122,18 +98,127 @@ const places = [
         description: 'A nice little fishing village',
         isFoodForSale: true,
         foodPrice: 5,
-        foods: 1,
         x: 2,
         y: 5,
-        neighbors: ['wet_1_5', 'wet_2_6'],
         prices: basePrices
     },
     {
-        name: 'Ocean', placeId: 'wet_2_6', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
-        foods: 0,
+        name: 'Land', placeId: 'dry_2_6', placeType: 'LAND', description: 'Land', isFoodForSale: false, foodPrice: -1,
         x: 2,
         y: 6,
-        neighbors: ['wet_2_5', 'wet_1_6'],
+        prices: {}
+    },
+    {
+        name: 'Nether',
+        placeId: 'nether',
+        placeType: 'PORT',
+        description: 'A southern region',
+        isFoodForSale: true,
+        foodPrice: 10,
+        x: 2,
+        y: 7,
+        prices: basePrices
+    },
+    {
+        name: 'Ocean', placeId: 'wet_2_8', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
+        x: 2,
+        y: 8,
+        prices: {}
+    },
+    {
+        name: 'Ocean', placeId: 'wet_3_1', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
+        x: 3,
+        y: 1,
+        prices: {}
+    },
+    {
+        name: 'Point B', placeId: 'pointb', placeType: 'PORT', description: 'Not far frmo Point A', isFoodForSale: true, foodPrice: 5,
+        x: 3,
+        y: 2,
+        prices: basePrices
+    },
+    {
+        name: 'Land', placeId: 'dry_3_3', placeType: 'LAND', description: 'Land', isFoodForSale: false, foodPrice: -1,
+        x: 3,
+        y: 3,
+        prices: {}
+    },
+    {
+        name: 'Land', placeId: 'dry_3_4', placeType: 'LAND', description: 'Land', isFoodForSale: false, foodPrice: -1,
+        x: 3,
+        y: 4,
+        prices: {}
+    },
+    {
+        name: 'Heck', placeId: 'heck', placeType: 'PORT', description: 'It\'s all going to here.', isFoodForSale: true, foodPrice: 5,
+        x: 3,
+        y: 5,
+        prices: basePrices
+    },
+    {
+        name: 'Land', placeId: 'dry_3_6', placeType: 'LAND', description: 'Land', isFoodForSale: false, foodPrice: -1,
+        x: 3,
+        y: 6,
+        prices: {}
+    },
+    {
+        name: 'Gibber', placeId: 'gibber', placeType: 'PORT', description: 'Home of a popular language.', isFoodForSale: true, foodPrice: 5,
+        x: 3,
+        y: 7,
+        prices: basePrices
+    },
+    {
+        name: 'Ocean', placeId: 'wet_3_8', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
+        x: 3,
+        y: 8,
+        prices: {}
+    },
+    {
+        name: 'Ocean', placeId: 'wet_4_1', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
+        x: 4,
+        y: 1,
+        prices: {}
+    },
+    {
+        name: 'Ocean', placeId: 'wet_4_2', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
+        x: 4,
+        y: 2,
+        prices: {}
+    },
+    {
+        name: 'Ocean', placeId: 'wet_4_3', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
+        x: 4,
+        y: 3,
+        prices: {}
+    },
+    {
+        name: 'Ocean', placeId: 'wet_4_4', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
+        x: 4,
+        y: 4,
+        prices: {}
+    },
+    {
+        name: 'Ocean', placeId: 'wet_4_5', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
+        x: 4,
+        y: 5,
+        prices: {}
+    },
+    {
+        name: 'Ocean', placeId: 'wet_4_', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
+        x: 4,
+        y: 6,
+        prices: {}
+    },
+    {
+        name: 'Ocean', placeId: 'wet_4_7', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
+        x: 4,
+        y: 7,
+        prices: {}
+    },
+    {
+        name: 'Ocean', placeId: 'wet_4_8', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
+        x: 4,
+        y: 8,
         prices: {}
     }
 ]
