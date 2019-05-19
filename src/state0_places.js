@@ -4,13 +4,12 @@
 //  that cargoType at that place. If it is defined, the prices is both the buying and selling price
 
 const  basePrices = {
-    oliveoil: 50,
-    smallbagofgold: 290,
-    coal: 10,
-    leopardwood: 100,
-    clockworks: 200,
-    kippers: 50,
-    fluff: 20
+    oliveoil: 100,
+    coal: 50,
+    leopardwood: 200,
+    clockworks: 300,
+    kippers: 100,
+    fluff: 10
 }
 
 const places = [
@@ -72,7 +71,7 @@ const places = [
         name: 'Point A', placeId: 'pointa', placeType: 'PORT', description: 'Not far frmo Point B', isFoodForSale: true, foodPrice: 5,
         x: 2,
         y: 2,
-        prices: basePrices
+        prices: {...basePrices, fluff:70, clockworks:100}
     },
     {
         name: 'Third Place',
@@ -83,7 +82,7 @@ const places = [
         foodPrice: 15,
         x: 2,
         y: 3,
-        prices: basePrices
+        prices: {...basePrices, fluff:70, leopardwood:30}
     },
     {
         name: 'Land', placeId: 'dry_2_4', placeType: 'LAND', description: 'Land', isFoodForSale: false, foodPrice: -1,
@@ -100,7 +99,7 @@ const places = [
         foodPrice: 5,
         x: 2,
         y: 5,
-        prices: basePrices
+        prices: {...basePrices, kippers: 5}
     },
     {
         name: 'Land', placeId: 'dry_2_6', placeType: 'LAND', description: 'Land', isFoodForSale: false, foodPrice: -1,
@@ -117,7 +116,7 @@ const places = [
         foodPrice: 10,
         x: 2,
         y: 7,
-        prices: basePrices
+        prices: {...basePrices, coal:10}
     },
     {
         name: 'Ocean', placeId: 'wet_2_8', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
@@ -135,7 +134,7 @@ const places = [
         name: 'Point B', placeId: 'pointb', placeType: 'PORT', description: 'Not far frmo Point A', isFoodForSale: true, foodPrice: 5,
         x: 3,
         y: 2,
-        prices: basePrices
+        prices: {...basePrices, fluff:70}
     },
     {
         name: 'Land', placeId: 'dry_3_3', placeType: 'LAND', description: 'Land', isFoodForSale: false, foodPrice: -1,
@@ -153,7 +152,7 @@ const places = [
         name: 'Heck', placeId: 'heck', placeType: 'PORT', description: 'It\'s all going to here.', isFoodForSale: true, foodPrice: 5,
         x: 3,
         y: 5,
-        prices: basePrices
+        prices: {...basePrices, coal:10}
     },
     {
         name: 'Land', placeId: 'dry_3_6', placeType: 'LAND', description: 'Land', isFoodForSale: false, foodPrice: -1,
@@ -165,7 +164,7 @@ const places = [
         name: 'Gibber', placeId: 'gibber', placeType: 'PORT', description: 'Home of a popular language.', isFoodForSale: true, foodPrice: 5,
         x: 3,
         y: 7,
-        prices: basePrices
+        prices: {...basePrices, fluff:2}
     },
     {
         name: 'Ocean', placeId: 'wet_3_8', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
