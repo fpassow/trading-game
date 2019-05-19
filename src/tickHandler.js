@@ -84,9 +84,9 @@ function eatFood(s) {
     }
 }
 
-//state.cargoProducers: [
+//Powers state.cargoProducers, which look like:
 //    {placeId: 'portharbor', period: 2, cargoType: 'oliveoil', quantity: 1}
-//cargos: [
+//Updates state.cargos, which look like:
 //    {isForSale: true, cargoId:'cargo1', cargoLabel: 'Olive Oil', 
 //       cargoType: 'oliveoil', cargoPrice: 50, isLoaded: false, placeId: 'portharbor', 
 //       shipId: null},

@@ -99,7 +99,7 @@ const places = [
         foodPrice: 5,
         x: 2,
         y: 5,
-        prices: {...basePrices, kippers: 5}
+        prices: {...basePrices, kippers: 5, oliveoil:10}
     },
     {
         name: 'Land', placeId: 'dry_2_6', placeType: 'LAND', description: 'Land', isFoodForSale: false, foodPrice: -1,
