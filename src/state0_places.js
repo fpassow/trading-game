@@ -63,6 +63,22 @@ const places = [
         prices: {}
     },
     {
+        name: 'Ocean', placeId: 'wet_1_7', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
+        foods: 0,
+        x: 1,
+        y: 7,
+        neighbors: ['nether', 'wet_1_6', 'wet_1_8'],
+        prices: {}
+    },
+    {
+        name: 'Ocean', placeId: 'wet_1_8', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
+        foods: 0,
+        x: 1,
+        y: 8,
+        neighbors: ['wet_1_7', 'wet_2_8'],
+        prices: {}
+    },
+    {
         name: 'Ocean', placeId: 'wet_2_1', placeType: 'AT_SEA', description: 'At sea', isFoodForSale: false, foodPrice: -1,
         foods: 0,
         x: 2,

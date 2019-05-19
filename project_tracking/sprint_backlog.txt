@@ -2,9 +2,6 @@ Sprint
 "adding-things"
 
 
-Add empty "food bays"
-Fit food store to bays, like cargos
-
 Add the other places
 Cargo prices everywhere
 
@@ -27,7 +24,7 @@ CREW IS AUTOMATIC. (STILL NEED PAY??)
 
 ==============================================
 
-
+Remove "other place"
 More Places
     Point A (An actual point of land)
     Point B
