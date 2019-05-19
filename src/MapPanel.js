@@ -4,6 +4,7 @@ import TimeView from './TimeView'
 import * as stateUtils from './stateUtils'
 import * as actions from './actions'
 import {seaBlue} from './styleConstants'
+import imagesByType from './imagesByType'
 
 let mapPanelStyle = {
     border: '1px solid blue',
@@ -64,7 +65,7 @@ const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
              onClick={moveHandler}
         >
             {p.placeType === 'PORT' ? p.name : ''}
-            {(myShip && (myShip.placeId === p.placeId)) ? <img className={shipCssClass} style={shipStyle} alt={myShip.shipName} src="img/fishboat.png" /> : <span> </span>} 
+            {(myShip && (myShip.placeId === p.placeId)) ? <img className={shipCssClass} style={shipStyle} alt={myShip.shipName} src={imagesByType[myShip.shipType]} /> : <span> </span>} 
             {(isDestination && !isMoving) ? <img style={arrowStyle} src="img/arrow_up.png" alt="You can move to here" /> : <span> </span>}
         </div>
     )

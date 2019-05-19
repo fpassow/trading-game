@@ -2,9 +2,6 @@ Sprint
 "adding-things"
 
 
-
-Cargo production everywhere
-
 Other ship types ready for play
    Buy a ship with a trade-in
    Use the right image on the map
