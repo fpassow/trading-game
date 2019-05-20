@@ -49,6 +49,7 @@ function eatFood(s) {
     let currentPlace = stateUtils.getCurrentPlace(s)
     let isFoodForSale = currentPlace.isFoodForSale
     let foodPrice = isFoodForSale ? currentPlace.foodPrice : -1
+    //No ship. Player buys food for self each day.
     if (!s.myShipId) {
         if (isFoodForSale && (cash >= foodPrice)) {
             floatNote('Buying food.')
@@ -56,9 +57,11 @@ function eatFood(s) {
         } else {
             return {...s, cash: cash - foodPrice, gameOver: true}
         }
+    //Player has a ship...
     } else {
         let myShip = stateUtils.getMyShip(s)
-        let crew = myShip.crew
+        //Assume ship always has a full crew
+        let crew = myShip.crewSize
 
         //Loop once for each person in the crew. Try to get a food each time.
         for (let crewPerson = 1; crewPerson <= crew; crewPerson++) {
@@ -69,14 +72,7 @@ function eatFood(s) {
                 if (isFoodForSale && (cash >= foodPrice)) {
                     s = {...s, cash: cash - foodPrice}
                 } else {
-                    if (myShip.crew > 1) {
-                        myShip.crew = myShip.crew - 1
-                        floatNote("Crew member starved.")
-                        s = stateUtils.replaceShip(myShip)
-                    } else {
-                        floatNote("You starve.")
-                        s = {...s, gameOver: true, gameOverMessage: 'You starved.'}
-                    }
+                    s = {...s, gameOver: true, gameOverMessage: 'You starved.'}
                 }
             }
         }

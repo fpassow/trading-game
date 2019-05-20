@@ -36,7 +36,6 @@ export function shipyard(placeId, shipType, shipName) {
         food:0, 
         cargo: [], 
         fuel: 0,
-        crew: 0,
         isForSale: true
     }
     switch (shipType) {

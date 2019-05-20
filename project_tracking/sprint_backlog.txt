@@ -3,9 +3,19 @@ Sprint
 
 
 Other ship types ready for play
+
+   Remove/ignore ship.crew. Use crewSize everywhere crew was used.
+         simplify tickhandler.js / eatFood. Stop checking if each crew gets fed. And port has infinite.
+           Just...
+              Take directly for cash if in port
+              Check crew vs food at sea... subtract or die.
+
+           buying a ship
+
    Buy a ship with a trade-in
-   Use the right image on the map
    Speeds
+
+Option to fill the food-store-thing with one click
 
 Fuel stuff
 
