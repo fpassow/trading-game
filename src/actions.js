@@ -20,8 +20,8 @@ export function buyCargo(cargoId) {
 	return {type: 'BUY_CARGO', cargoId: cargoId}
 }
 
-export function buyFood(placeId) {
-	return {type: 'BUY_FOOD', placeId: placeId}
+export function buyFood(placeId, quantity) {
+	return {type: 'BUY_FOOD', placeId: placeId, quantity: quantity}
 }
 
 //Also moves the player, if it's their ship.

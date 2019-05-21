@@ -41,25 +41,21 @@ function rootReducer(state = state0, action) {
             newState.cash = newCash
             return newState
 
-        case 'BUY_FOOD': { //action.placeId
+        case 'BUY_FOOD': { //action.placeId, action.quantity
             let myShip = stateUtils.getMyShip(state)
             //Bail out if there's no room for more food
-            if (myShip.food >= myShip.maxFood) {
+            if (myShip.food + action.quantity > myShip.maxFood) {
                 return state
             }
             //Bail if you can't afford it
-            let newCash = state.cash - stateUtils.getCurrentPlace(state).foodPrice
+            let newCash = state.cash - stateUtils.getCurrentPlace(state).foodPrice * action.quantity
             if (newCash < 0) {
                 return state
             }
             //Add food to your ship
-            myShip.food++
+            myShip.food += action.quantity
             let newState = stateUtils.replaceShip(myShip, state)
             newState.cash = newCash
-            //Remove the rations from the place
-            let newPlace = stateUtils.getPlaceById(action.placeId, newState)
-            newPlace.foods = 0
-            newState = stateUtils.replacePlace(newPlace, newState)
             return newState
         }
 
