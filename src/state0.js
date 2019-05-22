@@ -12,7 +12,7 @@ const state0 = {
     ticksToday: 0,
     isMoving: false,
     moveEndTime: null,
-    cash: 800,
+    cash: 80000,
     currentPlaceId: 'portharbor',
     defaultPlaceId: 'portharbor',
     myShipId: null,

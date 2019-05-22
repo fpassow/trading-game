@@ -53,17 +53,17 @@ export function shipyard(placeId, shipType, shipName) {
         case 'albionsteamclipper':
             newShip.shipTypeName = 'Albion Steam Clipper'
             newShip.basePrice = 12000
-            newShip.crewSize = 6
+            newShip.crewSize = 4
             newShip.maxFuel = 12
             newShip.speed = 3
             newShip.fuelPerMove = 1
             newShip.maxCargo = 12
-            newShip.maxFood = 60
+            newShip.maxFood = 20
             break
         case 'enginebarge':
             newShip.shipTypeName = 'Engine Barge'
             newShip.basePrice = 4000
-            newShip.crewSize = 3
+            newShip.crewSize = 2
             newShip.maxFuel = 20
             newShip.speed = 1
             newShip.fuelPerMove = 1
@@ -73,7 +73,7 @@ export function shipyard(placeId, shipType, shipName) {
         case 'silverzeplin':
             newShip.shipTypeName = 'Silver Zeplin'
             newShip.basePrice = 20000
-            newShip.crewSize = 4
+            newShip.crewSize = 2
             newShip.maxFuel = 10
             newShip.speed = 2
             newShip.fuelPerMove = 2
