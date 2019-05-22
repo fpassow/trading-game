@@ -16,4 +16,6 @@ README/Dev Guide
 
 Slight vertical difference between empty bays and cargos.
 
+PUT STARTING MONEY BACK TO 800f
+
 ==============================================
