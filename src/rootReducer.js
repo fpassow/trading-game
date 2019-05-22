@@ -8,6 +8,7 @@ function rootReducer(state = state0, action) {
     //But never show TICKs. There are too many.
     if (action.type !== 'TICK') {
         console.log(action)
+        //console.log(state)
     }
     
     switch (action.type) {
@@ -29,16 +30,20 @@ function rootReducer(state = state0, action) {
 
         case 'BUY_SHIP':
             let ship = stateUtils.getShipById(action.shipId, state)
-            let newCash = state.cash - ship.basePrice
+            let oldShip = stateUtils.getMyShip(state)
+            let newCash = state.cash + (oldShip?oldShip.basePrice:0) - ship.basePrice
             //Abort if I don't have the money.
             if (newCash < 0) {
                 return state
             }
             ship.isForSale = false
-            ship.crew = 1
             let newState = stateUtils.replaceShip(ship, state)
             newState.myShipId = ship.shipId
             newState.cash = newCash
+            if (oldShip) {
+                oldShip.isForSale = true
+                newState = stateUtils.replaceShip(oldShip, newState)
+            }
             return newState
 
         case 'BUY_FOOD': { //action.placeId, action.quantity

@@ -1,25 +1,15 @@
 Sprint
 "adding-things"
 
-Allow one click to max out on food
-   BUY_FOOD reducer takes "quantity"
 
 Other ship types ready for play
-           buying a ship
-
-   Buy a ship with a trade-in
    Speeds
-
-Option to fill the food-store-thing with one click
-
-Fuel stuff
+   Fuel stuff
 
 Flyer and hovercraft movement
 
 README/Dev Guide
 
 Slight vertical difference between empty bays and cargos.
-
-CREW IS AUTOMATIC. (STILL NEED PAY??)
 
 ==============================================

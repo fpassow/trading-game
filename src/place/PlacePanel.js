@@ -18,12 +18,13 @@ const PlacePanelComponent = (
     buyFood, 
     buyCargo}
 ) => {
+    let cashPlusTradeIn = cash + (myShip?myShip.basePrice:0)
     return (<div style={{ background: '#ad0' }}>
       <div >
         <h2>{place.name}</h2>
         <h3>{place.description}</h3>
       </div>
-      <ShipsForSale shipsForSale={shipsForSale} cash={cash} buyShip={buyShip} />
+      <ShipsForSale shipsForSale={shipsForSale} cash={cashPlusTradeIn} buyShip={buyShip} />
       <Chandler hasShip={hasShip} place={place} myShip={myShip} buyFood={buyFood} />
       <CargosForSale prices={place.prices} hasShip={hasShip} numberOfEmptyCargoBays={numberOfEmptyCargoBays} cargosForSale={cargosForSale} cash={cash} buyCargo={buyCargo} />
     </div>);
