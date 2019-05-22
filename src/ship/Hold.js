@@ -3,9 +3,8 @@ import Cargo from '../shared_components/Cargo'
 
 const holdStyle = {
     border: '3px solid brown',
-    background: 'grey',
     borderRadius: '5px',
-    //height: '300px',
+    padding: '3px',
     position: 'relative'
 }
 const emptyBayStyle = {
@@ -13,8 +12,9 @@ const emptyBayStyle = {
     boxSizing: 'border-box',
     width: '50px',
     height: '50px',
-    background: '#333',
-    border: '2px solid #666'
+    //background: '#333',
+    border: '2px solid #555',
+    borderTop: 'none'
 }
 const Hold = ({myShip, cargo, localPrices, sellCargo}) => {
     const emptyCargoBays = []
