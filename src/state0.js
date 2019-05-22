@@ -12,21 +12,21 @@ const state0 = {
     ticksToday: 0,
     isMoving: false,
     moveEndTime: null,
-    cash: 80000,
+    cash: 800,
     currentPlaceId: 'portharbor',
     defaultPlaceId: 'portharbor',
     myShipId: null,
     ships: [
-        shipyard('portharbor', 'fishboat', 'The Flying Flea'),
         shipyard('portharbor', 'fishboat', 'Fishy'),
         shipyard('portharbor', 'albionsteamclipper', 'Clippy'),
-        shipyard('portharbor', 'enginebarge', 'Grummpy'),
-        shipyard('portharbor', 'silverzeplin', 'Puffy'),
-        shipyard('portharbor', 'steamturbinehovercraft', 'Zippy'),
+        shipyard('heck', 'enginebarge', 'Grummpy'),
+        shipyard('pointa', 'silverzeplin', 'Puffy'),
+        shipyard('gibber', 'steamturbinehovercraft', 'Zippy'),
     ],
     places: places,
     cargos: [
-        {isForSale: true, cargoId:'cargo1', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', isLoaded: false, placeId: 'portharbor', shipId: null}
+        {isForSale: true, cargoId:'cargo1', cargoLabel: 'Olive Oil', cargoType: 'oliveoil', isLoaded: false, placeId: 'portharbor', shipId: null},
+        {isForSale: true, cargoId:'cargo2', cargoLabel: 'Kippers', cargoType: 'kippers', isLoaded: false, placeId: 'portharbor', shipId: null}
     ],
     cargoProducers: [
         {placeId: 'portharbor', period: 3, cargoType: 'oliveoil', quantity: 1},

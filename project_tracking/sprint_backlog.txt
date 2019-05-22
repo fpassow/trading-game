@@ -1,16 +1,11 @@
 Sprint
 "adding-things"
 
+Change gray hold to match other storage spaces
 
 Stop food and fuel from pushing other stuff down
     Use "..."  ???
     Collapsing view ???
-
-Position ships to buy around the map
-
-Remove serviceworker.js (?)
-
-
 
 README/Dev Guide
 
