@@ -5,7 +5,10 @@ Sprint
 Other ship types ready for play
 
    Fuel stuff
-      Don't show bordered fuel div if ship doesn't use fuel
+      
+      Position ships to buy around the map
+
+Remove serviceworker.js (?)
 
 Flyer and hovercraft movement
 

@@ -64,6 +64,24 @@ function rootReducer(state = state0, action) {
             return newState
         }
 
+        case 'BUY_FUEL': { //action.placeId, action.quantity
+            let myShip = stateUtils.getMyShip(state)
+            //Bail out if there's no room for more fuel
+            if (myShip.fuel + action.quantity > myShip.maxFuel) {
+                return state
+            }
+            //Bail if you can't afford it
+            let newCash = state.cash - stateUtils.getCurrentPlace(state).fuelPrice * action.quantity
+            if (newCash < 0) {
+                return state
+            }
+            //Add food to your ship
+            myShip.fuel += action.quantity
+            let newState = stateUtils.replaceShip(myShip, state)
+            newState.cash = newCash
+            return newState
+        }
+
         case 'BUY_CARGO': {
             let cargo = stateUtils.getCargoById(action.cargoId, state)
             let newCash = state.cash - stateUtils.getPlaceById(cargo.placeId, state).prices[cargo.cargoType]
@@ -87,12 +105,17 @@ function rootReducer(state = state0, action) {
                 return state
             }
             let newShip = stateUtils.getShipById(action.shipId, state)
+            //Bail if we don't have enough fuel
+            if (newShip.fuel < newShip.fuelPerMove) {
+                return state;
+            }
             let newState = {...state, isMoving:true, moveEndTime:state.ticks+(24/newShip.speed)}
             //If player is aboard, the player also moves.
             if (newState.myShipId === action.shipId) {
                 newState.currentPlaceId = action.placeId
             }
             newShip.placeId = action.placeId
+            newShip.fuel -= newShip.fuelPerMove
             let newerState = stateUtils.replaceShip(newShip, newState)
             return newerState
         }
