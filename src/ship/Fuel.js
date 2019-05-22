@@ -1,6 +1,9 @@
 import React from 'react'
 
 const Fuel = ({myShip}) =>  {
+    if (!myShip.fuelPerMove) {
+        return <div> </div>
+    }
     let fuelArr = []
     for (let i = 0; i < myShip.fuel; i++) {
         fuelArr.push(<img src="img/fuel.png" alt="Fuel barrel" key={i} />)

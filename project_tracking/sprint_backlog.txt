@@ -3,11 +3,9 @@ Sprint
 
 
 Other ship types ready for play
-   Speeds
-
-   Slow down time to allow range for faster ships
 
    Fuel stuff
+      Don't show bordered fuel div if ship doesn't use fuel
 
 Flyer and hovercraft movement
 
