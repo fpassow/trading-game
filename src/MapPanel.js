@@ -71,12 +71,12 @@ const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
     )
 }
 
-function _isDestination(place, myPlace) {
+function _isDestination(place, myPlace, myShip) {
     //True if they are one square apart (not diagonal), and place is a port or sea square,
     // and you are not going overland from port to port
     return (
-        (place.placeType === 'PORT' || place.placeType === 'AT_SEA') && 
-        !(myPlace.placeType === 'PORT' && place.placeType === 'PORT') &&
+        (place.placeType === 'PORT' || place.placeType === 'AT_SEA' || myShip.isFlyer) && 
+        (!(myPlace.placeType === 'PORT' && place.placeType === 'PORT') || myShip.isFlyer) &&
         ((Math.abs(place.x - myPlace.x) + Math.abs(place.y - myPlace.y)) === 1)
     )
 }
@@ -122,7 +122,7 @@ const MapPanelComponent = ({
                                           myShip={myShip} 
                                           myPlace={myPlace}
                                           isMoving={isMoving}
-                                          isDestination={myShip && _isDestination(p, myPlace)}
+                                          isDestination={myShip && _isDestination(p, myPlace, myShip)}
                                           moveShip={moveShip} 
                                   />
                 ))}

@@ -36,7 +36,8 @@ export function shipyard(placeId, shipType, shipName) {
         food:0, 
         cargo: [], 
         fuel: 0,
-        isForSale: true
+        isForSale: true,
+        isFlyer: false
     }
     switch (shipType) {
         case 'fishboat':
@@ -78,6 +79,7 @@ export function shipyard(placeId, shipType, shipName) {
             newShip.fuelPerMove = 2
             newShip.maxCargo = 6
             newShip.maxFood = 16
+            newShip.isFlyer = true
             break
         case 'steamturbinehovercraft':
             newShip.shipTypeName = 'Steam Turbine Hovercraft'
@@ -88,6 +90,7 @@ export function shipyard(placeId, shipType, shipName) {
             newShip.fuelPerMove = 3
             newShip.maxCargo = 4
             newShip.maxFood = 10
+            newShip.isFlyer = true
             break
         default:
             alert('Unknown ship type "'+shipType+'"')

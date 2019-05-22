@@ -2,15 +2,15 @@ Sprint
 "adding-things"
 
 
-Other ship types ready for play
+Stop food and fuel from pushing other stuff down
+    Use "..."  ???
+    Collapsing view ???
 
-   Fuel stuff
-      
-      Position ships to buy around the map
+Position ships to buy around the map
 
 Remove serviceworker.js (?)
 
-Flyer and hovercraft movement
+
 
 README/Dev Guide
 
