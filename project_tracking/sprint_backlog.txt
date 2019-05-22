@@ -4,6 +4,9 @@ Sprint
 
 Other ship types ready for play
    Speeds
+
+   Slow down time to allow range for faster ships
+
    Fuel stuff
 
 Flyer and hovercraft movement

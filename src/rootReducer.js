@@ -86,12 +86,12 @@ function rootReducer(state = state0, action) {
             if (state.isMoving) {
                 return state
             }
-            let newState = {...state, isMoving:true, moveEndTime:state.ticks+24}
+            let newShip = stateUtils.getShipById(action.shipId, state)
+            let newState = {...state, isMoving:true, moveEndTime:state.ticks+(24/newShip.speed)}
             //If player is aboard, the player also moves.
             if (newState.myShipId === action.shipId) {
                 newState.currentPlaceId = action.placeId
             }
-            let newShip = stateUtils.getShipById(action.shipId, newState)
             newShip.placeId = action.placeId
             let newerState = stateUtils.replaceShip(newShip, newState)
             return newerState
