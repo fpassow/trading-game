@@ -1,5 +1,12 @@
 import React from 'react'
-
+import {FLORIN_MARK} from '../constants'
+/*
+ * This component is where the player buys fuel.
+ * It has a botton to buy one unit of fuel, and another to 
+ * buy the exact amount required to max out the ship's storage
+ * capacity.
+ */
+ 
 const FuelDepot = ({place, buyFuel, hasShip, myShip}) => {
     let fuelGap = 0
     let visualFuelGap = []
@@ -20,7 +27,7 @@ const FuelDepot = ({place, buyFuel, hasShip, myShip}) => {
                     <div>
                         <button style={buttonStyle} onClick={()=>{buyFuel(place.placeId, 1)}}>
                             <img alt="rations" src="img/fuel.png"/>
-                            {place.fuelPrice}  &#402; 
+                            {place.fuelPrice}  {FLORIN_MARK}
                         </button> 
                     </div>
                 :
@@ -30,7 +37,7 @@ const FuelDepot = ({place, buyFuel, hasShip, myShip}) => {
                     <div>
                         <button style={buttonStyle} onClick={()=>{buyFuel(place.placeId, fuelGap)}}>
                             {visualFuelGap}
-                            {place.fuelPrice * fuelGap}  &#402;
+                            {place.fuelPrice * fuelGap}  {FLORIN_MARK}
                         </button>
                         </div> 
                 : 

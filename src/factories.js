@@ -1,3 +1,13 @@
+/*
+ * The cargoFactory function creates object representing various kinds of cargos,
+ * using the minium possible input information and infering other details from the 
+ * cargoType parameter.
+ *
+ * The shipyard function creates ship objects,
+ * using the minium possible input information and infering other details from the 
+ * shipType parameter.
+ */
+
 //Unique id generator
 let ___nextId = 111
 export function nextId() {
@@ -10,6 +20,7 @@ export function resetNextId() {
 }
 
 const baseCargo = {isForSale: true, isLoaded: false, shipId: null}
+
 const labelForCargoType = {
     oliveoil: 'Olive oil',
     coal: 'Coal',

@@ -1,5 +1,9 @@
 import React from 'react'
 
+/*
+ * A component displaying a number of crewperson images equal to the ship's crewSize.
+ */
+
 const Crew = ({myShip}) => {
     let crewArr = []
     for (let i = 0; i < myShip.crewSize; i++) {

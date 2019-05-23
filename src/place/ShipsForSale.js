@@ -1,7 +1,13 @@
 import React from 'react'
 import imagesByType from '../imagesByType'
 import {seaBlue} from '../styleConstants'
+import {FLORIN_MARK} from '../constants'
 
+/*
+ * This component displays all the ships which are for sale at the current seaport.
+ * Ships which the player can afford have an active "buy" button.
+ */
+ 
 const sfsStyle = {
     background:seaBlue, 
     color: 'white', 
@@ -24,7 +30,7 @@ function  ShipForSale({ship, canBuy, buyShip}) {
             <img alt="" src={imagesByType[ship.shipType]} />
             {ship.shipTypeName} &nbsp;
             <em>{ship.shipName}</em> &nbsp;
-            {ship.basePrice}&#402; &nbsp;
+            {ship.basePrice}{FLORIN_MARK} &nbsp;
             {canBuy ? <button onClick={()=>{buyShip(ship.shipId)}}>buy</button> : ' '}
         </div>
     )

@@ -1,5 +1,11 @@
 import React from 'react'
 
+/*
+ * This is a component which displays a ship's food stores using an image
+ * for a day's rations and a different image for an available space for a
+ * day's rations which is currently empty.
+ */
+
 const Food = ({myShip}) => {
     let foodArr = []
     for (let i = 0; i < myShip.food; i++) {

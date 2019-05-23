@@ -1,6 +1,11 @@
 import React from 'react'
 import Cargo from '../shared_components/Cargo'
 
+/*
+ * This is a component displaying the cargos which are currently for sale at the current
+ * seaport.
+ */
+
 export default function CargosForSaleComponent({prices, hasShip, numberOfEmptyCargoBays, cargosForSale, cash, buyCargo}) {
     return (
         <div >

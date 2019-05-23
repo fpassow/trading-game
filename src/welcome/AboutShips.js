@@ -1,5 +1,11 @@
 import React from 'react'
 import { shipyard } from '../factories'
+import { FLORIN_MARK } from '../constants'
+
+/*
+ * This component displays an image and data sheet for every kind
+ * of ship in the game.
+ */
 
 const allShipTypes = [
     'fishboat', 
@@ -39,7 +45,7 @@ const ShipTypeData = ({ship}) => (
             <h3>{ship.shipTypeName}</h3> 
              <table border="1" style={tableStyle}>
                  <tbody>
-                     <tr><td>Base Price</td><td>{ship.basePrice}&#402;</td></tr>
+                     <tr><td>Base Price</td><td>{ship.basePrice}{FLORIN_MARK}</td></tr>
                      <tr><td>Crew Size</td><td>{ship.crewSize}</td></tr>
                      <tr><td>Fuel Capacity</td><td>{ship.maxFuel}</td></tr>
                      <tr><td>Max Speed</td><td>{ship.speed}</td></tr>

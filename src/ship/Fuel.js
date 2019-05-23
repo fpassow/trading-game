@@ -1,5 +1,10 @@
 import React from 'react'
 
+/*
+ * This component displays a ship's fuel stores using an image
+ * for a unit of fuel and a different image for an available space 
+ * which is currently empty.
+ */
 const Fuel = ({myShip}) =>  {
     if (!myShip.fuelPerMove) {
         return <div> </div>

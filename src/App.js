@@ -5,6 +5,14 @@ import MainPage from './MainPage'
 import { showWelcomePage, startNewGame } from './actions'
 import * as stateUtils from './stateUtils'
 
+/*
+ * This is the absolute top level component of this project.
+ * It can dispay the WelcomePage component, the MainPage component for actually playing the game,
+ * or a simple "Game Over" screen.
+ * 
+ * This component is used by index.js.
+ */
+
 const AppComponent = ({showingWelcomePage, showWelcomePage, hideWelcomePage, hasShip, isInPort, gameOver, gameOverMessage, startNewGame, ticks}) => {
     if (gameOver) {
         return (

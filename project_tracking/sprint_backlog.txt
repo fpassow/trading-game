@@ -1,7 +1,8 @@
 Sprint
 "adding-things"
 
-Removed commented-out code form all files
+
+Run the tests
 
 PUT STARTING MONEY BACK TO 800f
 

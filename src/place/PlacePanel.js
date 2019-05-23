@@ -7,6 +7,12 @@ import FuelDepot from './FuelDepot'
 import { getCurrentPlace, getShipsForSaleHere, getCargoForSaleHere, getMyShip, numberOfEmptyCargoBays } from '../stateUtils'
 import { buyShip, buyFood, buyFuel, buyCargo } from '../actions'
 
+/*
+ * The PlacePanel is the top level component in this directory.
+ * It represents a seaport, and has sub-components showing things for sale,
+ * liek ships, cargos, rations, and fuel.
+ */
+
 const PlacePanelComponent = (
   {place, 
     cash, 

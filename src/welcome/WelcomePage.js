@@ -4,6 +4,11 @@ import IntroText from './IntroText'
 import PlayingTheGame from './PlayingTheGame'
 import {seaBlue} from '../styleConstants'
 
+/* This game has two screens: This componet displays the "welcome" screen, which information
+ * the player can read before playing.
+ * When they're ready, a button takes them to the MainPage componet for actual play.
+ */
+
 const wrapperStyle = {
     background: seaBlue,
     padding: '40px'

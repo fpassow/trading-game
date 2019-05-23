@@ -1,4 +1,13 @@
-//Redux action creators
+/*
+ * Redux action creators.
+ *
+ * It's a convention of this project aht all Redux action object must be created by
+ * an action creator function. And all action creator functions must be in this file.
+ * 
+ * I decided not to use a file of string constants for action names because those
+ * strings are all only used in exactly two places, here and in rootReducer.js.
+ * (And any typo is fail-fast.)
+ */
 
 export function tick() {
 	return {type: 'TICK'}

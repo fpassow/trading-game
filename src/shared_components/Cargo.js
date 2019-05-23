@@ -1,5 +1,25 @@
 import React from 'react'
 import imagesByType from '../imagesByType'
+import {FLORIN_MARK} from '../constants'
+
+
+/**
+ * This component displays one unit of cargo, on the dock or in the hold.
+ * If a price isn't null, the component can be clicked to trigger a buy or sell.
+ * If the "empty" param is true, this component displays an empty cargo bay.
+ * 
+ * empty - If true, don't show any cargo. But keep the same size and positioning.
+ * 
+ * aCargo - will to be an object like: {isForSale: true, cargoId:'cargo1', cargoLabel: 'Olive Oil', cargoType: 'oliveoil',
+ *                                   isLoaded: false, placeId: 'portharbor', shipId: null}
+ * 
+ * price - the buying or selling price.
+ * 
+ * enabled - controls whether the component is clickable
+ * 
+ * cargoClicked - a function which expects a cargoId. A cargo-buying or cargo-selling function should be passed depending
+ *               on where this component is used.
+ */
 
 const buttonStyle = (cargo) => {
     return {
@@ -12,28 +32,6 @@ const buttonStyle = (cargo) => {
         textShadow: '1px 1px 2px black'
     }
 }
-/*
-const disabledStyle = {
-    width: '50px',
-    height: '50px',
-    //verticalAlign: 'bottom'
-}
-*/
-
-/**
- * This is a component to display one unit of cargo, on the dock or in the hold.
- * If a price isn't null, the component will be a button which can be clicked to trigger a buy or sell.
- * 
- * aCargo - will to be an object like: {isForSale: true, cargoId:'cargo1', cargoLabel: 'Olive Oil', cargoType: 'oliveoil',
- *                                   isLoaded: false, placeId: 'portharbor', shipId: null}
- * 
- * price - is the buying or selling price.
- * 
- * enabled - controls whether the component is clickable
- * 
- * cargoClicked - is a function which expects a cargoId. A cargo-buying or cargo-selling function should be passed depending
- *               on where this component is used.
- */
 const Cargo = ({empty, aCargo, price, enabled, cargoClicked}) => {
     if (empty) {
         return (
@@ -45,7 +43,7 @@ const Cargo = ({empty, aCargo, price, enabled, cargoClicked}) => {
     if (enabled) {
         return (
             <button title={aCargo.cargoLabel} onClick={()=>{cargoClicked(aCargo.cargoId)}} style={buttonStyle(aCargo)}>
-                {price}&#402;
+                {price}{FLORIN_MARK}
             </button>
         )
     } else {
@@ -56,12 +54,5 @@ const Cargo = ({empty, aCargo, price, enabled, cargoClicked}) => {
         )
     }
 }
-
-/*
- <div style={{display:'inline-block'}}>
-                <img src={imagesByType[aCargo.cargoType]} alt={aCargo.cargoLabel} style={disabledStyle} />
-            </div>
-            */
-
 
 export default Cargo
