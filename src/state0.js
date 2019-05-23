@@ -27,6 +27,7 @@ const state0 = {
     isMoving: false,
     moveEndTime: null,
     cash: 800,
+    cashToWin: 50000,
     currentPlaceId: 'portharbor',
     defaultPlaceId: 'portharbor',
     myShipId: null,

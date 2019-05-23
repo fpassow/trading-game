@@ -1,14 +1,12 @@
 Sprint
 "adding-things"
 
+Add and describe victory conditions
 
-Run the tests
-
-PUT STARTING MONEY BACK TO 800f
+I hate the port name text....
 
 Play through all the ships and make notes
 
-README/Dev Guide
-
+Check README at github (md interpreted)
 
 ==============================================

@@ -24,7 +24,12 @@ const PlayingTheGame = () => (
 
         <p>When you reach another port, you can click your cargos to sell at the local price.</p>
 
-        <p>Buy bigger and faster ships when you can. And when you amass one million florins, you win. Have fun!</p>
+        <p>Buy bigger and faster ships when you can. A ship will have a buy button when you can buy it.
+            Note that the value of your current ship counts as a trade-in.</p>
+            
+        <p>Also, if you overspend somehow, you can trade down to a cheaper ship and free up some cash.</p>
+        
+        <p>And when you amass a fortune of fifty thousand florins, you win!</p>
    
     </div>
 )

@@ -13,7 +13,7 @@ import * as stateUtils from './stateUtils'
  * This component is used by index.js.
  */
 
-const AppComponent = ({showingWelcomePage, showWelcomePage, hideWelcomePage, hasShip, isInPort, gameOver, gameOverMessage, startNewGame, ticks}) => {
+const AppComponent = ({showingWelcomePage, showWelcomePage, hideWelcomePage, hasShip, isInPort, gameOver, gameOverMessage, cash, cashToWin, startNewGame, ticks}) => {
     if (gameOver) {
         return (
             <div className="App" style={{textAlign:'center'}}>
@@ -22,11 +22,21 @@ const AppComponent = ({showingWelcomePage, showWelcomePage, hideWelcomePage, has
                 <button onClick={startNewGame}>Start a new game</button>
             </div>
         )
-    } else if (showingWelcomePage) {
-        return <div className="App"><WelcomePage hideWelcomePage={hideWelcomePage} ticks={ticks} /></div>
-    } else {
-        return <div className="App"><MainPage showWelcomePage={showWelcomePage} hasShip={hasShip} isInPort={isInPort} /></div>
     }
+    if (cash >= cashToWin) {
+        return (
+            <div className="App" style={{textAlign:'center'}}>
+                <br /><br /><br />
+                <h1>Fifty thousand florins!</h1>
+                <h1>You Win !!!!!!!!!!!!!!!!</h1>
+                <button onClick={startNewGame}>Start a new game</button>
+            </div>
+        )
+    }
+    if (showingWelcomePage) {
+        return <div className="App"><WelcomePage hideWelcomePage={hideWelcomePage} ticks={ticks} /></div>
+    }
+    return <div className="App"><MainPage showWelcomePage={showWelcomePage} hasShip={hasShip} isInPort={isInPort} /></div>
 }
 
 const mapStateToProps = state => ({
@@ -35,7 +45,9 @@ const mapStateToProps = state => ({
   isInPort: stateUtils.getCurrentPlace(state).placeType === 'PORT',
   gameOver: state.gameOver,
   gameOverMessage: state.gameOverMessage,
-  ticks: state.ticks
+  ticks: state.ticks,
+  cash: state.cash,
+  cashToWin: state.cashToWin
 })
 
 const mapDispatchToProps = dispatch => ({
