@@ -5,32 +5,23 @@ const holdStyle = {
     border: '3px solid brown',
     borderRadius: '5px',
     padding: '3px',
-    position: 'relative'
+    position: 'relative',
+    minHeight: '50px'
 }
-const emptyBayStyle = {
-    display: 'inline-block',
-    boxSizing: 'border-box',
-    width: '50px',
-    height: '50px',
-    //background: '#333',
-    border: '2px solid #555',
-    borderTop: 'none'
-}
+
 const Hold = ({myShip, cargo, localPrices, sellCargo}) => {
     const emptyCargoBays = []
     for (let i = 0; i < (myShip.maxCargo - cargo.length); i++) {
-        emptyCargoBays.push(<div key={i} style={emptyBayStyle}></div>)
+        emptyCargoBays.push(<Cargo empty={true} />)
     }
     return (
         <div style={holdStyle}>
-            
                 {cargo.map((aCargo)=>(
-                    <Cargo key={aCargo.cargoId} cargoClicked={sellCargo} aCargo={aCargo} 
+                    <Cargo empty={false} key={aCargo.cargoId} cargoClicked={sellCargo} aCargo={aCargo} 
                            enabled={!!localPrices[aCargo.cargoType]} price={localPrices[aCargo.cargoType]} 
                     />
                 ))}
                 {emptyCargoBays}
-            
         </div>
     )
 }

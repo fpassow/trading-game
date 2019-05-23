@@ -1,16 +1,15 @@
 Sprint
 "adding-things"
 
-Change gray hold to match other storage spaces
+Match larger border and fuel border to hold border
 
-Stop food and fuel from pushing other stuff down
-    Use "..."  ???
-    Collapsing view ???
+Removed commented-out code form all files
+
+PUT STARTING MONEY BACK TO 800f
+
+Play through all the ships and make notes
 
 README/Dev Guide
 
-Slight vertical difference between empty bays and cargos.
-
-PUT STARTING MONEY BACK TO 800f
 
 ==============================================

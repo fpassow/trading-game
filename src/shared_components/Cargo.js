@@ -5,19 +5,20 @@ const buttonStyle = (cargo) => {
     return {
         height:'50px',
         width: '50px',
-        background: 'url(' + imagesByType[cargo.cargoType] + ') no-repeat',
+        background: (cargo) ? 'url(' + imagesByType[cargo.cargoType] + ') no-repeat' : 'inherit',
         paddingTop: '30px',
         fontWeight: 'bold',
         color: 'gold',
         textShadow: '1px 1px 2px black'
     }
 }
-
+/*
 const disabledStyle = {
     width: '50px',
     height: '50px',
-    verticalAlign: 'bottom'
+    //verticalAlign: 'bottom'
 }
+*/
 
 /**
  * This is a component to display one unit of cargo, on the dock or in the hold.
@@ -33,7 +34,14 @@ const disabledStyle = {
  * cargoClicked - is a function which expects a cargoId. A cargo-buying or cargo-selling function should be passed depending
  *               on where this component is used.
  */
-const Cargo = ({aCargo, price, enabled, cargoClicked}) => {
+const Cargo = ({empty, aCargo, price, enabled, cargoClicked}) => {
+    if (empty) {
+        return (
+            <button title={"empty"} disabled style={buttonStyle(aCargo)}>
+                &nbsp;
+            </button>
+        )
+    }
     if (enabled) {
         return (
             <button title={aCargo.cargoLabel} onClick={()=>{cargoClicked(aCargo.cargoId)}} style={buttonStyle(aCargo)}>
@@ -41,9 +49,19 @@ const Cargo = ({aCargo, price, enabled, cargoClicked}) => {
             </button>
         )
     } else {
-        return <img src={imagesByType[aCargo.cargoType]} alt={aCargo.cargoLabel} style={disabledStyle} />
+        return (
+            <button title={aCargo.cargoLabel} disabled style={buttonStyle(aCargo)}>
+                &nbsp;
+            </button>
+        )
     }
 }
+
+/*
+ <div style={{display:'inline-block'}}>
+                <img src={imagesByType[aCargo.cargoType]} alt={aCargo.cargoLabel} style={disabledStyle} />
+            </div>
+            */
 
 
 export default Cargo
