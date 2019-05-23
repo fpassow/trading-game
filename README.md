@@ -37,6 +37,7 @@ src    -- ES6/JSX source code
     ship               -- Directory containing components show the player's ship, the contents
                           of it's hold, food supply, etc. The players "cash box" also displays here.
     welcome            -- Components for the initial welcome screen, with rules and info.
+    map.js             -- Compoent that creates the game map, based on element in state.places.
 
 
     

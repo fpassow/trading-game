@@ -1,8 +1,6 @@
 Sprint
 "adding-things"
 
-Add and describe victory conditions
-
 I hate the port name text....
 
 Play through all the ships and make notes

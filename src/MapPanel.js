@@ -6,6 +6,10 @@ import * as actions from './actions'
 import {seaBlue} from './styleConstants'
 import imagesByType from './imagesByType'
 
+/*
+ * This component draws the entire map, creating a square for each element in state.places.
+ */
+
 let mapPanelStyle = {
     border: '1px solid blue',
     padding: '10px',
@@ -15,7 +19,8 @@ let mapPanelStyle = {
 const mapStyle = {
     display: 'grid',
     gridTemplateColumns: 'repeat(4, 100px)',
-    gridTemplateRows: 'repeat(8, 100px)'
+    gridTemplateRows: 'repeat(8, 100px)',
+    fontWeight: 'bold'
 }
 
 const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
