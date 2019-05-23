@@ -11,10 +11,13 @@ const Fuel = ({myShip}) =>  {
     for (let i = 0; i < (myShip.maxFuel - myShip.fuel); i++) {
         fuelArr.push(<img src="img/no_fuel.png" alt="Empty fuel bay" key={'e'+i} />)
     }
-    let fuelStyle = {
-        border: '2px solid black',
-        padding: '5px',
-        margin: '5px'
+    const fuelStyle = {
+        border: '3px solid brown',
+        borderRadius: '5px',
+        padding: '3px',
+        position: 'relative',
+        minHeight: '50px',
+        marginTop: '5px'
     }
     return (
         <div style={fuelStyle}>

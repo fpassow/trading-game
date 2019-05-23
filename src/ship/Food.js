@@ -9,9 +9,12 @@ const Food = ({myShip}) => {
         foodArr.push(<img src="img/no_rations.png" alt="Empty rations bay" key={'e'+i} />)
     }
     let foodStyle = {
-        border: '2px solid black',
-        padding: '5px',
-        margin: '5px'
+        marginTop: '5px',
+        border: '3px solid brown',
+        borderRadius: '5px',
+        padding: '3px',
+        position: 'relative',
+        minHeight: '50px'
     }
     return (
         <div style={foodStyle}>

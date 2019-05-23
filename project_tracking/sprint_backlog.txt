@@ -1,8 +1,6 @@
 Sprint
 "adding-things"
 
-Match larger border and fuel border to hold border
-
 Removed commented-out code form all files
 
 PUT STARTING MONEY BACK TO 800f
