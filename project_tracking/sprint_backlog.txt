@@ -1,9 +1,9 @@
 Sprint
 "adding-things"
 
-I hate the port name text....
-
 Play through all the ships and make notes
+
+Merge back into master
 
 Check README at github (md interpreted)
 
