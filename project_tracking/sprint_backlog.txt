@@ -5,6 +5,4 @@ Play through all the ships and make notes
 
 Merge back into master
 
-Check README at github (md interpreted)
-
 ==============================================

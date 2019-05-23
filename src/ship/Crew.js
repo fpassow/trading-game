@@ -10,8 +10,7 @@ const Crew = ({myShip}) => {
         crewArr.push(<img key={i} src="img/crew.png" alt="crewperson" />)
     }
     return (
-        <div>
-            <h3>Crew </h3>
+        <div style={{marginTop: '5px'}} >
             {crewArr}
         </div>
     )

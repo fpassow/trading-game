@@ -2,6 +2,10 @@ import state0 from './state0'
 import * as stateUtils from './stateUtils'
 import tickHandler from './tickHandler'
 
+/*
+ * Redux reducer function
+*/
+
 function rootReducer(state = state0, action) {
 
     //See actions. Might remove this later.
