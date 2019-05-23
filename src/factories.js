@@ -65,7 +65,7 @@ export function shipyard(placeId, shipType, shipName) {
             newShip.shipTypeName = 'Albion Steam Clipper'
             newShip.basePrice = 12000
             newShip.crewSize = 4
-            newShip.maxFuel = 5
+            newShip.maxFuel = 7
             newShip.speed = 3
             newShip.fuelPerMove = 1
             newShip.maxCargo = 12
@@ -75,11 +75,11 @@ export function shipyard(placeId, shipType, shipName) {
             newShip.shipTypeName = 'Engine Barge'
             newShip.basePrice = 4000
             newShip.crewSize = 2
-            newShip.maxFuel = 20
+            newShip.maxFuel = 7
             newShip.speed = 1
             newShip.fuelPerMove = 1
             newShip.maxCargo = 20
-            newShip.maxFood = 60
+            newShip.maxFood = 14
             break
         case 'silverzeplin':
             newShip.shipTypeName = 'Silver Zeplin'

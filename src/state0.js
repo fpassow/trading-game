@@ -1,6 +1,20 @@
 import { shipyard } from './factories'
 import places from './state0_places'
 
+/*
+ * This is the initial state used by React/Redux.
+ *
+ * The top level of this object has info about:
+ *     The player's character and ship
+ *     Time in the game
+ *     An array containing all the ship objects in the world
+ *     An array containing all the cargo objects in the world
+ *     An array of "cargo producers" which specify how often
+ *             cargos of various types appear in various places
+ *     An array of "place" objects, imported from state0_places.js.
+ *        Each place objects defines a square on the map.
+ */
+
 const state0 = {
     showingWelcomePage: true,
     timeStop: true,
@@ -12,7 +26,7 @@ const state0 = {
     ticksToday: 0,
     isMoving: false,
     moveEndTime: null,
-    cash: 80000,
+    cash: 800,
     currentPlaceId: 'portharbor',
     defaultPlaceId: 'portharbor',
     myShipId: null,
