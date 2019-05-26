@@ -13,7 +13,21 @@ import * as stateUtils from './stateUtils'
  * This component is used by index.js.
  */
 
-const AppComponent = ({showingWelcomePage, showWelcomePage, hideWelcomePage, hasShip, isInPort, gameOver, gameOverMessage, cash, cashToWin, startNewGame, ticks}) => {
+const AppComponent = ({
+    showingWelcomePage, 
+    showWelcomePage, 
+    hideWelcomePage, 
+    hasShip, 
+    isInPort, 
+    gameOver, 
+    gameOverMessage, 
+    cash, 
+    cashToWin, 
+    startNewGame, 
+    ticks, 
+    days, 
+    ticksToday
+}) => {
     if (gameOver) {
         return (
             <div className="App" style={{textAlign:'center'}}>
@@ -28,6 +42,7 @@ const AppComponent = ({showingWelcomePage, showWelcomePage, hideWelcomePage, has
             <div className="App" style={{textAlign:'center'}}>
                 <br /><br /><br />
                 <h1>Fifty thousand florins!</h1>
+                <h1>Achieved on day {days} at {ticksToday}:00.</h1>
                 <h1>You Win !!!!!!!!!!!!!!!!</h1>
                 <button onClick={startNewGame}>Start a new game</button>
             </div>
@@ -46,6 +61,8 @@ const mapStateToProps = state => ({
   gameOver: state.gameOver,
   gameOverMessage: state.gameOverMessage,
   ticks: state.ticks,
+  days: state.days,
+  ticksToday: state.ticksToday,
   cash: state.cash,
   cashToWin: state.cashToWin
 })

@@ -1,8 +1,11 @@
 Sprint
 "adding-things"
 
-Play through all the ships and make notes
+Test in FF, IE, and Edge
 
 Merge back into master
+
+Deployment notes
+    This is static, so copy into fritzpassow.com and push it all
 
 ==============================================

@@ -4,6 +4,12 @@ import * as factories from './factories'
 export default function tickHandler(state) {
     let newState = {...state}
 
+    //Check victory condition
+    if (newState.cash >= newState.cashToWin) {
+        newState.timeStop = true
+        return newState
+    }
+
     //Slow time by 20x when in port or deciding where to move next at sea,
     //    i.e. when state.isMoving is false.
     if (!state.isMoving) {
