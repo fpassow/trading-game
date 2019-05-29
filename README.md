@@ -15,7 +15,7 @@ cp -r * <web_server_root>/trading-game
 ```
 
 To install at the web root (which is easier for just playing around), remove
-the "homepage" element from project.json and rebuild. You can then point a dev server's webroot at the build directory.
+the "homepage" element from package.json and rebuild. You can then point a dev server's webroot at the build directory.
 
 DEVELOPERS' OVERVIEW
 --------------------
@@ -24,7 +24,7 @@ This project was started with create-react-app. It uses React and Redux.
 
 It's purely client-side JavaScript. 
 
-### TIME IN THE GAEM
+### TIME IN THE GAME
 
 A JavaScript setInterval(func, mS) call in index.js sends TICK actions into Redux.
 
