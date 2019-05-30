@@ -18,7 +18,7 @@ const holdStyle = {
 const Hold = ({myShip, cargo, localPrices, sellCargo}) => {
     const emptyCargoBays = []
     for (let i = 0; i < (myShip.maxCargo - cargo.length); i++) {
-        emptyCargoBays.push(<Cargo empty={true} />)
+        emptyCargoBays.push(<Cargo key={i} empty={true} />)
     }
     return (
         <div style={holdStyle}>
