@@ -1,8 +1,6 @@
 Sprint
 "adding-things"
 
-On the welcome page, make the "Play" button at the bottom look like
-  the nice one near the top.
 
 It was playable on my phone! Update layout to really support that.
     maxWidth on welcome page images?

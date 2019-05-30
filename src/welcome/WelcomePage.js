@@ -43,7 +43,7 @@ const WelcomePage = ({hideWelcomePage, ticks}) => {
                 <IntroText />
                 <PlayingTheGame />
                 <AboutShips />
-                <button onClick={hideWelcomePage} >Play</button>
+                <button style={buttonStyle} onClick={hideWelcomePage} >{buttonText} >>>></button>
             </div>
         </div>
     )
