@@ -5,7 +5,15 @@ A steampunk merchants game. I wanted something with lots of state to manage with
 RUNNING
 -------
 
-The build process is currently set up to generate code that expects to live at <web_server_root>/trading-game/
+In the projects top directory:
+
+```
+npm install
+npm start
+```
+After a few seconds, the above will start a dev server and open the project in your browser.
+
+Or... The build process is currently set up to generate code that expects to live at <web_server_root>/trading-game/
 
 ```
 npm run-script build

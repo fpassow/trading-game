@@ -1,11 +1,15 @@
 Sprint
 "adding-things"
 
+On the welcome page, make the "Play" button at the bottom look like
+  the nice one near the top.
+
+It was playable on my phone! Update layout to really support that.
+    maxWidth on welcome page images?
+    
 Test in FF, IE, and Edge
+   Get FF
 
 Merge back into master
-
-Deployment notes
-    This is static, so copy into fritzpassow.com and push it all
 
 ==============================================
