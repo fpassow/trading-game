@@ -22,7 +22,8 @@ const welcomePageStyle = {
 }
 const welcomeImageStyle = {
     display: 'block',
-    margin: '0 auto'
+    margin: '0 auto',
+    maxWidth: '90%'
 }
 const buttonStyle = {
     color: 'white',

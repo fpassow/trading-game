@@ -40,7 +40,7 @@ const tableStyle = {
 }
 const ShipTypeData = ({ship}) => (
     <div style={shipTypeDataStyle}>
-        <img src={'img/' + ship.shipType + '_large.png'} alt="" />
+        <img src={'img/' + ship.shipType + '_large.png'} alt="" style={{maxWidth: '90%'}} />
         <div>
             <h3>{ship.shipTypeName}</h3> 
              <table border="1" style={tableStyle}>

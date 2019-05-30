@@ -3,10 +3,10 @@ Sprint
 
 
 It was playable on my phone! Update layout to really support that.
-    maxWidth on welcome page images?
+
+    Break main page to three stacked panels.
     
 Test in FF, IE, and Edge
-   Get FF
 
 Merge back into master
 
