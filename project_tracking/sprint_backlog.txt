@@ -6,7 +6,7 @@ It was playable on my phone! Update layout to really support that.
 
     Break main page to three stacked panels.
     
-Test in FF, IE, and Edge
+Test in IE and FF
 
 Merge back into master
 
