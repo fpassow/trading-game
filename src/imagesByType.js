@@ -17,7 +17,7 @@ export default {
     fishboat: 'img/fishboat.png',
     albionsteamclipper: 'img/albionsteamclipper.png',
     enginebarge: 'img/enginebarge.png',
-    silverzeplin: 'img/silverzeplin.png',
+    silverzeppelin: 'img/silverzeppelin.png',
     steamturbinehovercraft: 'img/steamturbinehovercraft.png',
     coal: 'img/coal.png',
     leopardwood: 'img/leopardwood.png',

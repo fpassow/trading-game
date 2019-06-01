@@ -35,7 +35,7 @@ const state0 = {
         shipyard('portharbor', 'fishboat', 'Fishy'),
         shipyard('portharbor', 'albionsteamclipper', 'Clippy'),
         shipyard('heck', 'enginebarge', 'Grummpy'),
-        shipyard('pointa', 'silverzeplin', 'Puffy'),
+        shipyard('pointa', 'silverzeppelin', 'Puffy'),
         shipyard('gibber', 'steamturbinehovercraft', 'Zippy'),
     ],
     places: places,
@@ -50,6 +50,7 @@ const state0 = {
         {placeId: 'portharbor', period: 3, cargoType: 'kippers', quantity: 1},
         {placeId: 'pointa', period: 3, cargoType: 'clockworks', quantity: 1},
         {placeId: 'thirdplace', period: 3, cargoType: 'leopardwood', quantity: 1},
+        {placeId: 'nether', period: 2, cargoType: 'coal', quantity: 1},
     ]
 }
 

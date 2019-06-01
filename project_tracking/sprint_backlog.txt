@@ -1,9 +1,7 @@
 Sprint
 "adding-things"
 
-
 It was playable on my phone! Update layout to really support that.
-
     Break main page to three stacked panels.
     
 Test in IE and FF

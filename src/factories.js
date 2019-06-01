@@ -81,7 +81,7 @@ export function shipyard(placeId, shipType, shipName) {
             newShip.maxCargo = 20
             newShip.maxFood = 14
             break
-        case 'silverzeplin':
+        case 'silverzeppelin':
             newShip.shipTypeName = 'Silver Zeplin'
             newShip.basePrice = 20000
             newShip.crewSize = 2

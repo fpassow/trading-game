@@ -11,7 +11,7 @@ function rootReducer(state = state0, action) {
     //See actions. Might remove this later.
     //But never show TICKs. There are too many.
     if (action.type !== 'TICK') {
-        console.log(action)
+        //console.log(action)
         //console.log(state)
     }
     

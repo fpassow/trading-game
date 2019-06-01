@@ -11,7 +11,7 @@ const allShipTypes = [
     'fishboat', 
     'albionsteamclipper', 
     'enginebarge', 
-    'silverzeplin',
+    'silverzeppelin',
     'steamturbinehovercraft'
 ]
 
@@ -23,6 +23,14 @@ const aboutShipsStyle = {
 const AboutShips = () => (
     <div style={aboutShipsStyle}>
         <h2>Ships</h2>
+        <p>In case you're curious, here are all the ships and other vehicles
+            available in the game. Consult this if you want to calculate exactly
+            how much fuel or food are required for a given trip, or to understand how
+            much money you have to accumulate to trade up to a better vehicle.
+        </p>
+        <p>However, as long as you keep your food and fuel supplies topped up, you can 
+            also play by just watching the UI and seeing what happens.
+        </p>
         {exampleShips.map((ship)=>(<ShipTypeData key={ship.shipType} ship={ship} />))}
     </div>
 )
