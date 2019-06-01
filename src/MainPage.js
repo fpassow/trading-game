@@ -5,7 +5,7 @@ import ShiplessPanel from './ship/ShiplessPanel'
 import MapPanel from './MapPanel'
 import {seaBlue} from './styleConstants'
 
-let mainPageStyle = {
+const mainPageStyle = {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr 1fr'
 }
