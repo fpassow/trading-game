@@ -23,7 +23,7 @@ const aboutShipsStyle = {
 const AboutShips = () => (
     <div style={aboutShipsStyle}>
         <h2>Ships</h2>
-        <p>In case you're curious, here are all the ships and other vehicles
+        <p>Here are all the ships and other vehicles
             available in the game. Consult this if you want to calculate exactly
             how much fuel or food are required for a given trip, or to understand how
             much money you have to accumulate to trade up to a better vehicle.
@@ -58,7 +58,7 @@ const ShipTypeData = ({ship}) => (
                      <tr><td>Fuel Capacity</td><td>{ship.maxFuel}</td></tr>
                      <tr><td>Max Speed</td><td>{ship.speed}</td></tr>
                      <tr><td>Fuel per Square Moved</td><td>{ship.fuelPerMove}</td></tr>
-                     <tr><td>Cargo Capacity</td><td>{ship.maxCargo}</td></tr>
+                     <tr><td>Cargo Bays</td><td>{ship.maxCargo}</td></tr>
                      <tr><td>Food Store</td><td>{ship.maxFood}</td></tr>
                  </tbody>
             </table>

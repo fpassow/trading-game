@@ -3,7 +3,7 @@
 //Every place has a prices object. If place.prices[cargoType] isn't defined, there's no market for 
 //  that cargoType at that place. If it is defined, the prices is both the buying and selling price
 
-const  basePrices = {
+export const basePrices = {
     oliveoil: 100,
     coal: 50,
     leopardwood: 200,

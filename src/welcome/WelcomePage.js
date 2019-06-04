@@ -1,7 +1,8 @@
 import React from 'react'
-import AboutShips from './AboutShips'
 import IntroText from './IntroText'
 import PlayingTheGame from './PlayingTheGame'
+import AboutShips from './AboutShips'
+import AboutCargos from './AboutCargos'
 import {seaBlue} from '../styleConstants'
 
 /* This game has two screens: This componet displays the "welcome" screen, which information
@@ -44,6 +45,8 @@ const WelcomePage = ({hideWelcomePage, ticks}) => {
                 <IntroText />
                 <PlayingTheGame />
                 <AboutShips />
+                <AboutCargos />
+                <br />
                 <button style={buttonStyle} onClick={hideWelcomePage} >{buttonText} >>>></button>
             </div>
         </div>

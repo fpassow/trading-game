@@ -1,8 +1,11 @@
 Sprint
 "adding-things"
 
-It was playable on my phone! Update layout to really support that.
-    Break main page to three stacked panels.
+Break main page to three stacked panels.
+
+Brighter buy button for first ship buy
+
+Fit map to screen better.
     
 Test in IE and FF
 

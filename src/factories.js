@@ -21,13 +21,13 @@ export function resetNextId() {
 
 const baseCargo = {isForSale: true, isLoaded: false, shipId: null}
 
-const labelForCargoType = {
+export const labelForCargoType = {
     oliveoil: 'Olive oil',
     coal: 'Coal',
     leopardwood:'Leopard Wood',
     clockworks:'Clockworks',
     kippers:'Kippers',
-    fluf:'Fluff'
+    fluff:'Fluff'
 }
 export function cargoFactory(cargoType, placeId) {
     return {...baseCargo, 

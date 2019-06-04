@@ -26,7 +26,7 @@ const PlayingTheGame = () => (
 
         <p>When you get a ship that needs fuel, you will find that fuel works just like rations.</p>
 
-        <p>The right-most panel, or the bottom on mobile, show the map of the world.
+        <p>The right-most panel, or the bottom panel on mobile, shows the map of the world.
             When you are ready to set sail, click an arrow to move to an adjacent square.
             Your ship will bob over the waves for a time which depends on its speed. Then it
             will arrive in the new square and you will see a new set of arrows showing the
