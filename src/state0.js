@@ -16,7 +16,9 @@ import places from './state0_places'
  */
 
 const state0 = {
+    screenWidth: window.innerWidth, //updated every tick
     showingWelcomePage: true,
+    selectedTab: 'PORT', //Whish of 'PORT', 'SHIP', or 'MAP' to show in mobile view.
     timeStop: true,
     slowTimeCounter: 0,
     gameOver: false,

@@ -20,6 +20,9 @@ export default function tickHandler(state) {
         }
     }
 
+    newState.screenWidth = window.innerWidth
+
+
     //A day is 24 ticks.
     //state contains ticks, days, and ticksToday for other logic to use.
     //ticksToday rolls back to zero at the end of each day, like a clock. While ticks just

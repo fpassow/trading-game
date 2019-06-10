@@ -1,8 +1,8 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import {connect} from 'react-redux'
 import WelcomePage from './welcome/WelcomePage'
 import MainPage from './MainPage'
-import { showWelcomePage, startNewGame } from './actions'
+import {showWelcomePage, startNewGame, selectPortTab, selectShipTab, selectMapTab} from './actions'
 import * as stateUtils from './stateUtils'
 
 /*
@@ -26,7 +26,12 @@ const AppComponent = ({
     startNewGame, 
     ticks, 
     days, 
-    ticksToday
+    ticksToday,
+    screenWidth,
+    selectedTab,
+    selectPortTab,
+    selectShipTab,
+    selectMapTab
 }) => {
     if (gameOver) {
         return (
@@ -51,7 +56,18 @@ const AppComponent = ({
     if (showingWelcomePage) {
         return <div className="App"><WelcomePage hideWelcomePage={hideWelcomePage} ticks={ticks} /></div>
     }
-    return <div className="App"><MainPage showWelcomePage={showWelcomePage} hasShip={hasShip} isInPort={isInPort} /></div>
+    return <div className="App">
+        <MainPage 
+            showWelcomePage={showWelcomePage} 
+            hasShip={hasShip} 
+            isInPort={isInPort} 
+            screenWidth={screenWidth} 
+            selectedTab={selectedTab}
+            selectPortTab={selectPortTab}
+            selectShipTab={selectShipTab}
+            selectMapTab={selectMapTab}
+        />
+    </div>
 }
 
 const mapStateToProps = state => ({
@@ -64,13 +80,18 @@ const mapStateToProps = state => ({
   days: state.days,
   ticksToday: state.ticksToday,
   cash: state.cash,
-  cashToWin: state.cashToWin
+  cashToWin: state.cashToWin,
+  screenWidth: state.screenWidth,
+  selectedTab: state.selectedTab //Which tab to show in mobile view
 })
 
 const mapDispatchToProps = dispatch => ({
   showWelcomePage: () => dispatch(showWelcomePage(true)),
   hideWelcomePage: () => dispatch(showWelcomePage(false)),
-  startNewGame: () => dispatch(startNewGame())
+  startNewGame: () => dispatch(startNewGame()),
+  selectPortTab: () => dispatch(selectPortTab()),
+  selectShipTab: () => dispatch(selectShipTab()),
+  selectMapTab: () => dispatch(selectMapTab())
 })
 
 export default connect(

@@ -2,13 +2,13 @@ Sprint
 "adding-things"
 
 
-Break main page to three stacked panels.
+Mobile
+   Link to welcome page as a help icon, in the top bar
+   buttons for the other tabs, in the top bar
+   time display to the top bar 
+   Make the map fit on a phone
 
-Brighter buy button for first ship buy
-
-Fit map to screen better.
-    
-Test in IE and FF
+Remove FloatNote s.
 
 Merge back into master
 

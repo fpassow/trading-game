@@ -21,6 +21,16 @@ export function startNewGame() {
 	return {type: 'START_NEW_GAME'}
 }
 
+export function selectPortTab() {
+	return {type: 'SELECT_TAB', whichTab:'PORT'}
+}
+export function selectShipTab() {
+	return {type: 'SELECT_TAB', whichTab:'SHIP'}
+}
+export function selectMapTab() {
+	return {type: 'SELECT_TAB', whichTab:'MAP'}
+}
+
 export function buyShip(shipId) {
 	return {type: 'BUY_SHIP', shipId: shipId}
 }

@@ -32,6 +32,10 @@ function rootReducer(state = state0, action) {
         case 'START_NEW_GAME':
             return state0
 
+        case 'SELECT_TAB':
+            console.log('setting selectedTab to ' + action.whichTab)
+            return {...state, selectedTab: action.whichTab}
+
         case 'BUY_SHIP':
             let ship = stateUtils.getShipById(action.shipId, state)
             let oldShip = stateUtils.getMyShip(state)

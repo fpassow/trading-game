@@ -7,6 +7,11 @@ import React from 'react'
  * else used for CSS which I want to keep in a single place.
  */
 
+ /*
+  * Pixel width where we switch to the mobile layout
+  */
+ export const SCREEN_WIDTH_THRESHOLD = 700
+
 /*
  * HTML entity for the symbol, like an "f" with a tail, used to represent
  * the unit of money used in the game.
