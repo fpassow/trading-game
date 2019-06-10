@@ -33,7 +33,6 @@ function rootReducer(state = state0, action) {
             return state0
 
         case 'SELECT_TAB':
-            console.log('setting selectedTab to ' + action.whichTab)
             return {...state, selectedTab: action.whichTab}
 
         case 'BUY_SHIP':

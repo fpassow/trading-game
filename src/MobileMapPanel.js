@@ -17,9 +17,10 @@ let mobileMapPanelStyle = {
 
 const mapStyle = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(4, 1f)',
+    gridTemplateColumns: 'repeat(4, 25%)',
     gridTemplateRows: 'repeat(8, 100px)',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    width: '100%'
 }
 
 const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
@@ -42,6 +43,7 @@ const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
     let squareStyle = {
         border:border, 
         background: background,
+        backgroundSize: 'contain',
         gridColumn: p.x, 
         gridRow: p.y, 
         margin:'0px',

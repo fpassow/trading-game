@@ -3,6 +3,9 @@ Sprint
 
 
 Mobile
+
+   Limit size of the town image
+
    Link to welcome page as a help icon, in the top bar
    buttons for the other tabs, in the top bar
    time display to the top bar 
