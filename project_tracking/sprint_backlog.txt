@@ -1,6 +1,12 @@
 Sprint
 "adding-things"
 
+MAP DOESN'T USE WHOLE PHONE SCREEN.
+  ALSO WHEN ROTATED
+  Same width both case... so????
+  WHY DO THE OTHER TABS USE THE WHOLE WIDTH????
+    BUT NOT WHEN ROTATED <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
 HTTPS!!!!! (Doesn't matter until I show to strangers)
 
 Mobile

@@ -18,7 +18,7 @@ let mobileMapPanelStyle = {
 const mapStyle = {
     display: 'grid',
     gridTemplateColumns: 'repeat(4, 25%)',
-    gridTemplateRows: 'repeat(8, 100px)',
+    gridTemplateRows: 'repeat(8, 25vw)',
     fontWeight: 'bold',
     width: '100%'
 }
@@ -48,7 +48,7 @@ const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
         gridRow: p.y, 
         margin:'0px',
         position: 'relative',
-        backgroundPosition: 'center'
+        backgroundPosition: 'bottom'
     }
     let arrowStyle = {
         transform: 'rotate('+_arrowRotation(p, myPlace)+'deg)',

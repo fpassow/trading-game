@@ -15,7 +15,8 @@ const mainPageStyleForMobile = {
     background: seaBlue,
     position: 'absolute',
     top: '0px',
-    bottom: '0px'
+    bottom: '0px',
+    width: '100%'
 }
 
 const MainPage = ({
