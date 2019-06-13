@@ -1,12 +1,13 @@
 Sprint
 "adding-things"
 
-PUSH LATEST AND CHECK ON phone
+
+Pin tabs to top of screen when I scroll
+
 TIME DISPLAY
-BETTER BUTTONS FOR CHOOSING TABS
 
-HTTPS!!!!! (Doesn't matter until I show to strangers)
 
+Swipe to move between panels???
 
 Remove FloatNote s.
 

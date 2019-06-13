@@ -18,6 +18,22 @@ const mainPageStyleForMobile = {
     bottom: '0px',
     width: '100%'
 }
+const disabledButtonStyle = {
+    background: '#668',
+    fontWeight: 'bold',
+    fontSize: '30px'
+}
+const enabledButtonStyle = {
+    background: 'yellow',
+    fontWeight: 'bold',
+    fontSize: '30px'
+}
+const youarehereButtonStyle = {
+    background: seaBlue,
+    fontWeight: 'bold',
+    fontSize: '30px',
+    border: 'none'
+}
 
 const MainPage = ({
     showWelcomePage, 
@@ -38,15 +54,31 @@ const MainPage = ({
             </div>
         )
     } else {
-        const portButtonDisabled = selectedTab === 'PORT' || !isInPort
-        const shipButtonDisabled = selectedTab === 'SHIP' || !hasShip
+        const portButtonStyle = (selectedTab === 'PORT') ? youarehereButtonStyle : enabledButtonStyle
+        const portButtonDisabled = selectedTab === 'PORT'
+
+        const shipButtonStyle = (selectedTab === 'SHIP') ? youarehereButtonStyle : 
+            ( hasShip ? enabledButtonStyle : disabledButtonStyle)
+        const shipButtonDisabled = !hasShip || (selectedTab === 'SHIP')
+
+        const mapButtonStyle = (selectedTab === 'MAP') ? youarehereButtonStyle : enabledButtonStyle
         const mapButtonDisabled = selectedTab === 'MAP'
+
         return (
             <div style={mainPageStyleForMobile}>
                 <div>
-                    <button disabled={portButtonDisabled} onClick={selectPortTab}>Port</button>
-                    <button disabled={shipButtonDisabled} onClick={selectShipTab}>My Ship</button>
-                    <button disabled={mapButtonDisabled} onClick={selectMapTab}>Map</button>
+                    <button disabled={portButtonDisabled} 
+                            onClick={selectPortTab}
+                            style={portButtonStyle}
+                    >Port</button>
+                    <button disabled={shipButtonDisabled} 
+                            onClick={selectShipTab}
+                            style={shipButtonStyle}
+                    >My Ship</button>
+                    <button disabled={mapButtonDisabled} 
+                            onClick={selectMapTab}
+                            style={mapButtonStyle}
+                    >Map</button>
                     Time View
                     <button onClick={showWelcomePage}>(?)</button>
                 </div>
