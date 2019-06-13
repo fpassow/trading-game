@@ -21,18 +21,31 @@ const mainPageStyleForMobile = {
 const disabledButtonStyle = {
     background: '#668',
     fontWeight: 'bold',
-    fontSize: '30px'
+    fontSize: '30px',
+    width: '28%'
 }
 const enabledButtonStyle = {
     background: 'yellow',
     fontWeight: 'bold',
-    fontSize: '30px'
+    fontSize: '30px',
+    width: '28%'
 }
 const youarehereButtonStyle = {
     background: seaBlue,
+    color: 'black',
     fontWeight: 'bold',
     fontSize: '30px',
-    border: 'none'
+    border: 'none',
+    width: '28%'
+}
+const helpButtonStyle = {
+    width: '16%',
+    background: seaBlue,
+    fontWeight: 'bold',
+    fontSize: '30px',
+    color: 'yellow',
+    border: 'none',
+
 }
 
 const MainPage = ({
@@ -74,13 +87,12 @@ const MainPage = ({
                     <button disabled={shipButtonDisabled} 
                             onClick={selectShipTab}
                             style={shipButtonStyle}
-                    >My Ship</button>
+                    >Ship</button>
                     <button disabled={mapButtonDisabled} 
                             onClick={selectMapTab}
                             style={mapButtonStyle}
                     >Map</button>
-                    Time View
-                    <button onClick={showWelcomePage}>(?)</button>
+                    <button style={helpButtonStyle} onClick={showWelcomePage}> ? </button>
                 </div>
                 {selectedTab === 'PORT' ?
                   <PlacePanel /> : ( selectedTab === 'SHIP' ? <ShipPanel /> : <MobileMapPanel />)

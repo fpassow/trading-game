@@ -1,10 +1,11 @@
 Sprint
 "adding-things"
 
+Make nav-tabs take full width
 
 Pin tabs to top of screen when I scroll
 
-TIME DISPLAY
+move TIME DISPLAY to ship panel, or???? (Still want it in desktop and mobile)
 
 
 Swipe to move between panels???
