@@ -9,7 +9,8 @@ import {SCREEN_WIDTH_THRESHOLD} from './constants'
 
 const mainPageStyle = {
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr 1fr'
+    gridTemplateColumns: '1fr 1fr 1fr',
+    padding: '0px'
 }
 const mainPageStyleForMobile = {
     background: seaBlue,
@@ -45,7 +46,13 @@ const helpButtonStyle = {
     fontSize: '30px',
     color: 'yellow',
     border: 'none',
-
+}
+const mobileNavStyle = {
+    position: 'fixed',
+    width: '100%',
+    top: '0px',
+    left: '0px',
+    zIndex: '10'
 }
 
 const MainPage = ({
@@ -79,7 +86,7 @@ const MainPage = ({
 
         return (
             <div style={mainPageStyleForMobile}>
-                <div>
+                <div style={mobileNavStyle}>
                     <button disabled={portButtonDisabled} 
                             onClick={selectPortTab}
                             style={portButtonStyle}
@@ -94,6 +101,7 @@ const MainPage = ({
                     >Map</button>
                     <button style={helpButtonStyle} onClick={showWelcomePage}> ? </button>
                 </div>
+                <div style={{height:'40px'}}> </div>
                 {selectedTab === 'PORT' ?
                   <PlacePanel /> : ( selectedTab === 'SHIP' ? <ShipPanel /> : <MobileMapPanel />)
                 }
