@@ -28,7 +28,7 @@ const state0 = {
     ticksToday: 0,
     isMoving: false,
     moveEndTime: null,
-    cash: 8000,
+    cash: 800,
     cashToWin: 50000,
     currentPlaceId: 'portharbor',
     defaultPlaceId: 'portharbor',
