@@ -14,8 +14,7 @@ const PlayingTheGame = () => (
             it will automatically move to fill an empty space in your ship&apos; hold.
         </p>
 
-        <p>Your ship is shown in the center column on a large screen, or scroll down to the center
-            of three sections on mobile.
+        <p>Your ship is shown in the center column on a large screen, or use the PORT, SHIP, and MAP tabs on mobile.
         </p>
 
         <p>Be sure to buy rations for you and your crew. The game automatically buys rations for you when you are in port.
@@ -26,14 +25,14 @@ const PlayingTheGame = () => (
 
         <p>When you get a ship that needs fuel, you will find that fuel works just like rations.</p>
 
-        <p>The right-most panel, or the bottom panel on mobile, shows the map of the world.
+        <p>The right-most panel, or the MAP panel on mobile, shows the map of the world.
             When you are ready to set sail, click an arrow to move to an adjacent square.
-            Your ship will bob over the waves for a time which depends on its speed. Then it
+            Your ship will bob over the waves for a time. How long depends on its speed. Then it
             will arrive in the new square and you will see a new set of arrows showing the
             squares you can move to.
         </p>
 
-        <p>When you reach another port, your cargos will display the local price which you
+        <p>When you reach another port, your cargos in the SHIP panel will display the local price which you
             can sell them for. Click a cargo to sell it</p>
 
         <p>Buy bigger and faster ships when you can. A ship will display a buy button when you become
