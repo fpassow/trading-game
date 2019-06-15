@@ -115,8 +115,7 @@ const MapPanelComponent = ({
         <div style={mapPanelStyle}>
             <div style={{display:'inline-block', width:'200px'}}>
                 <TimeView 
-                    days={days} 
-                    ticks={ticks} 
+                    days={days}
                     ticksToday={ticksToday}
                 />
             </div>

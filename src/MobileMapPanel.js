@@ -4,6 +4,7 @@ import * as stateUtils from './stateUtils'
 import * as actions from './actions'
 import {seaBlue} from './styleConstants'
 import imagesByType from './imagesByType'
+import TimeView from './TimeView'
 
 /*
  * Mobile version of the component which draws the entire map, creating a square 
@@ -52,8 +53,8 @@ const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
     }
     let arrowStyle = {
         transform: 'rotate('+_arrowRotation(p, myPlace)+'deg)',
-        left: '5px',
-        top: '5px',
+        left: '15px',
+        top: '15px',
         zIndex: 10,
         position: 'absolute'
     }
@@ -103,12 +104,20 @@ function _arrowRotation(place, myPlace) {
     return 180
 }
 
+const timeContainerStyle = {
+    position: 'fixed',
+    top: '45px',
+    right: '0px',
+    zIndex: '5'
+}
 const MobileMapPanelComponent = ({
         ticks, days, ticksToday, places, myShip, myPlace, isMoving, moveShip
     }) => {
     return (
         <div style={mobileMapPanelStyle}>
-
+            <div style={timeContainerStyle}>
+                <TimeView days={days} ticksToday={ticksToday} />
+            </div>
             <div style={mapStyle}>
                 {places.map((p)=>(<Square key={p.placeId} 
                                           p={p} 
