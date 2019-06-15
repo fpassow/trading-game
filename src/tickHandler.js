@@ -61,7 +61,6 @@ function eatFood(s) {
     //No ship. Player buys food for self each day.
     if (!s.myShipId) {
         if (isFoodForSale && (cash >= foodPrice)) {
-            floatNote('Buying food.')
             return {...s, cash: cash - foodPrice}
         } else {
             return {...s, cash: cash - foodPrice, gameOver: true}
@@ -107,6 +106,3 @@ function producersProduce(oldState) {
     return {...oldState, cargos: newCargos}
 }
 
-function floatNote(text) {
-    console.log('FloatNote: ' + text)
-}
