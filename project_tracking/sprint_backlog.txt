@@ -2,6 +2,8 @@ Sprint
 "adding-things"
 
 
+Display a floating "arrow down" or something when there are cargos you can scroll to see.
+
 Move arrows not centered in mobile
 
 move TIME DISPLAY to ship panel, or???? (Still want it in desktop and mobile)

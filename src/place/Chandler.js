@@ -22,7 +22,7 @@ const Chandler = ({place, buyFood, hasShip, myShip}) => {
     if (place.isFoodForSale) {
         return (
             <div>
-                <h3>Buy food</h3> 
+                <h3>Buy rations</h3> 
                 {(hasShip) ? 
                     <div>
                         <button style={buttonStyle} onClick={()=>{buyFood(place.placeId, 1)}}>

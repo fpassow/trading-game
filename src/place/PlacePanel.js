@@ -34,8 +34,8 @@ const PlacePanelComponent = (
       </div>
       <ShipsForSale shipsForSale={shipsForSale} cash={cashPlusTradeIn} buyShip={buyShip} />
       <Chandler hasShip={hasShip} place={place} myShip={myShip} buyFood={buyFood} />
-      <FuelDepot hasShip={hasShip} place={place} myShip={myShip} buyFuel={buyFuel} />
       <CargosForSale prices={place.prices} hasShip={hasShip} numberOfEmptyCargoBays={numberOfEmptyCargoBays} cargosForSale={cargosForSale} cash={cash} buyCargo={buyCargo} />
+      <FuelDepot hasShip={hasShip} place={place} myShip={myShip} buyFuel={buyFuel} />
     </div>);
   }
 

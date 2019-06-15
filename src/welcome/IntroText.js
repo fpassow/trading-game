@@ -13,6 +13,9 @@ const IntroText = () => (
             money. And at sea, you can starve.
         </p>
 
+        <p><i>Note: This game currently runs client-side only. There's no server. And if you leave the page, 
+            you start over.</i></p>
+
     </div>
 )
 
