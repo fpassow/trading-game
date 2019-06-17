@@ -53,14 +53,18 @@ const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
     }
     let arrowStyle = {
         transform: 'rotate('+_arrowRotation(p, myPlace)+'deg)',
-        left: '15px',
-        top: '15px',
+        left: '25%',
+        top: '25%',
+        width: '50%',
+        height: '50%',
         zIndex: 10,
         position: 'absolute'
     }
     let shipStyle={
-        left: '18px',
-        top: '18px',
+        left: '25%',
+        top: '25%',
+        width: '50%',
+        height: '50%',
         zIndex: 5,
         position: 'absolute',
         border: 'none'

@@ -1,7 +1,9 @@
 Sprint
 "adding-things"
 
+localStorage
 
+User clicked on current town on map...
 
 Swipe to move between panels???
 
