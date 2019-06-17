@@ -57,7 +57,7 @@ const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip, selectSh
         top: '25%',
         width: '50%',
         height: '50%',
-        zIndex: 10,
+        zIndex: 8,
         position: 'absolute'
     }
     let shipStyle={
