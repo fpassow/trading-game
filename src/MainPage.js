@@ -103,7 +103,8 @@ const MainPage = ({
                 </div>
                 <div style={{height:'40px'}}> </div>
                 {selectedTab === 'PORT' ?
-                  <PlacePanel /> : ( selectedTab === 'SHIP' ? <ShipPanel /> : <MobileMapPanel />)
+                  <PlacePanel /> : ( selectedTab === 'SHIP' ? 
+                      <ShipPanel /> : <MobileMapPanel />)
                 }
             </div>
         )

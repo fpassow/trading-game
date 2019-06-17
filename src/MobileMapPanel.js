@@ -24,7 +24,7 @@ const mapStyle = {
     width: '100%'
 }
 
-const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
+const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip, selectShipTab}) => {
     const moveHandler = () => {
         if (isDestination) {
             moveShip(myShip.shipId, p.placeId)
@@ -70,13 +70,15 @@ const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
         border: 'none'
     }
     let shipCssClass = isMoving ? 'bobbing' : 'notbobbing'
+    let myShipIsHere = myShip && (myShip.placeId === p.placeId)
+    let inPortHere = myShipIsHere && (p.placeType === 'PORT')
     return (
         <div style={squareStyle} 
              key={p.placeId}
-             onClick={moveHandler}
+             onClick={(inPortHere)? selectShipTab : moveHandler}
         >
             {p.placeType === 'PORT' ? p.name : ''}
-            {(myShip && (myShip.placeId === p.placeId)) ? <img className={shipCssClass} style={shipStyle} alt={myShip.shipName} src={imagesByType[myShip.shipType]} /> : <span> </span>} 
+            {(myShipIsHere) ? <img className={shipCssClass} style={shipStyle} alt={myShip.shipName} src={imagesByType[myShip.shipType]} /> : <span> </span>} 
             {(isDestination && !isMoving) ? <img style={arrowStyle} src="img/arrow_up.png" alt="You can move to here" /> : <span> </span>}
         </div>
     )
@@ -115,7 +117,7 @@ const timeContainerStyle = {
     zIndex: '5'
 }
 const MobileMapPanelComponent = ({
-        ticks, days, ticksToday, places, myShip, myPlace, isMoving, moveShip
+        ticks, days, ticksToday, places, myShip, myPlace, isMoving, moveShip, selectShipTab
     }) => {
     return (
         <div style={mobileMapPanelStyle}>
@@ -130,6 +132,7 @@ const MobileMapPanelComponent = ({
                                           isMoving={isMoving}
                                           isDestination={myShip && _isDestination(p, myPlace, myShip)}
                                           moveShip={moveShip} 
+                                          selectShipTab={selectShipTab}
                                   />
                 ))}
             </div>
@@ -149,7 +152,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    moveShip: (shipId, placeId) => { dispatch(actions.moveShip(shipId, placeId)) }
+    moveShip: (shipId, placeId) => { dispatch(actions.moveShip(shipId, placeId)) },
+    selectShipTab: () => { dispatch(actions.selectShipTab()) }
   })
 
 export default connect(
