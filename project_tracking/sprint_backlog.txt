@@ -2,6 +2,7 @@ Sprint
 "adding-things"
 
 localStorage
+    Put version number in key so I can ignore or clear incompatable formats
 
 Swipe to move between panels???
 
