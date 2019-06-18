@@ -1,11 +1,8 @@
 Sprint
 "adding-things"
 
-Add start-new-game button.
 
 Gettig cargos with the same key after adding saveState
-
-Not responsive, even after reload, after adding saveState
 
 Swipe to move between panels???
 

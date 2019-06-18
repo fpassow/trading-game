@@ -9,14 +9,9 @@
  */
 
 //Unique id generator
-let ___nextId = 111
+let ___nextId = Math.random() //Random so game running from saved state won't repeat IDs.
 export function nextId() {
     return ___nextId++
-}
-
-//So unit tests can have predictable IDs.
-export function resetNextId() {
-    ___nextId = 111
 }
 
 const baseCargo = {isForSale: true, isLoaded: false, shipId: null}
