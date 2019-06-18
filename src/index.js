@@ -14,8 +14,6 @@ import {loadState, saveState} from './gameSaver'
 
 //Get state from local storage
 const persistedState = loadState()
-console.log('from local storage...')
-console.log(persistedState)
 
 //Create a store using state from local storage if we have it, or state0 from state0.js otherwise.
 const store = createStore(rootReducer, ((persistedState && persistedState.places)?persistedState:state0))

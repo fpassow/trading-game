@@ -33,7 +33,7 @@ const buttonStyle = {
     fontWeight: 'bold',
     borderRadius: '10px'
 }
-const WelcomePage = ({hideWelcomePage, ticks}) => {
+const WelcomePage = ({hideWelcomePage, ticks, resetState}) => {
     const buttonText = (ticks > 0) ? 'Return to game' : 'Start the game'
     return (
         <div style={wrapperStyle}>
@@ -41,7 +41,12 @@ const WelcomePage = ({hideWelcomePage, ticks}) => {
                 <div style={{textAligh:'right'}}>
                     <button style={buttonStyle} onClick={hideWelcomePage} >{buttonText} >>>></button>
                 </div>
+                <br />
                 <img src="img/albionsteamclipper_large.png" alt="A ship with steam and sail" style={welcomeImageStyle} />
+                <div style={{textAlign:'right'}}>
+                    <br />
+                    {ticks > 0 ? <button onClick={resetState}>Clear and restart</button> : ''}
+                </div>
                 <IntroText />
                 <PlayingTheGame />
                 <AboutShips />

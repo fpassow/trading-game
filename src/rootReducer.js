@@ -134,6 +134,10 @@ function rootReducer(state = state0, action) {
             newState.cash = newCash
             return newState
         }
+
+        case 'RESET_STATE': {
+            return state0
+        }
             
         default:
             return state;

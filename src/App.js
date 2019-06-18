@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import WelcomePage from './welcome/WelcomePage'
 import MainPage from './MainPage'
-import {showWelcomePage, startNewGame, selectPortTab, selectShipTab, selectMapTab} from './actions'
+import {showWelcomePage, startNewGame, selectPortTab, selectShipTab, selectMapTab, resetState} from './actions'
 import * as stateUtils from './stateUtils'
 
 /*
@@ -31,7 +31,8 @@ const AppComponent = ({
     selectedTab,
     selectPortTab,
     selectShipTab,
-    selectMapTab
+    selectMapTab,
+    resetState
 }) => {
     if (gameOver) {
         return (
@@ -54,7 +55,15 @@ const AppComponent = ({
         )
     }
     if (showingWelcomePage) {
-        return <div className="App"><WelcomePage hideWelcomePage={hideWelcomePage} ticks={ticks} /></div>
+        return (
+            <div className="App">
+                <WelcomePage 
+                    hideWelcomePage={hideWelcomePage} 
+                    ticks={ticks} 
+                    resetState={resetState} 
+                />
+            </div>
+        )
     }
     return <div className="App">
         <MainPage 
@@ -91,7 +100,8 @@ const mapDispatchToProps = dispatch => ({
   startNewGame: () => dispatch(startNewGame()),
   selectPortTab: () => dispatch(selectPortTab()),
   selectShipTab: () => dispatch(selectShipTab()),
-  selectMapTab: () => dispatch(selectMapTab())
+  selectMapTab: () => dispatch(selectMapTab()),
+  resetState: () => dispatch(resetState())
 })
 
 export default connect(

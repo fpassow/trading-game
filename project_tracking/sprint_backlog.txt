@@ -1,8 +1,11 @@
 Sprint
 "adding-things"
 
-localStorage
-    Put version number in key so I can ignore or clear incompatable formats
+Add start-new-game button.
+
+Gettig cargos with the same key after adding saveState
+
+Not responsive, even after reload, after adding saveState
 
 Swipe to move between panels???
 

@@ -55,3 +55,7 @@ export function moveShip(shipId, placeId) {
 export function sellCargo(cargoId) {
 	return {type: 'SELL_CARGO', cargoId: cargoId}
 }
+
+export function resetState() {
+	return {type: 'RESET_STATE'}
+}
