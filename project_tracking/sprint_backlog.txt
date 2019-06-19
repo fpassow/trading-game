@@ -1,11 +1,14 @@
 Sprint
 "adding-things"
 
+Merge back into master
 
-Gettig cargos with the same key after adding saveState
+Add to fritzpassow.com
+
+Update README
 
 Swipe to move between panels???
 
-Merge back into master
+
 
 ==============================================
