@@ -30,7 +30,7 @@ DEVELOPERS' OVERVIEW
 
 This project was started with create-react-app. It uses React and Redux.
 
-It's purely client-side JavaScript. 
+It's purely client-side JavaScript, but game state is saved to window.localStorage once per game "day" if the browser allows.
 
 ### TIME IN THE GAME
 
@@ -57,10 +57,12 @@ src    -- ES6/JSX source code
     stateUtils.js      -- Functions for finding and changing state. Used in
                             reducers and mapStateToProps
     actions.js         -- All of the Redux action creators
-    rootReducer.js     -- Redux reducer function
+    rootReducer.js     -- Redux reducer function. Handles player-generated actions.
+    tickHandler.js     -- Called by rootReducer.js to do everything that
+                          is driven by the tick actions
     factories.js       -- Contains functions for creating ship and 
                             cargo objects
-    place              -- Directory containing componets for the port the
+    place              -- Directory containing componets for the seaport the
                             player is currently at, where you buy and sell
                             cargo, etc. It just shows blue water while you
                             are at sea.

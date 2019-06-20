@@ -1,9 +1,10 @@
 Sprint
 "adding-things"
 
-Merge back into master
+Tell the player when they try to move without fuel.
+  (I've done it three times!!!!)
 
-Add to fritzpassow.com
+Merge back into master
 
 Update README
 

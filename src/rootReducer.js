@@ -114,7 +114,8 @@ function rootReducer(state = state0, action) {
             let newShip = stateUtils.getShipById(action.shipId, state)
             //Bail if we don't have enough fuel
             if (newShip.fuel < newShip.fuelPerMove) {
-                return state;
+                //In port, we show a warning if you're out of fuel
+                return {...state, selectedTab:'PORT'}
             }
             let newState = {...state, isMoving:true, moveEndTime:state.ticks+(24/newShip.speed)}
             //If player is aboard, the player also moves.
