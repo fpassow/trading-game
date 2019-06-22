@@ -34,7 +34,7 @@ const PlacePanelComponent = (
         <h3>{place.description}</h3>
       </div>
       <ShipsForSale shipsForSale={shipsForSale} cash={cashPlusTradeIn} buyShip={buyShip} />
-      {myShip.fuel < myShip.fuelPerMove ?  <h2 style={{color:'red'}}>Buy fuel!!</h2> : ''}
+      {(myShip && (myShip.fuel < myShip.fuelPerMove)) ?  <h2 style={{color:'red'}}>Buy fuel!!</h2> : ''}
       <Chandler hasShip={hasShip} place={place} myShip={myShip} buyFood={buyFood} />
       <CargosForSale prices={place.prices} hasShip={hasShip} numberOfEmptyCargoBays={numberOfEmptyCargoBays} cargosForSale={cargosForSale} cash={cash} buyCargo={buyCargo} />
       <FuelDepot hasShip={hasShip} place={place} myShip={myShip} buyFuel={buyFuel} />
