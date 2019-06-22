@@ -4,6 +4,11 @@ import TimeView from './TimeView'
 import * as stateUtils from './stateUtils'
 import * as actions from './actions'
 import {seaBlue} from './styleConstants'
+import imagesByType from './imagesByType'
+
+/*
+ * This component draws the entire map, creating a square for each element in state.places.
+ */
 
 let mapPanelStyle = {
     border: '1px solid blue',
@@ -13,8 +18,9 @@ let mapPanelStyle = {
 
 const mapStyle = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(2, 100px)',
-    gridTemplateRows: 'repeat(6, 100px)'
+    gridTemplateColumns: 'repeat(4, 100px)',
+    gridTemplateRows: 'repeat(8, 100px)',
+    fontWeight: 'bold'
 }
 
 const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
@@ -28,7 +34,7 @@ const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
         background = '#db8'
     }
     if (p.placeType === 'PORT') {
-        background = '#ad0 no-repeat url("port.png")'
+        background = '#ad0 no-repeat url("img/port.png")'
     }
     let border = '1px solid blue'
     if (isDestination && !isMoving) {
@@ -40,7 +46,8 @@ const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
         gridColumn: p.x, 
         gridRow: p.y, 
         margin:'0px',
-        position: 'relative'
+        position: 'relative',
+        backgroundPosition: 'center'
     }
     let arrowStyle = {
         transform: 'rotate('+_arrowRotation(p, myPlace)+'deg)',
@@ -63,14 +70,20 @@ const Square = ({p, myShip, myPlace, isDestination, isMoving, moveShip}) => {
              onClick={moveHandler}
         >
             {p.placeType === 'PORT' ? p.name : ''}
-            {(myShip && (myShip.placeId === p.placeId)) ? <img className={shipCssClass} style={shipStyle} alt={myShip.shipName} src="fishboat.png" /> : <span> </span>} 
-            {(isDestination && !isMoving) ? <img style={arrowStyle} src="arrow_up.png" alt="You can move to here" /> : <span> </span>}
+            {(myShip && (myShip.placeId === p.placeId)) ? <img className={shipCssClass} style={shipStyle} alt={myShip.shipName} src={imagesByType[myShip.shipType]} /> : <span> </span>} 
+            {(isDestination && !isMoving) ? <img style={arrowStyle} src="img/arrow_up.png" alt="You can move to here" /> : <span> </span>}
         </div>
     )
 }
-//  let isDestination = myShip && (destinations.indexOf(myShip.placeId) > -1)
-function _isDestination(destinations, placeId) {
-    return destinations.indexOf(placeId) > -1
+
+function _isDestination(place, myPlace, myShip) {
+    //True if they are one square apart (not diagonal), and place is a port or sea square,
+    // and you are not going overland from port to port
+    return (
+        (place.placeType === 'PORT' || place.placeType === 'AT_SEA' || myShip.isFlyer) && 
+        (!(myPlace.placeType === 'PORT' && place.placeType === 'PORT') || myShip.isFlyer) &&
+        ((Math.abs(place.x - myPlace.x) + Math.abs(place.y - myPlace.y)) === 1)
+    )
 }
 
 //For a given place and the player's ships place, compute the degrees rotation
@@ -89,20 +102,31 @@ function _arrowRotation(place, myPlace) {
     return 180
 }
 
+const backToWelcomePageStyle = {
+    color: 'white',
+    background: 'blue',
+    fontSize: '16px',
+    borderRadius: '10px'
+}
 const MapPanelComponent = ({
-        ticks, days, ticksToday, places, myShip, myPlace, isMoving, moveEndTime, moveShip
+        ticks, days, ticksToday, places, myShip, myPlace, isMoving, moveShip, showWelcomePage
     }) => {
-    let destinations = (myShip && myPlace) ? myPlace.neighbors : []
     return (
         <div style={mapPanelStyle}>
-            <TimeView days={days} ticks={ticks} ticksToday={ticksToday} isMoving={isMoving} moveEndTime={moveEndTime} />
+            <div style={{display:'inline-block', width:'200px'}}>
+                <TimeView 
+                    days={days}
+                    ticksToday={ticksToday}
+                />
+            </div>
+            <button onClick={showWelcomePage} style={backToWelcomePageStyle}>&lt;&lt; Back to home page</button>
             <div style={mapStyle}>
                 {places.map((p)=>(<Square key={p.placeId} 
                                           p={p} 
                                           myShip={myShip} 
                                           myPlace={myPlace}
                                           isMoving={isMoving}
-                                          isDestination={_isDestination(destinations, p.placeId)}
+                                          isDestination={myShip && _isDestination(p, myPlace, myShip)}
                                           moveShip={moveShip} 
                                   />
                 ))}
@@ -119,8 +143,7 @@ const mapStateToProps = state => ({
   places: state.places,
   myShip: stateUtils.getMyShip(state),
   myPlace: stateUtils.getCurrentPlace(state),
-  isMoving: state.isMoving,
-  moveEndTime: state.moveEndTime
+  isMoving: state.isMoving
 })
 
 const mapDispatchToProps = dispatch => ({

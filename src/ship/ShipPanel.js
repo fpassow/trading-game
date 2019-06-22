@@ -9,6 +9,14 @@ import * as stateUtils from '../stateUtils'
 import * as actions from '../actions'
 import {seaBlue} from '../styleConstants'
 
+/*
+ * This, and ShiplessPannel, are the two components in this directory which are used
+ * directly by code outside this directory.
+ *
+ * This component represents the player's ship, and has sub-components for the cargo
+ * hold, the food store, etc.
+ */
+
 const shipStyle = {
   background: 'tan',
   margin: '20px',
@@ -30,7 +38,7 @@ const nameplateStyle = {
 const ShipPanelComponent = ({cash, myShip, cargo, localPrices, sellCargo}) => (
   <div style={{background:seaBlue}}>
     <div style={shipStyle}>
-      <Hold cargo ={cargo} localPrices={localPrices} sellCargo={sellCargo} />
+      <Hold myShip ={myShip} cargo={cargo} localPrices={localPrices} sellCargo={sellCargo} />
       <Food myShip={myShip} />
       <Fuel myShip={myShip} />
       <Crew myShip={myShip} />

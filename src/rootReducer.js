@@ -2,12 +2,17 @@ import state0 from './state0'
 import * as stateUtils from './stateUtils'
 import tickHandler from './tickHandler'
 
+/*
+ * Redux reducer function
+*/
+
 function rootReducer(state = state0, action) {
 
     //See actions. Might remove this later.
     //But never show TICKs. There are too many.
     if (action.type !== 'TICK') {
-        console.log(action)
+        //console.log(action)
+        //console.log(state)
     }
     
     switch (action.type) {
@@ -27,39 +32,60 @@ function rootReducer(state = state0, action) {
         case 'START_NEW_GAME':
             return state0
 
+        case 'SELECT_TAB':
+            return {...state, selectedTab: action.whichTab}
+
         case 'BUY_SHIP':
             let ship = stateUtils.getShipById(action.shipId, state)
-            let newCash = state.cash - ship.basePrice
+            let oldShip = stateUtils.getMyShip(state)
+            let newCash = state.cash + (oldShip?oldShip.basePrice:0) - ship.basePrice
             //Abort if I don't have the money.
             if (newCash < 0) {
                 return state
             }
             ship.isForSale = false
-            ship.crew = 1
             let newState = stateUtils.replaceShip(ship, state)
             newState.myShipId = ship.shipId
             newState.cash = newCash
+            if (oldShip) {
+                oldShip.isForSale = true
+                newState = stateUtils.replaceShip(oldShip, newState)
+            }
             return newState
 
-        case 'BUY_FOOD': { //action.placeId
+        case 'BUY_FOOD': { //action.placeId, action.quantity
             let myShip = stateUtils.getMyShip(state)
             //Bail out if there's no room for more food
-            if (myShip.food >= myShip.maxFood) {
+            if (myShip.food + action.quantity > myShip.maxFood) {
                 return state
             }
             //Bail if you can't afford it
-            let newCash = state.cash - stateUtils.getCurrentPlace(state).foodPrice
+            let newCash = state.cash - stateUtils.getCurrentPlace(state).foodPrice * action.quantity
             if (newCash < 0) {
                 return state
             }
             //Add food to your ship
-            myShip.food++
+            myShip.food += action.quantity
             let newState = stateUtils.replaceShip(myShip, state)
             newState.cash = newCash
-            //Remove the rations from the place
-            let newPlace = stateUtils.getPlaceById(action.placeId, newState)
-            newPlace.foods = 0
-            newState = stateUtils.replacePlace(newPlace, newState)
+            return newState
+        }
+
+        case 'BUY_FUEL': { //action.placeId, action.quantity
+            let myShip = stateUtils.getMyShip(state)
+            //Bail out if there's no room for more fuel
+            if (myShip.fuel + action.quantity > myShip.maxFuel) {
+                return state
+            }
+            //Bail if you can't afford it
+            let newCash = state.cash - stateUtils.getCurrentPlace(state).fuelPrice * action.quantity
+            if (newCash < 0) {
+                return state
+            }
+            //Add food to your ship
+            myShip.fuel += action.quantity
+            let newState = stateUtils.replaceShip(myShip, state)
+            newState.cash = newCash
             return newState
         }
 
@@ -85,13 +111,19 @@ function rootReducer(state = state0, action) {
             if (state.isMoving) {
                 return state
             }
-            let newState = {...state, isMoving:true, moveEndTime:state.ticks+24}
+            let newShip = stateUtils.getShipById(action.shipId, state)
+            //Bail if we don't have enough fuel
+            if (newShip.fuel < newShip.fuelPerMove) {
+                //In port, we show a warning if you're out of fuel
+                return {...state, selectedTab:'PORT'}
+            }
+            let newState = {...state, isMoving:true, moveEndTime:state.ticks+(24/newShip.speed)}
             //If player is aboard, the player also moves.
             if (newState.myShipId === action.shipId) {
                 newState.currentPlaceId = action.placeId
             }
-            let newShip = stateUtils.getShipById(action.shipId, newState)
             newShip.placeId = action.placeId
+            newShip.fuel -= newShip.fuelPerMove
             let newerState = stateUtils.replaceShip(newShip, newState)
             return newerState
         }
@@ -102,6 +134,10 @@ function rootReducer(state = state0, action) {
             let newState = stateUtils.removeCargo(cargo, state)
             newState.cash = newCash
             return newState
+        }
+
+        case 'RESET_STATE': {
+            return state0
         }
             
         default:

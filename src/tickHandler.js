@@ -4,6 +4,12 @@ import * as factories from './factories'
 export default function tickHandler(state) {
     let newState = {...state}
 
+    //Check victory condition
+    if (newState.cash >= newState.cashToWin) {
+        newState.timeStop = true
+        return newState
+    }
+
     //Slow time by 20x when in port or deciding where to move next at sea,
     //    i.e. when state.isMoving is false.
     if (!state.isMoving) {
@@ -13,6 +19,9 @@ export default function tickHandler(state) {
             newState.slowTimeCounter = 0
         }
     }
+
+    newState.screenWidth = window.innerWidth
+
 
     //A day is 24 ticks.
     //state contains ticks, days, and ticksToday for other logic to use.
@@ -29,8 +38,7 @@ export default function tickHandler(state) {
 }
 
 function doTickly(s) {
-    let newState =  checkMoveCompleted(s)
-    return refreshRations(newState)
+    return checkMoveCompleted(s)
 }
 
 function checkMoveCompleted(state) {
@@ -39,17 +47,6 @@ function checkMoveCompleted(state) {
     } else {
         return state
     }
-}
-
-function refreshRations(state) {
-    let newPlaces = state.places.map((p)=>{
-        if (p.isFoodForSale && (p.foods < 1)) {
-            return {...p, foods: 1}
-        } else {
-            return p
-        }
-    })
-    return {...state, places: newPlaces}
 }
 
 function doDaily(state) {
@@ -61,16 +58,18 @@ function eatFood(s) {
     let currentPlace = stateUtils.getCurrentPlace(s)
     let isFoodForSale = currentPlace.isFoodForSale
     let foodPrice = isFoodForSale ? currentPlace.foodPrice : -1
+    //No ship. Player buys food for self each day.
     if (!s.myShipId) {
         if (isFoodForSale && (cash >= foodPrice)) {
-            floatNote('Buying food.')
             return {...s, cash: cash - foodPrice}
         } else {
             return {...s, cash: cash - foodPrice, gameOver: true}
         }
+    //Player has a ship...
     } else {
         let myShip = stateUtils.getMyShip(s)
-        let crew = myShip.crew
+        //Assume ship always has a full crew
+        let crew = myShip.crewSize
 
         //Loop once for each person in the crew. Try to get a food each time.
         for (let crewPerson = 1; crewPerson <= crew; crewPerson++) {
@@ -81,14 +80,7 @@ function eatFood(s) {
                 if (isFoodForSale && (cash >= foodPrice)) {
                     s = {...s, cash: cash - foodPrice}
                 } else {
-                    if (myShip.crew > 1) {
-                        myShip.crew = myShip.crew - 1
-                        floatNote("Crew member starved.")
-                        s = stateUtils.replaceShip(myShip)
-                    } else {
-                        floatNote("You starve.")
-                        s = {...s, gameOver: true, gameOverMessage: 'You starved.'}
-                    }
+                    s = {...s, gameOver: true, gameOverMessage: 'You starved.'}
                 }
             }
         }
@@ -96,9 +88,9 @@ function eatFood(s) {
     }
 }
 
-//state.cargoProducers: [
+//Powers state.cargoProducers, which look like:
 //    {placeId: 'portharbor', period: 2, cargoType: 'oliveoil', quantity: 1}
-//cargos: [
+//Updates state.cargos, which look like:
 //    {isForSale: true, cargoId:'cargo1', cargoLabel: 'Olive Oil', 
 //       cargoType: 'oliveoil', cargoPrice: 50, isLoaded: false, placeId: 'portharbor', 
 //       shipId: null},
@@ -114,6 +106,3 @@ function producersProduce(oldState) {
     return {...oldState, cargos: newCargos}
 }
 
-function floatNote(text) {
-    console.log('FloatNote: ' + text)
-}

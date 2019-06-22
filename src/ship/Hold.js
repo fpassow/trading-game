@@ -1,52 +1,35 @@
 import React from 'react'
-import imagesByType from '../imagesByType'
+import Cargo from '../shared_components/Cargo'
+
+/*
+ * This is the component within the Ship component which displays all the
+ * cargo on board. The Cargo component has an "empty" property and an empty
+ * Cargo represents an empty cargo bay. So we always display 
+ * myShip.maxCargo Cargo components.
+ */
 
 const holdStyle = {
     border: '3px solid brown',
-    background: 'grey',
-    borderRadius: '5px'
+    borderRadius: '5px',
+    padding: '3px',
+    position: 'relative',
+    minHeight: '50px'
 }
-const Hold = ({cargo, localPrices, sellCargo}) => {
+const Hold = ({myShip, cargo, localPrices, sellCargo}) => {
+    const emptyCargoBays = []
+    for (let i = 0; i < (myShip.maxCargo - cargo.length); i++) {
+        emptyCargoBays.push(<Cargo key={i} empty={true} />)
+    }
     return (
         <div style={holdStyle}>
-            <h3>Cargo </h3>
-            {cargo.map((aCargo)=>(<Cargo key={aCargo.cargoId} sellCargo={sellCargo} aCargo={aCargo} prices={localPrices} />))}
+                {cargo.map((aCargo)=>(
+                    <Cargo empty={false} key={aCargo.cargoId} cargoClicked={sellCargo} aCargo={aCargo} 
+                           enabled={!!localPrices[aCargo.cargoType]} price={localPrices[aCargo.cargoType]} 
+                    />
+                ))}
+                {emptyCargoBays}
         </div>
     )
 }
-let cargoStyle = {
-    display: "inline-block"
-}
-const Cargo = ({aCargo, prices, sellCargo}) => {
-    return (
-        <div style={cargoStyle}>
-            {prices[aCargo.cargoType] ? 
-                <div>
-
-                <button onClick={()=>{sellCargo(aCargo.cargoId)}}>
-                    <img src={imagesByType[aCargo.cargoType]} alt={aCargo.cargoLabel} /><br/>
-                    {prices[aCargo.cargoType]}&#402;
-                 </button>
-                </div> :
-                 ''
-            } 
-        </div>
-    )
-}
-/*
-const Cargo = ({aCargo, prices, sellCargo}) => {
-    return (
-        <div>
-            <img src={imagesByType[aCargo.cargoType]} alt={aCargo.cargoLabel} />
-            {prices[aCargo.cargoType] ? 
-                <span>
-                <button onClick={()=>{sellCargo(aCargo.cargoId)}}>Sell for {prices[aCargo.cargoType]}&#402;</button>
-                </span> :
-                 ''
-            } 
-        </div>
-    )
-}
-*/
 
 export default Hold

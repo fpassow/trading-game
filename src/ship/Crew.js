@@ -1,15 +1,17 @@
 import React from 'react'
 
+/*
+ * A component displaying a number of crewperson images equal to the ship's crewSize.
+ */
+
 const Crew = ({myShip}) => {
-    let maybeRed = {color: ((myShip.crew < myShip.crewSize) ? 'red' : 'inherit')}
     let crewArr = []
-    for (let i = 0; i < myShip.crew; i++) {
-        crewArr.push(<img key={i} src="crew.png" alt="crewperson" />)
+    for (let i = 0; i < myShip.crewSize; i++) {
+        crewArr.push(<img key={i} src="img/crew.png" alt="crewperson" />)
     }
     return (
-        <div>
-            <h3>Crew </h3>
-            {crewArr} <span style={maybeRed}>(need {myShip.crewSize})</span>
+        <div style={{marginTop: '5px'}} >
+            {crewArr}
         </div>
     )
 }

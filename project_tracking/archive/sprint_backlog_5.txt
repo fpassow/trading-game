@@ -1,0 +1,74 @@
+Sprint
+"Looing better, thing-by-thing"
+
+--- Hide placeId's
+---Graphical cargos
+---Show the rations supply "refreshing"
+  --- Put fadein on rations
+  --- Remove rations when bought
+      --- Record how many (1/0)
+  ---  ONly display rations if they exist
+
+  ---  Replace missing rations every tick
+
+
+---graphical ships for sale
+
+
+  ---food store with images
+  ---cargo images in hold
+  ---Click-to-sell hover (alt text?)
+  ---crew images
+
+---Arrows for possible moves
+  --- direction
+  --- z-axis
+   ---center
+
+---Center the ship
+
+
+---Remove that blue border on my boat
+
+Button for "Start new game" after starve
+    ---Add START_NEW_GAME action
+    ---In reducer, ^ returns state0
+    ---Wire it into App.js
+
+Put ship secton labels into background images
+
+Add cargo types
+    Coal
+    Titanium
+    Leopard Wood
+    Clockworks
+    Kippers
+    Fluff
+
+ships
+    Albion Steam Clipper
+    Engine Barge
+    Silver Zeplin (adjacent to any square, semilimited cargo)
+    Steam Turbine Hovercraft (Fastest, fuel hog, limited cargo)
+
+More Places
+    Point A (An actual point of land)
+    Point B
+    Heck
+    3rd Place 
+    Nether
+    Gibber
+
+
+
+
+
+
+
+
+
+
+
+
+
+

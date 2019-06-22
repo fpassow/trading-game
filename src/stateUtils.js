@@ -67,6 +67,15 @@ export function getCargoOnBoard(shipId, state) {
     return state.cargos.filter((cargo)=>(cargo.isLoaded && cargo.shipId === shipId))
 }
 
+export function numberOfEmptyCargoBays(state) {
+    const myShip = getMyShip(state)
+    if (!myShip) {
+        return 0
+    }
+    const cargoCount = getCargoOnBoard(myShip.shipId, state).length
+    return Math.max(0, myShip.maxCargo - cargoCount)
+}
+
 export function replaceCargo(cargo, state) {
     let newCargos = state.cargos.map((c)=>( (c.cargoId === cargo.cargoId) ? cargo : c) )
     return { ...state, cargos: newCargos}
